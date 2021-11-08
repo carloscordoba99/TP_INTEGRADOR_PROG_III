@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ddd.html" />
     <Content Include="DetalleVentas\AgregarDetalleDeVentas.aspx" />
     <Content Include="DetalleVentas\BuscarDetalleDeVentas.aspx" />
     <Content Include="DetalleVentas\EliminarDetalleDeVentas.aspx" />
