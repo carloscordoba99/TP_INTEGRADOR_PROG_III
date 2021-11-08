@@ -7,9 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.Sql;
 using Negocio;
-/// <summary>
-///  ESTE HAY QUE ELIMINAR
-/// </summary>
+
 namespace Vistas
 {
     public partial class LoginForm : System.Web.UI.Page
