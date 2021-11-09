@@ -45,7 +45,7 @@
             width: 258px;
         }
         .auto-style14 {
-            width: 53%;
+            width: 59%;
             margin-left: 34px;
         }
         .auto-style15 {
@@ -109,11 +109,17 @@
                 <td class="auto-style16">
                     <asp:TextBox ID="txtNombreCat" runat="server" Width="216px"></asp:TextBox>
                 </td>
+                <td class="auto-style16">
+                    <asp:RequiredFieldValidator ID="rfvNomCategoria" runat="server" ControlToValidate="txtNombreCat">Ingrese Categoria</asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style17">Descripcion</td>
                 <td class="auto-style21">
                     <asp:TextBox ID="txtDescripcion" runat="server" Width="216px"></asp:TextBox>
+                </td>
+                <td class="auto-style21">
+                    <asp:RequiredFieldValidator ID="rfvDescripion" runat="server" ControlToValidate="txtDescripcion">Ingrese Descripcion</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -123,6 +129,8 @@
                 <td class="auto-style21">
                     <asp:Button ID="btnCrear" runat="server" Text="Crear" Width="129px" OnClick="btnCrear_Click" />
                 </td>
+                <td class="auto-style21">
+                    &nbsp;</td>
             </tr>
         </table>
             <div class="auto-style19">
