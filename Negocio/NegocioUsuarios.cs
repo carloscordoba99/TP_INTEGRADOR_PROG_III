@@ -123,5 +123,14 @@ namespace Negocio
             String TipoUsuario = dao.GetTraerTipoUsuario(user);
             return TipoUsuario;
         }
+        public string GetTraerIdUsuario(String Id, String Contraseña)
+        {
+            DaoUsuarios dao = new DaoUsuarios();
+            Usuario user = new Usuario();
+            user.SetIdCliente(Convert.ToInt32(Id));
+            user.SetPassword(Contraseña);
+            String IdUsuario = dao.GetTraerIdUsuario(user);
+            return IdUsuario;
+        }
     }
 }

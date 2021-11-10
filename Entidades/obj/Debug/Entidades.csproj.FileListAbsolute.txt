@@ -16,3 +16,9 @@ C:\Users\Usuario\Documents\GitHub\Proyecto_Prog3\TP_INTEGRADOR_PROG_III\Entidade
 C:\Users\Usuario\Documents\GitHub\Proyecto_Prog3\TP_INTEGRADOR_PROG_III\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Documents\GitHub\Proyecto_Prog3\TP_INTEGRADOR_PROG_III\Entidades\obj\Debug\Entidades.dll
 C:\Users\Usuario\Documents\GitHub\Proyecto_Prog3\TP_INTEGRADOR_PROG_III\Entidades\obj\Debug\Entidades.pdb
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V6\Entidades\bin\Debug\Entidades.dll
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V6\Entidades\bin\Debug\Entidades.pdb
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V6\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V6\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V6\Entidades\obj\Debug\Entidades.dll
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V6\Entidades\obj\Debug\Entidades.pdb

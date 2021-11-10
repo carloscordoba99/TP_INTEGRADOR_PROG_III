@@ -20,6 +20,7 @@
         <div>
             <asp:Panel ID="Panel1" runat="server" Height="586px" Width="259px">
                 <asp:Panel ID="Panel2" runat="server" CssClass="auto-style1" Height="75px" Width="801px">
+                    <asp:Label ID="LblUsuario" runat="server"></asp:Label>
                 </asp:Panel>
                 <div class="auto-style2">
                     <br />

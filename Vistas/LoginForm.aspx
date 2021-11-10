@@ -57,7 +57,9 @@
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="LblUsuario" runat="server"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>

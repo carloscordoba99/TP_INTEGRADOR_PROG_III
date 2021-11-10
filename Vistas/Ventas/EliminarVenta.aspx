@@ -62,7 +62,9 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style3">Venta</td>
-                    <td class="auto-style5">Usuario<table class="auto-style1">
+                    <td class="auto-style5">
+                        <asp:Label ID="LblUsuario" runat="server"></asp:Label>
+                        <table class="auto-style1">
                         <tr>
                             <td class="auto-style10">
                                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Ventas/AgregarVenta.aspx">Agregar venta</asp:HyperLink>

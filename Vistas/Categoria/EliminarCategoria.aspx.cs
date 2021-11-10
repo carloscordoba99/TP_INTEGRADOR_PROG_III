@@ -15,7 +15,10 @@ namespace Vistas.Categoria
         NegocioCategoria deleteCat = new NegocioCategoria();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Usuario"] != null)
+            {
+                LblUsuario.Text = Session["Usuario"].ToString();
+            }
         }
 
         protected void btnElliminar_Click(object sender, EventArgs e)

@@ -180,5 +180,17 @@ namespace Dao
             }
             return TipoUsuario;
         }
+        public string ObtenerIdUsuario(String consulta)
+        {
+            string IdUsuario = "";
+            SqlConnection Conexion = ObtenerConexion();
+            SqlCommand cmd = new SqlCommand(consulta, Conexion);
+            SqlDataReader datos = cmd.ExecuteReader();
+            if (datos.Read())
+            {
+                IdUsuario = Convert.ToString(datos[0]);
+            }
+            return IdUsuario;
+        }
     }
 }

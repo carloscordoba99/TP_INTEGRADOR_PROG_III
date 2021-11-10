@@ -14,6 +14,10 @@ namespace Vistas.Ventas
         NegocioVenta SearchVenta = new NegocioVenta();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] != null)
+            {
+                LblUsuario.Text = Session["Usuario"].ToString();
+            }
             AgregarGrid();
         }
 

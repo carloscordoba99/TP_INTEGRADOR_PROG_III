@@ -14,7 +14,10 @@ namespace Vistas.Ventas
         NegocioVenta ObjVenta = new NegocioVenta();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Usuario"] != null)
+            {
+                LblUsuario.Text = Session["Usuario"].ToString();
+            }
         }
 
         protected void BtnAgregar_Click(object sender, EventArgs e)
