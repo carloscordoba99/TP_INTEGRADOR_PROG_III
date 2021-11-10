@@ -123,5 +123,10 @@ namespace Dao
             String consulta = "Select * from Usuarios where IdCliente ='" + User.GetIdCliente() + "' AND Contrasena='" + User.GetPassword() + "'";
             return dt.ObtenerTipoUsuario(consulta);
         }
+        public string GetTraerIdUsuario(Usuario User)
+        {
+            String consulta = "Select * from Usuarios where IdCliente ='" + User.GetIdCliente() + "' AND Contrasena='" + User.GetPassword() + "'";
+            return dt.ObtenerIdUsuario(consulta);
+        }
     }
 }

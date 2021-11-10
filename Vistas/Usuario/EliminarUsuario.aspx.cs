@@ -14,7 +14,10 @@ namespace Vistas.Usuario
         NegocioUsuarios deleteUser = new NegocioUsuarios();
          protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Usuario"] != null)
+            {
+                LblUsuario.Text = Session["Usuario"].ToString();
+            }
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)

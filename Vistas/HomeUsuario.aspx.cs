@@ -11,20 +11,7 @@ namespace Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LblMensaje.Text = Session["Usuario"].ToString();
-
-            /*String Nombre = "", Apellido = "", TipoUsuario = "";
-            HttpCookie TraerNombre = Request.Cookies["Nombre"];
-            HttpCookie Traer2 = Request.Cookies["Apellido"];
-            HttpCookie Traer3 = Request.Cookies["TipoUsuario"];
-            if (TraerNombre != null)
-            {
-                Nombre = TraerNombre["Nombre"].ToString();
-                Apellido = Traer2["Apellido"].ToString();
-                TipoUsuario = Traer3["TipoUsuario"].ToString();
-                LblMensaje.Text = Nombre + " " + Apellido + " " + TipoUsuario;
-            }
-            */
+            LblMensaje.Text = Session["Usuario"].ToString() + Session["IdUsuario"].ToString();
         }
 
         protected void BtnCerrarSesion_Click(object sender, EventArgs e)
