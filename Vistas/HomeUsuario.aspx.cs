@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Negocio;
 
 namespace Vistas
 {
@@ -11,7 +12,9 @@ namespace Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LblMensaje.Text = Session["Usuario"].ToString() + Session["IdUsuario"].ToString();
+            
+            //LblMensaje.Text = Session["Usuario"].ToString();
+
         }
 
         protected void BtnCerrarSesion_Click(object sender, EventArgs e)

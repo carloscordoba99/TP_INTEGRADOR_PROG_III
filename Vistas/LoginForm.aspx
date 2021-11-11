@@ -99,8 +99,6 @@
                 </tr>
             </table>
         </div>
-        <asp:GridView ID="GridView1" runat="server">
-        </asp:GridView>
     </form>
 </body>
 </html>
