@@ -13,7 +13,7 @@ namespace Vistas
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            //LblMensaje.Text = Session["Usuario"].ToString();
+            LblMensaje.Text = Session["Usuario"].ToString();
 
         }
 
