@@ -45,6 +45,7 @@
         .auto-style14 {
             width: 61%;
             margin-left: 34px;
+            height: 217px;
         }
         .auto-style15 {
             width: 258px;
@@ -63,10 +64,10 @@
         }
         .auto-style18 {
             height: 23px;
-            width: 353px;
+            width: 235px;
         }
         .auto-style19 {
-            width: 353px;
+            width: 235px;
         }
     </style>
 </head>
@@ -105,7 +106,8 @@
                         <asp:TextBox ID="txtNombre" runat="server" Width="216px" OnTextChanged="txtNombre_TextChanged"></asp:TextBox>
                     </td>
                     <td class="auto-style16">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre">Ingrese Nombre</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Marca</td>
@@ -113,7 +115,8 @@
                         <asp:TextBox ID="txtMarca" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td>
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvMarca" runat="server" ControlToValidate="txtMarca">Ingrese Marca</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Precio Unitario</td>
@@ -121,7 +124,8 @@
                         <asp:TextBox ID="txtPrecioU" runat="server" Width="214px"></asp:TextBox>
                     </td>
                     <td>
-                        &nbsp;</td>
+                        <asp:CompareValidator ID="cvPrecio" runat="server" ControlToValidate="txtPrecioU" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Precio</asp:CompareValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Categoria</td>
@@ -138,7 +142,8 @@
                         <asp:TextBox ID="txtStock" runat="server" Width="214px"></asp:TextBox>
                     </td>
                     <td>
-                        &nbsp;</td>
+                        <asp:CompareValidator ID="cvStock" runat="server" ControlToValidate="txtStock" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Stock</asp:CompareValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">&nbsp;</td>

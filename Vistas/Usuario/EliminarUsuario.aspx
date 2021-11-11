@@ -95,7 +95,7 @@
                 <td class="auto-style13">&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtIdUsuario" runat="server" Width="333px"></asp:TextBox>
                 </td>
-                <td class="auto-style8">&nbsp;&nbsp;<asp:Button ID="btnEliminar" runat="server" Text="Eliminar" Width="147px" OnClick="btnEliminar_Click" />
+                <td class="auto-style8">&nbsp;&nbsp;<asp:Button ID="btnEliminar" runat="server" Text="Eliminar" Width="147px" OnClick="btnEliminar_Click" OnClientClick="return confirm(&quot;¿Esta seguro que desea Eliminar el Usuario?&quot;);" />
                 </td>
             </tr>
             <tr>

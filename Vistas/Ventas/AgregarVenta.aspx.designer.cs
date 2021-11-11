@@ -87,6 +87,15 @@ namespace Vistas.Ventas
         protected global::System.Web.UI.WebControls.TextBox TxtCodCliente;
 
         /// <summary>
+        /// Control rfvCodCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCodCliente;
+
+        /// <summary>
         /// Control TxtTotalFactura.
         /// </summary>
         /// <remarks>
@@ -96,6 +105,15 @@ namespace Vistas.Ventas
         protected global::System.Web.UI.WebControls.TextBox TxtTotalFactura;
 
         /// <summary>
+        /// Control cvTotalFactura.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvTotalFactura;
+
+        /// <summary>
         /// Control TxtFecha.
         /// </summary>
         /// <remarks>
@@ -103,6 +121,15 @@ namespace Vistas.Ventas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtFecha;
+
+        /// <summary>
+        /// Control rfvFecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFecha;
 
         /// <summary>
         /// Control BtnAgregar.

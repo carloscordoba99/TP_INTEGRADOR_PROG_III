@@ -58,6 +58,14 @@
             text-align: center;
             height: 23px;
         }
+        .auto-style23 {
+            width: 258px;
+            text-align: right;
+            height: 26px;
+        }
+        .auto-style24 {
+            height: 26px;
+        }
     </style>
 </head>
 <body>
@@ -97,18 +105,21 @@
                     <td class="auto-style17">Código cliente: </td>
                     <td>
                         <asp:TextBox ID="TxtCodCliente" runat="server" Width="216px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvCodCliente" runat="server" ControlToValidate="TxtCodCliente">Ingrese Codigo de Cliente</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">Total factura: </td>
-                    <td>
+                    <td class="auto-style23">Total factura: </td>
+                    <td class="auto-style24">
                         <asp:TextBox ID="TxtTotalFactura" runat="server" Width="216px"></asp:TextBox>
+                        <asp:CompareValidator ID="cvTotalFactura" runat="server" ControlToValidate="TxtTotalFactura" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Total de Factura</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Fecha factura: </td>
                     <td>
                         <asp:TextBox ID="TxtFecha" runat="server" Width="216px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvFecha" runat="server" ControlToValidate="TxtFecha">Ingrese Fecha</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>

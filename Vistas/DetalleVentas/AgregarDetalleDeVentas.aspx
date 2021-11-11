@@ -47,11 +47,14 @@
             margin-left: 34px;
         }
         .auto-style17 {
-            width: 258px;
+            width: 150px;
             text-align: right;
         }
         .auto-style13 {
-            width: 258px;
+            width: 150px;
+        }
+        .auto-style18 {
+            width: 202px;
         }
     </style>
 </head>
@@ -85,38 +88,53 @@
             <table align="center" class="auto-style14">
                 <tr>
                     <td class="auto-style17">Código de venta: </td>
-                    <td>
+                    <td class="auto-style18">
                         <asp:TextBox ID="TxtCodVenta" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style18">
+                        <asp:RequiredFieldValidator ID="rfvCodVenta" runat="server" ControlToValidate="TxtCodVenta">Ingrese Codigo Venta</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">codigo de artículo: </td>
-                    <td>
+                    <td class="auto-style17">Codigo de artículo: </td>
+                    <td class="auto-style18">
                         <asp:TextBox ID="TXtCodArt" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style18">
+                        <asp:RequiredFieldValidator ID="rfvCodArt" runat="server" ControlToValidate="TXtCodArt">Ingrese Codigo</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Cantidad: </td>
-                    <td>
+                    <td class="auto-style18">
                         <asp:TextBox ID="TxtCantidad" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style18">
+                        <asp:CompareValidator ID="cvCantidad" runat="server" ControlToValidate="TxtCantidad" ErrorMessage="CompareValidator" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Cantidad</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Precio unitario: </td>
-                    <td>
+                    <td class="auto-style18">
                         <asp:TextBox ID="TxtPrecioUnitario" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style18">
+                        <asp:CompareValidator ID="cv" runat="server" ControlToValidate="TxtPrecioUnitario" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Precio Unitario</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style18">&nbsp;</td>
+                    <td class="auto-style18">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style13">&nbsp;</td>
-                    <td>
+                    <td class="auto-style18">
                         <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" Width="129px" OnClick="BtnAgregar_Click" />
                         <asp:Label ID="LblMensaje" runat="server"></asp:Label>
                     </td>
+                    <td class="auto-style18">
+                        &nbsp;</td>
                 </tr>
             </table>
         </div>

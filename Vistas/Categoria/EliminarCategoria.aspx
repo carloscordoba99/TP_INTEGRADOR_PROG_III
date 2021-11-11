@@ -86,7 +86,7 @@
                     <asp:TextBox ID="txtIdSuc" runat="server" Width="320px"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:Button ID="btnElliminar" runat="server" OnClick="btnElliminar_Click" Text="Eliminar" Width="117px" />
+                    <asp:Button ID="btnElliminar" runat="server" OnClick="btnElliminar_Click" Text="Eliminar" Width="117px" OnClientClick="return confirm(&quot;¿Esta seguro que desea Eliminar la Categoria?&quot;);" />
                 </td>
             </tr>
             <tr>

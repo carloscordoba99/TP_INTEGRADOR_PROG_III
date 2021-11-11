@@ -85,7 +85,7 @@
                         <asp:TextBox ID="TxtIDProveedor" runat="server" Width="320px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="BtnEliminar" runat="server" CssClass="auto-style14" Text="Eliminar" Width="113px" OnClick="BtnEliminar_Click" />
+                        <asp:Button ID="BtnEliminar" runat="server" CssClass="auto-style14" Text="Eliminar" Width="113px" OnClick="BtnEliminar_Click" OnClientClick="return confirm(&quot;¿Esta seguro que desea Eliminar el Proveedor?&quot;);" />
                     </td>
                 </tr>
                 <tr>

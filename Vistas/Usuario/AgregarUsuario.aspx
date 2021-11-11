@@ -109,7 +109,8 @@
                     <asp:TextBox ID="txtNom" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style14">
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNom">Ingrese Nombre</asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style16">Apellido</td>
@@ -117,7 +118,8 @@
                     <asp:TextBox ID="txtApellido" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style14">
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido">Ingrese Apellido</asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style15">Email</td>
@@ -125,7 +127,8 @@
                     <asp:TextBox ID="txtEmail" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style18">
-                    &nbsp;</td>
+                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Ingrese Email</asp:RegularExpressionValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style15">Numero Celular</td>
@@ -133,7 +136,8 @@
                     <asp:TextBox ID="txtNumCel" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style18">
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="rfvNum" runat="server" ControlToValidate="txtNumCel">Ingrese Numero Celular</asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style15">Dni</td>
@@ -141,7 +145,8 @@
                     <asp:TextBox ID="txtDni" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style18">
-                    &nbsp;</td>
+                    <asp:CompareValidator ID="cv" runat="server" ControlToValidate="txtDni" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Dni</asp:CompareValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style15">Direccion</td>
@@ -149,7 +154,8 @@
                     <asp:TextBox ID="TxtDireccion" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style18">
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="TxtDireccion">Ingrese Direccion</asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style15">Contraseña</td>
@@ -163,12 +169,14 @@
                 <td class="auto-style15">Tipo de Usuario</td>
                 <td class="auto-style18">
                     <asp:DropDownList ID="ddlTipo" runat="server" Height="32px" Width="225px">
-                        <asp:ListItem>Administrador</asp:ListItem>
+                        <asp:ListItem>-- Seleccione Tipo --</asp:ListItem>
                         <asp:ListItem>Cliente</asp:ListItem>
+                        <asp:ListItem>Administrador</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style18">
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="rfv" runat="server" ControlToValidate="ddlTipo" InitialValue="-- Seleccione Tipo --">Seleccione Tipo</asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style20"></td>

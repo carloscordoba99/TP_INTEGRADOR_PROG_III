@@ -69,6 +69,15 @@ namespace Vistas.DetalleDeVentas
         protected global::System.Web.UI.WebControls.TextBox TxtCodVenta;
 
         /// <summary>
+        /// Control rfvCodVenta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCodVenta;
+
+        /// <summary>
         /// Control TXtCodArt.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace Vistas.DetalleDeVentas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TXtCodArt;
+
+        /// <summary>
+        /// Control rfvCodArt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCodArt;
 
         /// <summary>
         /// Control TxtCantidad.
@@ -87,6 +105,15 @@ namespace Vistas.DetalleDeVentas
         protected global::System.Web.UI.WebControls.TextBox TxtCantidad;
 
         /// <summary>
+        /// Control cvCantidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvCantidad;
+
+        /// <summary>
         /// Control TxtPrecioUnitario.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace Vistas.DetalleDeVentas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtPrecioUnitario;
+
+        /// <summary>
+        /// Control cv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cv;
 
         /// <summary>
         /// Control BtnAgregar.

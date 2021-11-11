@@ -52,12 +52,21 @@
         }
         .auto-style13 {
             width: 258px;
+            height: 30px;
         }
         .auto-style19 {
             width: 238px;
         }
         .auto-style20 {
             width: 269px;
+        }
+        .auto-style21 {
+            width: 238px;
+            height: 30px;
+        }
+        .auto-style22 {
+            width: 269px;
+            height: 30px;
         }
     </style>
 </head>
@@ -87,7 +96,7 @@
                 </tr>
             </table>
             <p class="auto-style12">
-                Agregar proveedor</p>
+                Agregar proveedor&nbsp;&nbsp;&nbsp; </p>
             <table align="center" class="auto-style14">
                 <tr>
                     <td class="auto-style17">Razon social: </td>
@@ -95,7 +104,8 @@
                         <asp:TextBox ID="TxtRazonSocial" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvRazonSocial" runat="server" ControlToValidate="TxtRazonSocial">Ingrese Razon Social</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Marca: </td>
@@ -103,7 +113,8 @@
                         <asp:TextBox ID="TxtMarca" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvMarca" runat="server" ControlToValidate="TxtMarca">Ingrese Marca</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Dirección: </td>
@@ -111,7 +122,8 @@
                         <asp:TextBox ID="TxtDireccion" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="TxtDireccion">Ingrese Direccion</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Ciudad: </td>
@@ -119,7 +131,8 @@
                         <asp:TextBox ID="TxtCiudad" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvCiudad" runat="server" ControlToValidate="TxtCiudad">Ingrese Ciudad</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Provincia</td>
@@ -127,7 +140,8 @@
                         <asp:TextBox ID="TxtProvincia" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ControlToValidate="TxtProvincia">Ingrese Provincia</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Cuit</td>
@@ -135,7 +149,8 @@
                         <asp:TextBox ID="TxtCuit" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ControlToValidate="TxtCuit">Ingrese numero de Cuit</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Telefono</td>
@@ -143,7 +158,8 @@
                         <asp:TextBox ID="TxtTelefono" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="TxtTelefono">Ingrese Numero de Telefono</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Contacto</td>
@@ -151,7 +167,8 @@
                         <asp:TextBox ID="TxtContacto" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvContacto" runat="server" ControlToValidate="TxtContacto">Ingrese Contacto</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Web</td>
@@ -159,7 +176,8 @@
                         <asp:TextBox ID="TxtWeb" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RegularExpressionValidator ID="revWeb" runat="server" ControlToValidate="TxtWeb" ValidationExpression="([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?">Ingrese una Pagina web Valida</asp:RegularExpressionValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Email</td>
@@ -167,7 +185,8 @@
                         <asp:TextBox ID="TxtEmail" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="TxtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Ingrese una Direccion de Email Valida</asp:RegularExpressionValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">CBU: </td>
@@ -175,7 +194,8 @@
                         <asp:TextBox ID="TxtCBU" runat="server" Width="214px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        &nbsp;</td>
+                        <asp:RequiredFieldValidator ID="rfvCbu" runat="server" ControlToValidate="TxtCBU">Ingrese numero de Cbu</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">&nbsp;</td>
@@ -183,11 +203,11 @@
                     <td class="auto-style20">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style13">&nbsp;</td>
-                    <td class="auto-style19">
+                    <td class="auto-style13"></td>
+                    <td class="auto-style21">
                         <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" Width="129px" OnClick="BtnAgregar_Click" />
                     </td>
-                    <td class="auto-style20">
+                    <td class="auto-style22">
                         <asp:Label ID="LblMensaje" runat="server"></asp:Label>
                     </td>
                 </tr>
