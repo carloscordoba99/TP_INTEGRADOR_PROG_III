@@ -22,6 +22,9 @@
         .auto-style6 {
             width: 1203px;
         }
+        .auto-style7 {
+            margin-left: 137px;
+        }
         </style>
 </head>
 <body>
@@ -42,6 +45,26 @@
                     <td>&nbsp;</td>
                 </tr>
             </table>
+            <br />
+            <nav>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink2" runat="server">HyperLink</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink3" runat="server">HyperLink</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink4" runat="server">HyperLink</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink5" runat="server">HyperLink</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink6" runat="server">HyperLink</asp:HyperLink>
+            </nav>
+            <br />
+            <nav> 
+                <asp:Button ID="btnfiltro" runat="server" CssClass="auto-style7" Text="buscar con filtro" Width="117px" />
+                <asp:TextBox ID="txtbuscar" runat="server" Width="367px"></asp:TextBox>
+                <asp:Button ID="btnbuscar" runat="server" Text="Buscar" Width="200px" />
+            </nav>
             <br />
             <asp:ListView ID="LVproductos" runat="server" DataSourceID="SqlDataSource1" GroupItemCount="3">
                 <AlternatingItemTemplate>

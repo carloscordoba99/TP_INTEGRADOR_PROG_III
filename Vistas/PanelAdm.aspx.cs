@@ -26,5 +26,25 @@ namespace Vistas
         {
             Response.Redirect("~/Categoria/AgregarCategoria.aspx");
         }
+
+        protected void btnDetalleventas_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DetalleVentas/AgregarDetalleDeVentas.aspx");
+        }
+
+        protected void btnProveedores_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Proveedores/AgregarProveedeor.aspx");
+        }
+
+        protected void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Usuario/AgregarUsuario.aspx");
+        }
+
+        protected void btnVentas_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Ventas/AgregarVenta.aspx");
+        }
     }
 }

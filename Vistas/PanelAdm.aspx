@@ -30,16 +30,16 @@
                     <asp:Button ID="btnCategorias" runat="server" Font-Bold="True" Height="30px" Text="Categorias" Width="180px" OnClick="btnCategorias_Click" />
                     <br />
                     <br />
-                    <asp:Button ID="Button3" runat="server" Font-Bold="True" Height="30px" Text="Detalle Ventas" Width="180px" />
+                    <asp:Button ID="btnDetalleventas" runat="server" Font-Bold="True" Height="30px" Text="Detalle Ventas" Width="180px" OnClick="btnDetalleventas_Click" />
                     <br />
                     <br />
-                    <asp:Button ID="Button4" runat="server" Font-Bold="True" Height="30px" Text="Proveedores" Width="180px" />
+                    <asp:Button ID="btnProveedores" runat="server" Font-Bold="True" Height="30px" Text="Proveedores" Width="180px" OnClick="btnProveedores_Click" />
                     <br />
                     <br />
-                    <asp:Button ID="Button5" runat="server" Font-Bold="True" Height="30px" Text="Usuarios" Width="180px" />
+                    <asp:Button ID="btnUsuarios" runat="server" Font-Bold="True" Height="30px" Text="Usuarios" Width="180px" OnClick="btnUsuarios_Click" />
                     <br />
                     <br />
-                    <asp:Button ID="Button6" runat="server" Font-Bold="True" Height="30px" Text="Ventas" Width="180px" />
+                    <asp:Button ID="btnVentas" runat="server" Font-Bold="True" Height="30px" Text="Ventas" Width="180px" OnClick="btnVentas_Click" />
                     <br />
                 </div>
             </asp:Panel>
