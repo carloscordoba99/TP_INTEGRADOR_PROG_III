@@ -14,16 +14,16 @@ namespace Entidades
         private String Direccion;
         private String Ciudad;
         private String Provincia;
-        private string Cuit;
-        private int Telefono;
+        private String Cuit;
+        private String Telefono;
         private String Contacto;
         private String Email;
         private String Web;
-        private string CBU;
+        private String CBU;
 
         public Proveedor() { }
 
-        public Proveedor(int CodProveedor_, String RazonSocial_, String Marca, String Direccion_, String Ciudad_, String Provincia_, string Cuit_, int Telefono_, String Contacto_, String Email_, String Web_, string CBU_)
+        public Proveedor(int CodProveedor_, String RazonSocial_, String Marca, String Direccion_, String Ciudad_, String Provincia_, String Cuit_, String Telefono_, String Contacto_, String Email_, String Web_, string CBU_)
         {
             this.CodProveedor = CodProveedor_;
             this.RazonSocial = RazonSocial_;
@@ -60,8 +60,8 @@ namespace Entidades
         public string GetCuit() { return Cuit; }
         public void SetCuit(string Cuit) { this.Cuit = Cuit; }
 
-        public int GetTelefono() { return Telefono; }
-        public void SetTelefono(int Telefono) { this.Telefono = Telefono; }
+        public String GetTelefono() { return Telefono; }
+        public void SetTelefono(String Telefono) { this.Telefono = Telefono; }
 
         public string GetContacto() { return Contacto; }
         public void SetContacto(string Contacto) { this.Contacto = Contacto; }

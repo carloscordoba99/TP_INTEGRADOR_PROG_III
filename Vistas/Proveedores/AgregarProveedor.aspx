@@ -63,6 +63,7 @@
         .auto-style21 {
             width: 238px;
             height: 30px;
+            text-align: center;
         }
         .auto-style22 {
             width: 269px;

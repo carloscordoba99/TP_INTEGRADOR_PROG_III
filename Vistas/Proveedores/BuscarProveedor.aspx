@@ -11,6 +11,7 @@
 
         .auto-style1 {
             width: 100%;
+            text-align: center;
         }
         .auto-style3 {
             width: 184px;
@@ -42,13 +43,35 @@
             text-align: center;
             font-size: large;
         }
-        .auto-style13 {
-            width: 215px;
-            text-align: right;
+        .GrdProveedores{
+            text-align:center;
         }
-        .auto-style16 {
-            width: 49px;
+
+        p,td{
+            text-align:center;
         }
+
+        .auto-style19 {
+            width: 70%;
+            text-align:center;
+        }
+        
+        
+        .auto-style20 {
+            width: 96%;
+            text-align: center;
+            position:center;
+        }
+        .GrdProveedores{
+            text-align:center;
+        }
+        
+        
+        .auto-style21 {
+            width: 197px;
+        }
+        
+        
         </style>
 </head>
 <body>
@@ -77,30 +100,30 @@
                 </tr>
             </table>
             <p class="auto-style12">
-                <strong>Buscar </strong>Proveedor</p>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style13">Ingrese código de Proveedor: </td>
-                    <td>
-                        <asp:TextBox ID="TxtIdProveedor" runat="server" Width="320px"></asp:TextBox>
+                <strong>Buscar Proveedor</strong></p>
+            <div>
+                <table class="auto-style19">
+                    <tr>
+                        <td>&nbsp;Ingrese código de Proveedor: 
+                        </td>
+                        <td> 
+                        <asp:TextBox ID="TxtIdProveedor" runat="server" Width="303px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style21">
                         <asp:Button ID="BtnBuscar" runat="server" CssClass="auto-style14" Text="Buscar" Width="113px" OnClick="BtnBuscar_Click" />
-                    </td>
-                    <td class="auto-style16">
-                        <asp:Button ID="BtnMostarTodos" runat="server" OnClick="btnMostarTodos_Click" Text="Mostar Todos" />
-                    </td>
-                    <td>
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style5" colspan="3">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
-                </tr>
-                <tr>
+                        </td>
+                        <td><asp:Button ID="BtnMostarTodos" runat="server" OnClick="btnMostarTodos_Click" Text="Mostar Todos" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+            </div>
+            <table class="auto-style20">
+                 <tr>
                     <td class="auto-style5" colspan="3">
-            <asp:GridView ID="GrdProveedores" runat="server" Width="1392px">
+            <asp:GridView ID="GrdProveedores" runat="server" Width="1392px" >
             </asp:GridView>
                     </td>
-                    <td class="auto-style5">&nbsp;</td>
                 </tr>
             </table>
         </div>

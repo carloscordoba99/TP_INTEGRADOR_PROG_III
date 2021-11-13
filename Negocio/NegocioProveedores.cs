@@ -22,7 +22,7 @@ namespace Negocio
             prov.SetCiudad(Ciudad);
             prov.SetProvincia(Provincia);
             prov.SetCuit(Cuit);
-            prov.SetTelefono(Convert.ToInt32(Telefono));
+            prov.SetTelefono(Telefono);
             prov.SetContacto(Contacto);
             prov.SetEmail(Email);
             prov.SetWeb(Web);

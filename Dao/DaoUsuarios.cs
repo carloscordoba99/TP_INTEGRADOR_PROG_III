@@ -44,21 +44,21 @@ namespace Dao
             SqlParameter Sqlparametros = new SqlParameter();
             Sqlparametros = comando.Parameters.Add("@IDCLIENTE", SqlDbType.Int);
             Sqlparametros.Value = user.GetIdCliente();
-            Sqlparametros = comando.Parameters.Add("@NOMBRE", SqlDbType.Char, 30);
+            Sqlparametros = comando.Parameters.Add("@NOMBRE", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetNombre();
-            Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.Char, 30);
+            Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetApellido();
-            Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.Char, 30);
+            Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetEmail();
-            Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.Int);
+            Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetTelefono();
-            Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.Int);
+            Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDni();
-            Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.Char, 50);
+            Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDireccion();
-            Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.Char, 30);
+            Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetPassword();
-            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.Char, 15);
+            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetTipoUsuario();
 
         }
@@ -89,21 +89,21 @@ namespace Dao
             SqlParameter Sqlparametros = new SqlParameter();
             Sqlparametros = comando.Parameters.Add("@IDCLIENTE", SqlDbType.Int);
             Sqlparametros.Value = user.GetIdCliente();
-            Sqlparametros = comando.Parameters.Add("@NOMBRE", SqlDbType.Char, 30);
+            Sqlparametros = comando.Parameters.Add("@NOMBRE", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetNombre();
-            Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.Char, 30);
+            Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetApellido();
-            Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.Char, 30);
+            Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetEmail();
-            Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.Int);
+            Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetTelefono();
-            Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.Int);
+            Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDni();
-            Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.Char, 50);
+            Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 30);
             Sqlparametros.Value = user.GetDireccion();
-            Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.Char, 30);
+            Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetPassword();
-            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.Char, 15);
+            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetTipoUsuario();
         }
 

@@ -31,8 +31,8 @@ namespace Negocio
             user.SetNombre(nombre);
             user.SetApellido(apellido);
             user.SetEmail(email);
-            user.SetTelefono(Convert.ToInt32(celular));
-            user.SetDni(Convert.ToInt32(dni));
+            user.SetTelefono(celular);
+            user.SetDni(dni);
             user.SetDireccion(direccion);
             user.SetPassword(contrasena);
             user.SetTipoUsuario(tipo);
@@ -75,18 +75,17 @@ namespace Negocio
         {
             DaoUsuarios dao = new DaoUsuarios();
             Usuario user = new Usuario();
-            user.SetIdCliente(Convert.ToInt32( idcliente));
+            user.SetIdCliente(Convert.ToInt32(idcliente));
             user.SetNombre(nombre);
             user.SetApellido(apellido);
             user.SetEmail(email);
-            user.SetTelefono( Convert.ToInt32(celular));
-            user.SetDni(Convert.ToInt32(dni));
+            user.SetTelefono(celular);
+            user.SetDni(dni);
             user.SetDireccion(direccion);
             user.SetPassword(contrasena);
             user.SetTipoUsuario(tipo_usuario);
 
             dao.ModificarDatos(user);
-
         }
         public bool ValidarUsuario(String Id, String Contraseña)
         {

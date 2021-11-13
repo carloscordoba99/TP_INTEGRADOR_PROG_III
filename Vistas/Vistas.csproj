@@ -84,6 +84,7 @@
     <Content Include="Producto\EliminarProducto.aspx" />
     <Content Include="Usuario\AgregarUsuario.aspx" />
     <Content Include="Usuario\BuscarUsuario.aspx" />
+    <Content Include="Usuario\EditarUsuario.aspx" />
     <Content Include="Usuario\EliminarUsuario.aspx" />
     <Content Include="Ventas\AgregarVenta.aspx" />
     <Content Include="Ventas\BuscarVenta.aspx" />
@@ -205,6 +206,13 @@
     </Compile>
     <Compile Include="Usuario\BuscarUsuario.aspx.designer.cs">
       <DependentUpon>BuscarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\EditarUsuario.aspx.cs">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\EditarUsuario.aspx.designer.cs">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuario\EliminarUsuario.aspx.cs">
       <DependentUpon>EliminarUsuario.aspx</DependentUpon>

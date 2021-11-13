@@ -42,3 +42,14 @@ C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V7\Negocio\obj\Debug\Negocio
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V7\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V7\Negocio\obj\Debug\Negocio.dll
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V7\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\bin\Debug\Negocio.dll
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\bin\Debug\Dao.dll
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\bin\Debug\Entidades.dll
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\bin\Debug\Dao.pdb
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\bin\Debug\Entidades.pdb
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\obj\Debug\Negocio.dll
+C:\Users\Usuario\Documents\GitHub\Clon\Negocio\obj\Debug\Negocio.pdb

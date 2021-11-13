@@ -11,6 +11,9 @@ namespace Dao
 {
     public class DaoProveedores
     {
+        string datos = "SELECT Cod_Proveedor_Pr AS [Codigo proveedor],RazonSocial_Pr as [Razon Social], Marca_Pr as [Marca],Direccion_Pr as [Dirreccion],Ciudad_Pr as [Direecion],Provincia_Pr as [Provincia], Cuit_Pr as [Numero Cuit],Telefono_Pr as [Telefono], Contacto_Pr as [Contacto], Web_Pr as [Pagina Web], Email_Pr as [Correo Electronico], CBU_Pr as [CBU] FROM Proveedores order by Cod_Proveedor_Pr";
+
+
         AccesoDatos dt = new AccesoDatos();
         public Boolean ExisteProveedor(Proveedor Prov)
         {
@@ -40,7 +43,7 @@ namespace Dao
             SqlParametros.Value = Prov.GetProvincia();
             SqlParametros = Comando.Parameters.Add("@Cuit", SqlDbType.VarChar,25);
             SqlParametros.Value = Prov.GetCuit();
-            SqlParametros = Comando.Parameters.Add("@Telefono", SqlDbType.Int);
+            SqlParametros = Comando.Parameters.Add("@Telefono", SqlDbType.VarChar,25);
             SqlParametros.Value = Prov.GetTelefono();
             SqlParametros = Comando.Parameters.Add("@Contacto", SqlDbType.VarChar,25);
             SqlParametros.Value = Prov.GetContacto();
@@ -48,7 +51,7 @@ namespace Dao
             SqlParametros.Value = Prov.GetWeb();
             SqlParametros = Comando.Parameters.Add("@Email", SqlDbType.VarChar,25);
             SqlParametros.Value = Prov.GetEmail();
-            SqlParametros = Comando.Parameters.Add("@Cbu", SqlDbType.Int,25);
+            SqlParametros = Comando.Parameters.Add("@Cbu", SqlDbType.VarChar,25);
             SqlParametros.Value = Prov.GetCBU();
         }
 
@@ -60,7 +63,7 @@ namespace Dao
 
         public DataTable GetProveedores()
         {
-            DataTable tabla = dt.ObtenerTablaProd("Proveedores", "Select * from Proveedores order by Cod_Proveedor_Pr");
+            DataTable tabla = dt.ObtenerTablaProd("Proveedores", datos);
             return tabla;
         }
         public int EliminarProveedor(Proveedor Prov)
