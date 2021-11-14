@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Vistas",
+    "\\Vistas\\Usuario"
   ],
-  "SelectedNode": "\\Trabajo_Integrador.sln",
+  "SelectedNode": "\\Vistas\\Usuario\\AgregarUsuario.aspx.cs",
   "PreviewInSolutionExplorer": false
 }
