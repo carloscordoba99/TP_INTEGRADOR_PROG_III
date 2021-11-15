@@ -14,13 +14,34 @@ namespace Vistas
         {
             if(IsPostBack == false)
             {
-                DataTable dt = (DataTable)Session["Pedido"];
-                GrdCarrito.DataSource = dt;
-                GrdCarrito.DataBind();
-
-                grdPrueba.DataSource = dt;
-                grdPrueba.DataBind();
+                CargarGridView();
             }
+        }
+
+        public void CargarGridView()
+        {
+            DataTable dt = (DataTable)Session["Pedido"];
+            GrdCarrito.DataSource = dt;
+            GrdCarrito.DataBind();
+        }
+
+        protected void GrdCarrito_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            DataTable dt = (DataTable)Session["Pedido"];
+            foreach (DataRow row in dt.Rows)
+            {
+                row.Delete();
+            }
+            CargarGridView();
+            /*String IdArticulo = GrdCarrito.Rows[e.RowIndex].FindControl("ID Artículo");
+            String Descripcion = GrdCarrito.Rows[e.RowIndex].FindControl("Descripción").ToString();
+            String Precio = GrdCarrito.Rows[e.RowIndex].FindControl("Precio Unitario").ToString();
+            String Cantidad = GrdCarrito.Rows[e.RowIndex].FindControl("Cantidad").ToString();
+            String SubTotal = GrdCarrito.Rows[e.RowIndex].FindControl("Sub total").ToString();*/
+        }
+
+        protected void GrdCarrito_RowEditing(object sender, GridViewEditEventArgs e)
+        {
 
         }
     }
