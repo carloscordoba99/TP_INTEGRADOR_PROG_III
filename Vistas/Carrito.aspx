@@ -20,6 +20,8 @@
                     <asp:TemplateField HeaderText="Total"></asp:TemplateField>
                 </Columns>
             </asp:GridView>
+            <asp:GridView ID="grdPrueba" runat="server">
+            </asp:GridView>
         </div>
     </form>
 </body>

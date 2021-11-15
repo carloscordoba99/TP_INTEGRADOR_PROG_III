@@ -28,11 +28,11 @@ namespace Vistas
             if (Session["Pedido"] == null)
             {
                 Dt = new DataTable("Carrito");
-                Dt.Columns.Add("codproducto", System.Type.GetType("System.String"));
-                Dt.Columns.Add("desproducto", System.Type.GetType("System.String"));
-                Dt.Columns.Add("preproducto", System.Type.GetType("System.Decimal"));
-                Dt.Columns.Add("canproducto", System.Type.GetType("System.Int32"));
-                Dt.Columns.Add("subtotal", System.Type.GetType("System.Decimal"));
+                Dt.Columns.Add("ID Artículo", System.Type.GetType("System.String"));
+                Dt.Columns.Add("Descripción", System.Type.GetType("System.String"));
+                Dt.Columns.Add("Precio Unitario", System.Type.GetType("System.Decimal"));
+                Dt.Columns.Add("Cantidad", System.Type.GetType("System.Int32"));
+                Dt.Columns.Add("Sub total", System.Type.GetType("System.Decimal"));
 
                 Session["Pedido"] = Dt;
             }

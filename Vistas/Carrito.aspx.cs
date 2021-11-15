@@ -14,9 +14,12 @@ namespace Vistas
         {
             if(IsPostBack == false)
             {
-                DataTable dt = Session["Pedido"] as DataTable;
+                DataTable dt = (DataTable)Session["Pedido"];
                 GrdCarrito.DataSource = dt;
                 GrdCarrito.DataBind();
+
+                grdPrueba.DataSource = dt;
+                grdPrueba.DataBind();
             }
 
         }
