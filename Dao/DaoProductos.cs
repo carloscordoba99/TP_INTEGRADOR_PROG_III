@@ -71,5 +71,16 @@ namespace Dao
             SqlParametros = comando.Parameters.Add("@CODCARTICULO", SqlDbType.Int);
             SqlParametros.Value = prod.GetCodProd();
         }
+
+        public string GetDescripcion(string Cod)
+        {
+            String Descripcion = dt.ObtenerDescripcion("Select * from Articulos where CodArticulo = '" + Cod.ToString() + "'");
+            return Descripcion;
+        }
+        public decimal GetPrecio(string Cod)
+        {
+            decimal Precio = dt.ObtenerPrecioUnitario("Select * from Articulos where CodArticulo = '" + Cod.ToString() + "'");
+            return Precio;
+        }
     }
 }

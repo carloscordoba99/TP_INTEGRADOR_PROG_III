@@ -192,5 +192,30 @@ namespace Dao
             }
             return IdUsuario;
         }
+
+        public string ObtenerDescripcion(String consulta)
+        {
+            string Descripcion = "";
+            SqlConnection Conexion = ObtenerConexion();
+            SqlCommand cmd = new SqlCommand(consulta, Conexion);
+            SqlDataReader datos = cmd.ExecuteReader();
+            if (datos.Read())
+            {
+                Descripcion = Convert.ToString(datos[2]);
+            }
+            return Descripcion;
+        }
+        public decimal ObtenerPrecioUnitario(String consulta)
+        {
+            decimal Precio = 0;
+            SqlConnection Conexion = ObtenerConexion();
+            SqlCommand cmd = new SqlCommand(consulta, Conexion);
+            SqlDataReader datos = cmd.ExecuteReader();
+            if (datos.Read())
+            {
+                Precio = Convert.ToDecimal(datos[3]);
+            }
+            return Precio;
+        }
     }
 }

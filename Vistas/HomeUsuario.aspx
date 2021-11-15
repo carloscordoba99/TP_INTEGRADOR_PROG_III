@@ -64,7 +64,9 @@
                 <asp:Button ID="btnfiltro" runat="server" CssClass="auto-style7" Text="buscar con filtro" Width="117px" />
                 <asp:TextBox ID="txtbuscar" runat="server" Width="367px"></asp:TextBox>
                 <asp:Button ID="btnbuscar" runat="server" Text="Buscar" Width="200px" />
+                <asp:Button ID="BtnCarrito" runat="server" Text="Ir al carrito" Width="200px" OnClick="BtnCarrito_Click" />
             </nav>
+            <asp:Label ID="LblProductoAgregado" runat="server"></asp:Label>
             <br />
             <asp:ListView ID="LVproductos" runat="server" DataSourceID="SqlDataSource1" GroupItemCount="3">
                 <AlternatingItemTemplate>
@@ -75,6 +77,8 @@
                         <br />
                         Precio: $
                         <asp:Label ID="PrecioUnitarioLabel" runat="server" Text='<%# Eval("PrecioUnitario") %>' />
+                        <br />
+                        <asp:Button ID="BtnCarrito" runat="server" CommandArgument='<%# Eval("CodArticulo") %>' CommandName="EventoAgregar" OnCommand="BtnCarrito_Command" Text="Agregar al carrito" Width="200px" />
                         <br /></td>
                 </AlternatingItemTemplate>
                 <EditItemTemplate>
@@ -125,6 +129,8 @@
                         <asp:Label ID="DescripcionLabel" runat="server" Text='<%# Eval("Descripcion") %>' Width="200px" />
                         <br />Precio: $
                         <asp:Label ID="PrecioUnitarioLabel" runat="server" Text='<%# Eval("PrecioUnitario") %>' />
+                        <br />
+                        <asp:Button ID="BtnCarrito" runat="server" CommandArgument='<%# Eval("CodArticulo") %>' CommandName="EventoAgregar" OnCommand="BtnCarrito_Command" Text="Agregar al carrito" Width="200px" />
                         <br /></td>
                 </ItemTemplate>
                 <LayoutTemplate>
@@ -160,7 +166,7 @@
                         <br /></td>
                 </SelectedItemTemplate>
             </asp:ListView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString %>" SelectCommand="SELECT [ImagenUrl], [Descripcion], [PrecioUnitario] FROM [Articulos]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString %>" SelectCommand="SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos]"></asp:SqlDataSource>
         </div>
     </form>
 </body>

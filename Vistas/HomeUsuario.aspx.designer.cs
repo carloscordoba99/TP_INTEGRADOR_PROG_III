@@ -123,6 +123,24 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.Button btnbuscar;
 
         /// <summary>
+        /// Control BtnCarrito.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCarrito;
+
+        /// <summary>
+        /// Control LblProductoAgregado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblProductoAgregado;
+
+        /// <summary>
         /// Control LVproductos.
         /// </summary>
         /// <remarks>

@@ -52,7 +52,6 @@ namespace Negocio
             return dao.GetProductos();
         }
 
-
         public bool EliminarProducto(int codigo)
         {
             DaoProductos dao = new DaoProductos();
@@ -65,8 +64,16 @@ namespace Negocio
                 return false;
 
         }
-
-
+        public string GetDescripcion(string Cod)
+        {
+            DaoProductos dao = new DaoProductos();
+            return dao.GetDescripcion(Cod);
+        }
+        public decimal GetPrecio(string Cod)
+        {
+            DaoProductos dao = new DaoProductos();
+            return dao.GetPrecio(Cod);
+        }
 
     }
 }

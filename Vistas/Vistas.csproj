@@ -92,6 +92,7 @@
     <Content Include="Ventas\ModificarVenta.aspx" />
     <Content Include="Web.config" />
     <Content Include="HomeUsuario.aspx" />
+    <Content Include="Carrito.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DetalleVentas\AgregarDetalleDeVentas.aspx.cs">
@@ -255,6 +256,13 @@
     </Compile>
     <Compile Include="HomeUsuario.aspx.designer.cs">
       <DependentUpon>HomeUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
