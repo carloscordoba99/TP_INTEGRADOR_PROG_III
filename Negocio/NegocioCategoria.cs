@@ -41,6 +41,12 @@ namespace Negocio
             return dao.getCategorias();
         }
 
+        public DataTable getTablaProveedores()
+        {
+            DaoCategoria dao2 = new DaoCategoria();
+            return dao2.getProveedor();
+        }
+
         public bool EliminarCategoria(int cod)
         {
             //validar id

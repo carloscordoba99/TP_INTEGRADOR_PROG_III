@@ -100,6 +100,16 @@ namespace Dao
             return ds.Tables[NombreTabla];
         }
 
+        public DataTable ObtenerTablaProveedor(string NombreTabla, String Sql)
+        {
+            DataSet ds2 = new DataSet();
+            SqlConnection Conexion = ObtenerConexion();
+            SqlDataAdapter adp = ObtenerAdaptador(Sql, Conexion);
+            adp.Fill(ds2, NombreTabla);
+            Conexion.Close();
+            return ds2.Tables[NombreTabla];
+        }
+
         public DataTable ObtenerCategoria(String NombreTabla, String Sql)
         {
             DataSet ds = new DataSet();

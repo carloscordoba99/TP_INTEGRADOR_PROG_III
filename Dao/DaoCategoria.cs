@@ -34,6 +34,12 @@ namespace Dao
             return tabla;
         }
 
+        public DataTable getProveedor()
+        {
+            DataTable tabla = dt.ObtenerTablaProveedor("Proveedores", "Select * from Proveedores order by Cod_Proveedor_Pr");
+            return tabla;
+        }
+
         public int eliminarSucursales(Categoria cat)
         {
             SqlCommand comando = new SqlCommand();
@@ -57,11 +63,11 @@ namespace Dao
         private void ArmarParametrosCategorialAgregar(ref SqlCommand Comando, Categoria cat)
         {
             SqlParameter SqlParametros = new SqlParameter();
-            SqlParametros = Comando.Parameters.Add("@CODCATEGORIA", SqlDbType.Int);
-            SqlParametros.Value = cat.getCodCategoria();
-            SqlParametros = Comando.Parameters.Add("@NOMBRECATEGORIA", SqlDbType.VarChar);
+            /*SqlParametros = Comando.Parameters.Add("@CODCATEGORIA", SqlDbType.Int);
+            SqlParametros.Value = cat.getCodCategoria();*/
+            SqlParametros = Comando.Parameters.Add("@NOMBRECATEGORIA", SqlDbType.VarChar,50);
             SqlParametros.Value = cat.getNombreCategoria();
-            SqlParametros = Comando.Parameters.Add("@DESCRIPCION", SqlDbType.VarChar);
+            SqlParametros = Comando.Parameters.Add("@DESCRIPCION", SqlDbType.VarChar,100);
             SqlParametros.Value = cat.getDescripcion();
           
          }

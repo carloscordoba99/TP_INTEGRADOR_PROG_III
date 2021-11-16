@@ -48,13 +48,13 @@ namespace Dao
         private void ArmarParametroProductoAgregar(ref SqlCommand Comando, Producto prod)
         {
             SqlParameter SqlParametros = new SqlParameter();
-            SqlParametros = Comando.Parameters.Add("@CODARTICULO", SqlDbType.Int);
-            SqlParametros.Value = prod.GetCodProd();
-            SqlParametros = Comando.Parameters.Add("@NOMBREARTICULO", SqlDbType.VarChar);
+           /* SqlParametros = Comando.Parameters.Add("@CODARTICULO", SqlDbType.Int);
+            SqlParametros.Value = prod.GetCodProd();*/
+            SqlParametros = Comando.Parameters.Add("@NOMBREARTICULO", SqlDbType.VarChar,25);
             SqlParametros.Value = prod.GetNombreProd();
-            SqlParametros = Comando.Parameters.Add("@MARCA", SqlDbType.VarChar);
-            SqlParametros.Value = prod.GetMarca();
-            SqlParametros = Comando.Parameters.Add("@PRECIOUNITARIO", SqlDbType.Money);
+            SqlParametros = Comando.Parameters.Add("@DESCRIPCION", SqlDbType.VarChar, 50);
+            SqlParametros.Value = prod.GetDescripcion();
+            SqlParametros = Comando.Parameters.Add("@PRECIOUNITARIO", SqlDbType.Decimal);
             SqlParametros.Value = prod.GetPrecioU();
             SqlParametros = Comando.Parameters.Add("@ESTADO", SqlDbType.Bit);
             SqlParametros.Value = prod.GetEstado();
@@ -62,6 +62,8 @@ namespace Dao
             SqlParametros.Value = prod.GetIdCategoria();
             SqlParametros = Comando.Parameters.Add("@STOCK", SqlDbType.Int);
             SqlParametros.Value = prod.GetStock();
+            SqlParametros = Comando.Parameters.Add("@CODPROVEEDOR", SqlDbType.Int);
+            SqlParametros.Value = prod.GetCodProveedor();
 
         }
 

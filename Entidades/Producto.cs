@@ -10,23 +10,25 @@ namespace Entidades
     {
         private int CodProd;
         private String NombreProd;
-        private String Marca;
+        private String Descripcion;
         private float PrecioUnitario;
         private bool Estado;
         private int IdCategoria;
         private int Stock;
+        private int CodProveedor;
         
         public Producto() { }
 
-        public Producto (int codArticulos_, string nombrePord_, string marca_, float precioUnitario_, bool estado_, int idCategoria_,int stock_)
+        public Producto (int codArticulos_, string nombrePord_, string descripcion_, float precioUnitario_, bool estado_, int idCategoria_,int stock_,int CodProveedor_)
         {
             this.CodProd = codArticulos_;
             this.NombreProd = nombrePord_;
-            this.Marca = marca_;
+            this.Descripcion = descripcion_;
             this.PrecioUnitario = precioUnitario_;
             this.Estado = estado_;
             this.IdCategoria = idCategoria_;
             this.Stock = stock_;
+            this.CodProveedor = CodProveedor_;
         }
 
         public int GetCodProd() { return CodProd; }
@@ -35,8 +37,8 @@ namespace Entidades
         public string GetNombreProd() { return NombreProd; }
         public void SetNombreProd(string nombre) { this.NombreProd = nombre; }
 
-        public string GetMarca() { return Marca; }
-        public void SetMarca(string marca) { this.Marca = marca; }
+        public string GetDescripcion() { return Descripcion; }
+        public void SetDescripcion(string descripcion) { this.Descripcion = descripcion; }
 
         public float GetPrecioU() { return PrecioUnitario; }
         public void SetPrecioU(float precioU) { this.PrecioUnitario = precioU; }
@@ -46,6 +48,8 @@ namespace Entidades
         public void SetIdCategoria(int idcat) { this.IdCategoria = idcat; }
         public int GetStock() { return Stock; }
         public void SetStock(int stock) { this.Stock = stock; }
+        public int GetCodProveedor() { return CodProveedor; }
+        public void SetCodProveedor(int CodProveedor) { this.CodProveedor = CodProveedor; }
 
 
 
