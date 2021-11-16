@@ -10,6 +10,9 @@
 
         .auto-style1 {
             width: 100%;
+            text-align:center;
+            margin: 0 auto;
+            border-collapse: collapse;
         }
         .auto-style3 {
             width: 184px;
@@ -49,14 +52,28 @@
             width: 348px;
         }
         .auto-style16 {
-            width: 153px;
+            width: 305px;
+            text-align: right;
+        }
+        .auto-style17 {
+            width: 100%;
+            background-color: #FF9900;
+        }
+        .auto-style18 {
+            text-align: left;
+        }
+        .auto-style19 {
+            width: 97%;
+            text-align: center;
+            margin: 0 auto;
+            border-collapse: collapse;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-    <table class="auto-style1">
+    <table class="auto-style17">
         <tr>
             <td class="auto-style3">Categorias</td>
             <td class="auto-style5">
@@ -73,7 +90,8 @@
                         <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Categoria/BuscarCategoria.aspx">Buscar Categoria</asp:HyperLink>
                     </td>
                     <td class="auto-style8">
-                        &nbsp;</td>
+                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/PanelAdm.aspx">Home</asp:HyperLink>
+                    </td>
                 </tr>
                 </table>
             </td>
@@ -81,22 +99,22 @@
     </table>
             <p class="auto-style12">
                 <strong>Buscar Categoria</strong></p>
-            <table class="auto-style1">
+            <table class="auto-style19">
                 <tr>
                     <td class="auto-style13">Ingrese ID de Categoria: </td>
                     <td class="auto-style15">
-                        <asp:TextBox ID="txtIdCategoria" runat="server" Width="320px"></asp:TextBox>
+                        <asp:TextBox ID="txtIdCategoria" runat="server" Width="488px"></asp:TextBox>
                     </td>
                     <td class="auto-style16">
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="135px" OnClick="btnBuscar_Click" />
                     </td>
-                    <td>
+                    <td class="auto-style18">
                         <asp:Button ID="btnTodos" runat="server" Text="Mostrar Todos" Width="135px" />
                     </td>
                 </tr>
             </table>
             <br />
-            <asp:GridView ID="grdCategoria" runat="server" Width="1588px">
+            <asp:GridView ID="grdCategoria" runat="server" Width="1588px" HorizontalAlign="Center">
             </asp:GridView>
         </div>
     </form>

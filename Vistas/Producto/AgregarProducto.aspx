@@ -46,6 +46,9 @@
             width: 61%;
             margin-left: 34px;
             height: 217px;
+            text-align:center;
+            margin: 0 auto;
+            border-collapse: collapse;
         }
         .auto-style15 {
             width: 258px;
@@ -91,6 +94,7 @@
                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Producto/BuscarProducto.aspx">Buscar Producto</asp:HyperLink>
                     </td>
                     <td class="auto-style8">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/PanelAdm.aspx">Home</asp:HyperLink>
                     </td>
                 </tr>
                 </table>
@@ -110,12 +114,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">Marca</td>
+                    <td class="auto-style17">Descripcion</td>
                     <td class="auto-style19">
-                        <asp:TextBox ID="txtMarca" runat="server" Width="216px"></asp:TextBox>
+                        <asp:TextBox ID="txtDescripcion" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="rfvMarca" runat="server" ControlToValidate="txtMarca">Ingrese Marca</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvDecripcion" runat="server" ControlToValidate="txtDescripcion">Ingrese Descripcion</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -130,7 +134,7 @@
                 <tr>
                     <td class="auto-style17">Categoria</td>
                     <td class="auto-style19">
-                        <asp:DropDownList ID="ddlCategoria" runat="server" Height="16px" Width="220px">
+                        <asp:DropDownList ID="ddlCategoria" runat="server" Height="30px" Width="220px">
                         </asp:DropDownList>
                     </td>
                     <td>
@@ -146,8 +150,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">&nbsp;</td>
-                    <td class="auto-style19">&nbsp;</td>
+                    <td class="auto-style17">Codigo Proveedor</td>
+                    <td class="auto-style19">
+                        <asp:DropDownList ID="ddlProveedor" runat="server" AppendDataBoundItems="True" Height="30px" Width="220px">
+                            <asp:ListItem></asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>

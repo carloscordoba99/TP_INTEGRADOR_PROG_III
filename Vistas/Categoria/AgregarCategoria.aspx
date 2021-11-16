@@ -47,6 +47,9 @@
         .auto-style14 {
             width: 59%;
             margin-left: 34px;
+            text-align:center;
+            margin: 0 auto;
+            border-collapse: collapse;
         }
         .auto-style15 {
             width: 258px;
@@ -73,13 +76,17 @@
         .auto-style21 {
             width: 437px;
         }
+        .auto-style22 {
+            width: 100%;
+            background-color: #FF9900;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="auto-style18">
         <div>
-    <table class="auto-style1">
+    <table class="auto-style22">
         <tr>
             <td class="auto-style3">Categorias</td>
             <td class="auto-style5">

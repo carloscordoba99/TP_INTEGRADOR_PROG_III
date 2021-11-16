@@ -12,16 +12,18 @@ namespace Negocio
     public class NegocioProducto
     {
 
-        public bool AgregarProducto(String nombre, string marca, string precioUnitario, string categoria, string stock)
+        public bool AgregarProducto(String nombre, string descripcion, string precioUnitario, string categoria, string stock,string codproveedor)
         {
         int cantFilas = 0;
 
         Producto prod = new Producto();
             prod.SetNombreProd(nombre);
-            prod.SetMarca(marca);
+            prod.SetDescripcion(descripcion);
             prod.SetPrecioU(float.Parse(precioUnitario));
+            prod.SetEstado(true);
             prod.SetIdCategoria(Convert.ToInt32(categoria));
             prod.SetStock(Convert.ToInt32(stock));
+            prod.SetCodProveedor(Convert.ToInt32(codproveedor));
 
             DaoProductos dao = new DaoProductos();
             if(dao.ExisteProducto(prod) == false)

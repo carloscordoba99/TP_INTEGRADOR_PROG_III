@@ -14,6 +14,7 @@ namespace Vistas.Producto
     {
         NegocioProducto objProd = new NegocioProducto();
         NegocioCategoria negCat = new NegocioCategoria();
+        NegocioCategoria negCat2 = new NegocioCategoria();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Usuario"] != null)
@@ -27,6 +28,10 @@ namespace Vistas.Producto
                 ddlCategoria.DataSource = negCat.getTablaCategorias();
                 ddlCategoria.DataTextField = "NombreCategoria";
                 ddlCategoria.DataBind();
+
+                ddlProveedor.DataSource = negCat2.getTablaProveedores();
+                ddlProveedor.DataTextField = "Cod_Proveedor_Pr";
+                ddlProveedor.DataBind();
             }
         }
 
@@ -37,7 +42,7 @@ namespace Vistas.Producto
         {
             Boolean agregado = false;
 
-            agregado = objProd.AgregarProducto(txtNombre.Text, txtMarca.Text, txtPrecioU.Text, ddlCategoria.SelectedIndex.ToString(), txtStock.Text);
+            agregado = objProd.AgregarProducto(txtNombre.Text,txtDescripcion.Text, txtPrecioU.Text, ddlCategoria.SelectedIndex.ToString(), txtStock.Text,ddlProveedor.SelectedValue);
             if (agregado == true)
             {
                 lblMensaje.Text = "Producto Agregado";
@@ -54,7 +59,7 @@ namespace Vistas.Producto
         public void LimpiarDatos()
         {
             txtNombre.Text = " ";
-            txtMarca.Text = " ";
+            txtDescripcion.Text = " ";
             txtPrecioU.Text = " ";
             txtStock.Text = " ";
         }
