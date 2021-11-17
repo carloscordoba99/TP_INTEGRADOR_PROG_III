@@ -30,7 +30,9 @@ namespace Dao
 
         public DataTable getCategorias()
         {
-            DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "Select * from Categorias order by CodCategoria");
+            //DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT CodCategoria AS 'CODIGO CATEGORIA', NombreCategoria AS 'NOMBRE CATEGORIA', Descripcion AS 'DESCRIPCION'  FROM Categorias");
+            DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM Categorias");
+
             return tabla;
         }
 
@@ -71,5 +73,28 @@ namespace Dao
             SqlParametros.Value = cat.getDescripcion();
           
          }
+
+        private void ArmarParametrosCategoriaModificar(ref SqlCommand comando, Categoria cat)
+        {
+            SqlParameter Sqlparametros = new SqlParameter();
+            Sqlparametros = comando.Parameters.Add("@CODCAT", SqlDbType.Int);
+            Sqlparametros.Value = cat.getCodCategoria();
+            Sqlparametros = comando.Parameters.Add("@NOMCAT", SqlDbType.VarChar,50);
+            Sqlparametros.Value = cat.getNombreCategoria();
+            Sqlparametros = comando.Parameters.Add("@DESC", SqlDbType.VarChar,100);
+            Sqlparametros.Value = cat.getDescripcion();
+        }
+
+        public bool ActualizarCategoria(Categoria cat)
+        {
+            SqlCommand Comando = new SqlCommand();
+            ArmarParametrosCategoriaModificar(ref Comando, cat);
+            AccesoDatos ad = new AccesoDatos();
+            int FilasInsertadas = ad.EjecutarProcedimientoAlmacenado(Comando, "spActualizarCategoria");
+            if (FilasInsertadas == 1)
+                return true;
+            else
+                return false;
+        }
     }
 }

@@ -35,6 +35,20 @@ namespace Negocio
             }
         }
 
+        public void ModificarCategoria(String CodCat_, String Nombre, String Descripcion)
+        {
+            Categoria Cat = new Categoria();
+
+            Cat.setCodCategoria(Convert.ToInt32(CodCat_));
+            Cat.setNombreCategoria(Nombre);
+            Cat.setDescripcion(Descripcion);
+
+            DaoCategoria daocat = new DaoCategoria();
+
+            daocat.ActualizarCategoria(Cat);
+
+        }
+
         public DataTable getTablaCategorias()
         {
             DaoCategoria dao = new DaoCategoria();

@@ -70,9 +70,6 @@
         .auto-style19 {
             text-align: center;
         }
-        .auto-style20 {
-            width: 657px;
-        }
         .auto-style21 {
             width: 437px;
         }
@@ -142,18 +139,38 @@
                     &nbsp;</td>
             </tr>
         </table>
+            <br />
             <div class="auto-style19">
-                <br />
-                <table class="auto-style1">
-                    <tr>
-                        <td class="auto-style20">&nbsp;</td>
-                        <td>
-                            <asp:GridView ID="grdCategorias" runat="server">
-                            </asp:GridView>
-                        </td>
-                        <td>&nbsp;</td>
-                    </tr>
-                </table>
+                
+                <asp:GridView ID="grdCategorias" runat="server" AutoGenerateColumns="False" AutoGenerateEditButton="True" OnRowCancelingEdit="grdCategorias_RowCancelingEdit" OnRowEditing="grdCategorias_RowEditing" OnRowUpdating="grdCategorias_RowUpdating">
+                    <Columns>
+                        <asp:TemplateField HeaderText="CODIGO CATEGORIA">
+                            <EditItemTemplate>
+                                <asp:Label ID="lbl_eit_CodCat" runat="server" Text='<%# Bind("CodCategoria") %>'></asp:Label>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_codcat" runat="server" Text='<%# Bind("CodCategoria") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="NOMBRE">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_eit_Nombre" runat="server" Text='<%# Bind("NombreCategoria") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_NomCat" runat="server" Text='<%# Bind("NombreCategoria") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="DESCRIPCION">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_eit_Descripcion" runat="server" Text='<%# Bind("Descripcion") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Descripcion" runat="server" Text='<%# Bind("Descripcion") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+                
             </div>
         </div>
     </form>

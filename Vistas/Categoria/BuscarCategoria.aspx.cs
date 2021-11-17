@@ -19,7 +19,12 @@ namespace Vistas.Categoria
             {
                 LblUsuario.Text = Session["Usuario"].ToString();
             }
-            AgregarGrid();
+
+            if (IsPostBack == false)
+            {
+                AgregarGrid();
+
+            }
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -36,5 +41,7 @@ namespace Vistas.Categoria
             grdCategoria.DataSource = negCat.getTablaCategorias();
             grdCategoria.DataBind();
         }
+
+
     }
 }

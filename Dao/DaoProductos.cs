@@ -84,5 +84,39 @@ namespace Dao
             decimal Precio = dt.ObtenerPrecioUnitario("Select * from Articulos where CodArticulo = '" + Cod.ToString() + "'");
             return Precio;
         }
+
+        private void ArmarParametrosProductoModificar(ref SqlCommand Comando, Producto prod)
+        {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = Comando.Parameters.Add("@CODART", SqlDbType.Int);
+            SqlParametros.Value = prod.GetCodProd();
+            SqlParametros = Comando.Parameters.Add("@NOMART", SqlDbType.VarChar,25);
+            SqlParametros.Value = prod.GetNombreProd();
+            SqlParametros = Comando.Parameters.Add("@DESC", SqlDbType.VarChar, 50);
+            SqlParametros.Value = prod.GetDescripcion();
+            SqlParametros = Comando.Parameters.Add("@PU", SqlDbType.Int);
+            SqlParametros.Value = prod.GetPrecioU();
+            SqlParametros = Comando.Parameters.Add("@ESTADO", SqlDbType.Bit);
+            SqlParametros.Value = prod.GetEstado();
+            SqlParametros = Comando.Parameters.Add("@CODCAT", SqlDbType.Int);
+            SqlParametros.Value = prod.GetIdCategoria();
+            SqlParametros = Comando.Parameters.Add("@STOCK", SqlDbType.Int);
+            SqlParametros.Value = prod.GetStock();
+            SqlParametros = Comando.Parameters.Add("@CODPROV", SqlDbType.Int);
+            SqlParametros.Value = prod.GetCodProveedor();
+
+        }
+
+        public bool ActualizarProducto(Producto prod)
+        {
+            SqlCommand Comando = new SqlCommand();
+            ArmarParametrosProductoModificar(ref Comando, prod);
+            AccesoDatos ad = new AccesoDatos();
+            int FilasInsertadas = ad.EjecutarProcedimientoAlmacenado(Comando, "spActualizarArticulo");
+            if (FilasInsertadas == 1)
+                return true;
+            else
+                return false;
+        }
     }
 }

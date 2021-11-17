@@ -38,8 +38,24 @@ namespace Negocio
             {
                 return false;
             }
+        }
 
-        
+        public void ModficarProducto(String codart, String NomArt, String Desc, String Pu, String Estado, String CodCat, String Stock, String CodProv)
+        {
+            Producto prod = new Producto();
+
+            prod.SetCodProd(Convert.ToInt32(codart));
+            prod.SetNombreProd(NomArt);
+            prod.SetDescripcion(Desc);
+            prod.SetPrecioU(float.Parse(Pu));
+            prod.SetEstado(Convert.ToBoolean(Estado));
+            prod.SetIdCategoria(Convert.ToInt32(CodCat));
+            prod.SetStock(Convert.ToInt32(Stock));
+            prod.SetCodProveedor(Convert.ToInt32(CodProv));
+
+            DaoProductos dao = new DaoProductos();
+            dao.ActualizarProducto(prod);
+
         }
 
         public DataTable GetProducto(string cod)

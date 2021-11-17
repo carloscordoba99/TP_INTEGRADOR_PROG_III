@@ -114,7 +114,7 @@
                 </tr>
             </table>
             <br />
-            <asp:GridView ID="grdCategoria" runat="server" Width="1588px" HorizontalAlign="Center">
+            <asp:GridView ID="grdCategoria" runat="server" Width="1588px" HorizontalAlign="Center" AutoGenerateColumns="False">
             </asp:GridView>
         </div>
     </form>
