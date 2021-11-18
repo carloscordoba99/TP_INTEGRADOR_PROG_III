@@ -76,26 +76,14 @@ namespace Vistas
 
             DataTable dt = (DataTable)Session["Pedido"];
             GridViewRow row = GrdCarrito.Rows[e.RowIndex];
-            dt.Rows[row.DataItemIndex]["Cantidad"] = ((TextBox)row.Cells[4].Controls[0]).Text;
+
+            decimal Cantidad = Convert.ToDecimal(((TextBox)row.Cells[4].Controls[0]).Text);
+            decimal PrecioUnitario = Convert.ToDecimal(((TextBox)row.Cells[3].Controls[0]).Text);
+            decimal NuevoPrecio = PrecioUnitario * Cantidad;
+            dt.Rows[row.DataItemIndex]["Cantidad"] = Cantidad;
+            dt.Rows[row.DataItemIndex]["Sub total"] = NuevoPrecio;
 
             GrdCarrito.EditIndex = -1;
-            CargarGridView();
-        }
-
-        protected void Cambiar_Click(object sender, EventArgs e)
-        {
-            DataTable dt = (DataTable)Session["Pedido"];
-            //DataRow Fila = dt.Rows[e.];
-            //IdArticulo.get
-            //dt.Rows[]["Cantidad"] = "3";
-
-            foreach (DataRow row in dt.Rows)
-            {
-                if (Convert.ToInt32(row["ID Artículo"].ToString()) == Convert.ToInt32(TxtId.Text))
-                {
-                    dt.Rows[Convert.ToInt32(TxtId.Text)]["Cantidad"] = TxtCantidad.Text;
-                }
-            }
             CargarGridView();
         }
 
