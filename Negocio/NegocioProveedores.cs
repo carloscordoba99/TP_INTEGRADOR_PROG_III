@@ -55,7 +55,7 @@ namespace Negocio
             return dao.GetProveedores();
         }
 
-
+        
         public bool EliminarProveedor(int IdProveedor)
         {
             DaoProveedores dao = new DaoProveedores();
@@ -64,6 +64,27 @@ namespace Negocio
             int op = dao.EliminarProveedor(Prov);
             if (op == 1) return true;
             else return false;
+        }
+
+        public void ActualizarProveedor(String CodProv, String RazonS, String Marca_, String Direccion_, String Ciudad_, String Prov_, String cuit_, String Telefono_, String Contacto_, String Web_ , String Email_, String Cbu_)
+        {
+            Proveedor Prov = new Proveedor();
+
+            Prov.SetCodProveedor(Convert.ToInt32(CodProv));
+            Prov.SetRazonSocial(RazonS);
+            Prov.SetMarca(Marca_);
+            Prov.SetDireccion(Direccion_);
+            Prov.SetCiudad(Ciudad_);
+            Prov.SetProvincia(Prov_);
+            Prov.SetCuit(cuit_);
+            Prov.SetTelefono(Telefono_);
+            Prov.SetContacto(Contacto_);
+            Prov.SetWeb(Web_);
+            Prov.SetEmail(Email_);
+            Prov.SetCBU(Cbu_);
+
+            DaoProveedores daoProv = new DaoProveedores();
+            daoProv.ModificarProveedor(Prov);
         }
     }
 }

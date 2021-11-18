@@ -96,26 +96,61 @@
                 </table>
             </td>
         </tr>
+        
+
     </table>
             <p class="auto-style12">
                 <strong>Buscar Categoria</strong></p>
+            <div>
             <table class="auto-style19">
                 <tr>
-                    <td class="auto-style13">Ingrese ID de Categoria: </td>
+                    <td class="auto-style24">Ingrese ID de Categoria: </td>
                     <td class="auto-style15">
                         <asp:TextBox ID="txtIdCategoria" runat="server" Width="488px"></asp:TextBox>
                     </td>
                     <td class="auto-style16">
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="135px" OnClick="btnBuscar_Click" />
                     </td>
-                    <td class="auto-style18">
-                        <asp:Button ID="btnTodos" runat="server" Text="Mostrar Todos" Width="135px" />
+                    <td class="auto-style25">
+                        <asp:Button ID="btnTodos" runat="server" Text="Mostrar Todos" Width="135px" OnClick="btnTodos_Click" />
                     </td>
                 </tr>
             </table>
+        </div>
             <br />
-            <asp:GridView ID="grdCategoria" runat="server" Width="1588px" HorizontalAlign="Center" AutoGenerateColumns="False">
-            </asp:GridView>
+            <div class="auto-style23">
+                
+                <asp:GridView ID="grdCategorias" runat="server" AutoGenerateColumns="False" AutoGenerateEditButton="True" OnRowCancelingEdit="grdCategorias_RowCancelingEdit" OnRowEditing="grdCategorias_RowEditing" OnRowUpdating="grdCategorias_RowUpdating" HorizontalAlign="Center">
+                    <Columns>
+                        <asp:TemplateField HeaderText="CODIGO CATEGORIA">
+                            <EditItemTemplate>
+                                <asp:Label ID="lbl_eit_CodCat" runat="server" Text='<%# Bind("CodCategoria") %>'></asp:Label>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_codcat" runat="server" Text='<%# Bind("CodCategoria") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="NOMBRE">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_eit_Nombre" runat="server" Text='<%# Bind("NombreCategoria") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_NomCat" runat="server" Text='<%# Bind("NombreCategoria") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="DESCRIPCION">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_eit_Descripcion" runat="server" Text='<%# Bind("Descripcion") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_Descripcion" runat="server" Text='<%# Bind("Descripcion") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+                
+            </div>
+            
         </div>
     </form>
 </body>

@@ -11,6 +11,7 @@
 
         .auto-style1 {
             width: 100%;
+            background-color:coral;
         }
         .auto-style3 {
             width: 184px;
@@ -45,6 +46,7 @@
         .auto-style14 {
             width: 53%;
             margin-left: 34px;
+            text-align:center;
         }
         .auto-style17 {
             width: 258px;
@@ -69,6 +71,13 @@
             width: 269px;
             height: 30px;
         }
+        table {
+		
+            margin: 0 auto;
+		
+            border-collapse: collapse;
+        }
+
     </style>
 </head>
 <body>
@@ -90,7 +99,9 @@
                             <td class="auto-style9">
                                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Proveedores/BuscarProveedor.aspx">Buscar proveedor</asp:HyperLink>
                             </td>
-                            <td class="auto-style8"></td>
+                            <td class="auto-style8">
+                                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/PanelAdm.aspx">Inicio</asp:HyperLink>
+                            </td>
                         </tr>
                         </table>
                     </td>
@@ -98,7 +109,7 @@
             </table>
             <p class="auto-style12">
                 Agregar proveedor&nbsp;&nbsp;&nbsp; </p>
-            <table align="center" class="auto-style14">
+            <table class="auto-style14" align="center">
                 <tr>
                     <td class="auto-style17">Razon social: </td>
                     <td class="auto-style19">
@@ -214,6 +225,13 @@
                 </tr>
             </table>
         </div>
+    <br />
+    <div>
+
+        <asp:GridView ID="grdListaProveedores" runat="server" HorizontalAlign="Center" Width="1392px">
+        </asp:GridView>
+
+    </div>
     </form>
-</body>
+    </body>
 </html>

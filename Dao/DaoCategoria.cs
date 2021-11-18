@@ -30,8 +30,8 @@ namespace Dao
 
         public DataTable getCategorias()
         {
-            //DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT CodCategoria AS 'CODIGO CATEGORIA', NombreCategoria AS 'NOMBRE CATEGORIA', Descripcion AS 'DESCRIPCION'  FROM Categorias");
-            DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM Categorias");
+            DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT CodCategoria AS 'CODIGO CATEGORIA', NombreCategoria AS 'NOMBRE CATEGORIA', Descripcion AS 'DESCRIPCION'  FROM Categorias");
+            //DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM Categorias");
 
             return tabla;
         }
@@ -67,7 +67,7 @@ namespace Dao
             SqlParameter SqlParametros = new SqlParameter();
             /*SqlParametros = Comando.Parameters.Add("@CODCATEGORIA", SqlDbType.Int);
             SqlParametros.Value = cat.getCodCategoria();*/
-            SqlParametros = Comando.Parameters.Add("@NOMBRECATEGORIA", SqlDbType.VarChar,50);
+            SqlParametros = Comando.Parameters.Add("@NOMCAT", SqlDbType.VarChar,50);
             SqlParametros.Value = cat.getNombreCategoria();
             SqlParametros = Comando.Parameters.Add("@DESCRIPCION", SqlDbType.VarChar,100);
             SqlParametros.Value = cat.getDescripcion();
@@ -84,6 +84,7 @@ namespace Dao
             Sqlparametros = comando.Parameters.Add("@DESC", SqlDbType.VarChar,100);
             Sqlparametros.Value = cat.getDescripcion();
         }
+
 
         public bool ActualizarCategoria(Categoria cat)
         {

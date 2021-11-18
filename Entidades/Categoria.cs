@@ -28,7 +28,7 @@ namespace Entidades
 
         public void setCodCategoria(int codcat) { this.CodCategoria = codcat; }
         public void setNombreCategoria(string nomcat) { this.NombreCategoria = nomcat; }
-        public void setDescripcion(string Descripcion_) { this.Descripcion = Descripcion_; }
+        public void setDescripcion(string Descripcion) { this.Descripcion = Descripcion; }
 
     }
 }

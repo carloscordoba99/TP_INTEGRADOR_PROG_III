@@ -18,6 +18,11 @@ namespace Vistas.Proveedores
             {
                 LblUsuario.Text = Session["Usuario"].ToString();
             }
+
+            if(IsPostBack == false)
+            {
+                AgregarListaProveedores();
+            }
         }
         protected void BtnAgregar_Click(object sender, EventArgs e)
         {
@@ -27,6 +32,7 @@ namespace Vistas.Proveedores
             if (Agregado == true)
             {
                 LblMensaje.Text = "Proveedor Agregado.";
+
             }
             else
             {
@@ -34,6 +40,7 @@ namespace Vistas.Proveedores
             }
 
             LimpiarDatos();
+            AgregarListaProveedores();
 
         }
         public void LimpiarDatos()
@@ -49,6 +56,12 @@ namespace Vistas.Proveedores
             TxtEmail.Text = "";
             TxtWeb.Text = "";
             TxtCBU.Text = "";
+        }
+
+        public void AgregarListaProveedores()
+        {
+            grdListaProveedores.DataSource = ObjProv.GetTablaProveedores();
+            grdListaProveedores.DataBind();
         }
     }
 }

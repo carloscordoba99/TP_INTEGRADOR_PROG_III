@@ -35,11 +35,11 @@ namespace Negocio
             }
         }
 
-        public void ModificarCategoria(String CodCat_, String Nombre, String Descripcion)
+        public void ModificarCategoria(String CodCat, String Nombre, String Descripcion)
         {
             Categoria Cat = new Categoria();
 
-            Cat.setCodCategoria(Convert.ToInt32(CodCat_));
+            Cat.setCodCategoria(Convert.ToInt32(CodCat));
             Cat.setNombreCategoria(Nombre);
             Cat.setDescripcion(Descripcion);
 

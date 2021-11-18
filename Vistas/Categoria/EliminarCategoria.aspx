@@ -10,6 +10,10 @@
 
         .auto-style1 {
             width: 100%;
+            background-color: #FF9900;
+        }
+        .auto-style2 {
+            width: 100%;
         }
         .auto-style3 {
             width: 184px;
@@ -70,6 +74,7 @@
                         <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Categoria/BuscarCategoria.aspx">Buscar Categoria</asp:HyperLink>
                     </td>
                     <td class="auto-style8">
+                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/PanelAdm.aspx">Home</asp:HyperLink>
                     </td>
                 </tr>
                 </table>
@@ -79,7 +84,7 @@
         </div>
         <p class="auto-style12">
             <strong>Eliminar Categoria</strong></p>
-        <table class="auto-style1">
+        <table class="auto-style2">
             <tr>
                 <td class="auto-style13">Ingrese ID de Categoria: </td>
                 <td class="auto-style15">

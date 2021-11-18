@@ -20,18 +20,15 @@ namespace Vistas
                 LblUsuario.Text = Session["Usuario"].ToString();
             }
 
-            if (IsPostBack == false)
-            {
-                CargarCategorias();
-            }
             
+            CargarCategorias();
         }
 
        
         private void CargarCategorias()
         {
-            grdCategorias.DataSource = negCat.getTablaCategorias();
-            grdCategorias.DataBind();
+            grdCategoria.DataSource = negCat.getTablaCategorias();
+            grdCategoria.DataBind();
         }
 
         protected void btnCrear_Click(object sender, EventArgs e)
@@ -60,31 +57,6 @@ namespace Vistas
             txtDescripcion.Text = " ";
         }
 
-        protected void grdCategorias_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            grdCategorias.EditIndex = e.NewEditIndex;
-            CargarCategorias();
-        }
-
-        protected void grdCategorias_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-        {
-            grdCategorias.EditIndex = -1;
-            CargarCategorias();
-        }
-
-        protected void grdCategorias_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            String s_codcat = ((Label)grdCategorias.Rows[e.RowIndex].FindControl("lbl_eit_CodCat")).Text;
-            String s_nomcat = ((TextBox)grdCategorias.Rows[e.RowIndex].FindControl("txt_eit_Nombre")).Text;
-            String s_desc = ((TextBox)grdCategorias.Rows[e.RowIndex].FindControl("txt_eit_Descripcion")).Text;
-
-            NegocioCategoria negcat2 = new NegocioCategoria();
-
-            negcat2.ModificarCategoria(s_codcat, s_nomcat,s_desc);
-
-            grdCategorias.EditIndex = -1;
-            
-            CargarCategorias();
-        }
+        
     }
 }
