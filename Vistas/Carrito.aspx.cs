@@ -58,18 +58,50 @@ namespace Vistas
 
         protected void GrdCarrito_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            DataTable dt = (DataTable)Session["Pedido"];
-            DataRow IdArticulo = dt.Rows[e.RowIndex];
+            /*DataTable dt = (DataTable)Session["Pedido"];
+            DataRow Fila = dt.Rows[e.RowIndex];
             //IdArticulo.get
             //dt.Rows[]["Cantidad"] = "3";
 
             foreach (DataRow row in dt.Rows)
             {
-                if (Convert.ToInt32(row["ID Artículo"].ToString()) == Convert.ToInt32(TxtCantidad.Text))
+                if (Convert.ToInt32(row["ID Artículo"].ToString()) == Convert.ToInt32(TxtId.Text))
                 {
-                    dt.Rows[Convert.ToInt32(row["ID Artículo"].ToString())]["Nombre"] = TxtCantidad.Text;
+                    dt.Rows[e.RowIndex]["Cantidad"] = TxtCantidad.Text;
                 }
             }
+            GrdCarrito.EditIndex = -1;
+            CargarGridView();*/
+
+
+            DataTable dt = (DataTable)Session["Pedido"];
+            GridViewRow row = GrdCarrito.Rows[e.RowIndex];
+            dt.Rows[row.DataItemIndex]["Cantidad"] = ((TextBox)row.Cells[4].Controls[0]).Text;
+
+            GrdCarrito.EditIndex = -1;
+            CargarGridView();
+        }
+
+        protected void Cambiar_Click(object sender, EventArgs e)
+        {
+            DataTable dt = (DataTable)Session["Pedido"];
+            //DataRow Fila = dt.Rows[e.];
+            //IdArticulo.get
+            //dt.Rows[]["Cantidad"] = "3";
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if (Convert.ToInt32(row["ID Artículo"].ToString()) == Convert.ToInt32(TxtId.Text))
+                {
+                    dt.Rows[Convert.ToInt32(TxtId.Text)]["Cantidad"] = TxtCantidad.Text;
+                }
+            }
+            CargarGridView();
+        }
+
+        protected void GrdCarrito_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            GrdCarrito.EditIndex = -1;
             CargarGridView();
         }
     }
