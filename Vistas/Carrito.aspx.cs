@@ -29,6 +29,10 @@ namespace Vistas
         {
             DataTable dt = (DataTable)Session["Pedido"];
 
+            DataRow IdArticulo = dt.Rows[e.RowIndex];
+            IdArticulo.Delete();
+            CargarGridView();
+
             //String IdArticulo = dt.Rows[e.RowIndex].Delete();
             //String IdArticulo = (GrdCarrito.Rows[e.RowIndex].FindControl("ID Artículo")).Text;
             //Label1.Text = IdArticulo;
@@ -47,7 +51,26 @@ namespace Vistas
 
         protected void GrdCarrito_RowEditing(object sender, GridViewEditEventArgs e)
         {
+            DataTable dt = (DataTable)Session["Pedido"];
+            DataRow IdArticulo = dt.Rows[e.NewEditIndex];
+            CargarGridView();
+        }
 
+        protected void GrdCarrito_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            DataTable dt = (DataTable)Session["Pedido"];
+            DataRow IdArticulo = dt.Rows[e.RowIndex];
+            //IdArticulo.get
+            //dt.Rows[]["Cantidad"] = "3";
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if (Convert.ToInt32(row["ID Artículo"].ToString()) == Convert.ToInt32(TxtCantidad.Text))
+                {
+                    dt.Rows[Convert.ToInt32(row["ID Artículo"].ToString())]["Nombre"] = TxtCantidad.Text;
+                }
+            }
+            CargarGridView();
         }
     }
 }
