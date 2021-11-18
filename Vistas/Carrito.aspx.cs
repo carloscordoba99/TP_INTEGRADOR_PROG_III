@@ -15,16 +15,22 @@ namespace Vistas
             if(IsPostBack == false)
             {
                 CargarGridView();
+                Decimal Total = GrdCarrito.Rows.Cast<GridViewRow>().Sum(x => Convert.ToDecimal(x.Cells[4].Text));
+                LblIdTotal.Text = Convert.ToString(Total);
             }
         }
 
         public void CargarGridView()
         {
-            DataTable dt = (DataTable)Session["Pedido"];
+            DataTable dt = (DataTable)Session["Pedido"];       
             GrdCarrito.DataSource = dt;
             GrdCarrito.DataBind();
         }
-
+        public void CargarTotal()
+        {
+            Decimal Total = GrdCarrito.Rows.Cast<GridViewRow>().Sum(x => Convert.ToDecimal(x.Cells[3].Text));
+            LblIdTotal.Text = Convert.ToString(Total);
+        }
         protected void GrdCarrito_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             DataTable dt = (DataTable)Session["Pedido"];
@@ -32,7 +38,8 @@ namespace Vistas
             DataRow IdArticulo = dt.Rows[e.RowIndex];
             IdArticulo.Delete();
             CargarGridView();
-
+            CargarTotal();
+    
             //String IdArticulo = dt.Rows[e.RowIndex].Delete();
             //String IdArticulo = (GrdCarrito.Rows[e.RowIndex].FindControl("ID Artículo")).Text;
             //Label1.Text = IdArticulo;
@@ -53,7 +60,8 @@ namespace Vistas
         {
             DataTable dt = (DataTable)Session["Pedido"];
             DataRow IdArticulo = dt.Rows[e.NewEditIndex];
-            CargarGridView();
+            /*CargarGridView();
+            CargarTotal();*/
         }
 
         protected void GrdCarrito_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -85,12 +93,15 @@ namespace Vistas
 
             GrdCarrito.EditIndex = -1;
             CargarGridView();
+            CargarTotal();
         }
 
         protected void GrdCarrito_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GrdCarrito.EditIndex = -1;
             CargarGridView();
+            CargarTotal();
         }
+
     }
 }
