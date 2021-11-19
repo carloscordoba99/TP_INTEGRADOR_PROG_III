@@ -38,13 +38,21 @@
             text-align: center;
             font-size: large;
         }
+        .auto-style14 {
+            width: 53%;
+            margin-left: 34px;
+        }
+        .auto-style17 {
+            width: 258px;
+            text-align: right;
+        }
+        .auto-style13 {
+            width: 258px;
+        }
         .auto-style18 {
             width: 191px;
             text-align: center;
             height: 23px;
-        }
-        .auto-style19 {
-            margin-left: 206px;
         }
     </style>
 </head>
@@ -80,39 +88,41 @@
             </table>
             <p class="auto-style12">
                 Modificar venta</p>
-            <p >
-                <asp:TextBox ID="txtbuscar" runat="server" CssClass="auto-style19" Width="229px"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" Text="Buscar" Width="86px" />
-            </p>
+            <table align="center" class="auto-style14">
+                <tr>
+                    <td class="auto-style17">Código cliente: </td>
+                    <td>
+                        <asp:TextBox ID="TxtCodCliente" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">Total factura: </td>
+                    <td>
+                        <asp:TextBox ID="TxtTotalFactura" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">Fecha factura: </td>
+                    <td>
+                        <asp:TextBox ID="TxtFecha" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style13">&nbsp;</td>
+                    <td>
+                        <asp:Button ID="BtnModificar" runat="server" Text="Modificar" Width="129px" />
+                        <asp:Label ID="LblMensaje" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style13">&nbsp;</td>
+                </tr>
+            </table>
         </div>
-        <asp:GridView ID="gvmodificarventa" runat="server" AutoGenerateColumns="False" AutoGenerateEditButton="True" Width="755px">
-            <Columns>
-                <asp:TemplateField HeaderText="Codigo Cliente">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="txtcodclienteedit" runat="server" Text='<%# Bind("Cod_Cliente_V") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="lblcodcliente" runat="server" Text='<%# Bind("Cod_Cliente_V") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Total Factura">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="txttotaledit" runat="server" Text='<%# Bind("TotalFactura_V") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="lblCantidad" runat="server" Text='<%# Bind("TotalFactura_V") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Fecha de Venta">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="txtfechaedit" runat="server" Text='<%# Bind("FechaFactura_V") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="lblFecha" runat="server" Text='<%# Bind("FechaFactura_V") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-        </asp:GridView>
     </form>
 </body>
 </html>

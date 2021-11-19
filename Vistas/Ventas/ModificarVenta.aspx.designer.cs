@@ -78,30 +78,48 @@ namespace Vistas.Ventas
         protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
 
         /// <summary>
-        /// Control txtbuscar.
+        /// Control TxtCodCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbuscar;
+        protected global::System.Web.UI.WebControls.TextBox TxtCodCliente;
 
         /// <summary>
-        /// Control Button1.
+        /// Control TxtTotalFactura.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox TxtTotalFactura;
 
         /// <summary>
-        /// Control gvmodificarventa.
+        /// Control TxtFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvmodificarventa;
+        protected global::System.Web.UI.WebControls.TextBox TxtFecha;
+
+        /// <summary>
+        /// Control BtnModificar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnModificar;
+
+        /// <summary>
+        /// Control LblMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblMensaje;
     }
 }

@@ -73,19 +73,6 @@
             width: 235px;
         }
         
-        .auto-style20 {
-            width: 258px;
-            text-align: right;
-            height: 24px;
-        }
-        .auto-style21 {
-            width: 235px;
-            height: 24px;
-        }
-        .auto-style22 {
-            height: 24px;
-        }
-        
     </style>
 </head>
 <body>
@@ -146,15 +133,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style20">Categoria</td>
-                    <td class="auto-style21">
+                    <td class="auto-style17">Categoria</td>
+                    <td class="auto-style19">
                         <asp:DropDownList ID="ddlCategoria" runat="server" Height="30px" Width="220px">
-                            <asp:ListItem>--Seleccione Categoria--</asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    <td class="auto-style22">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" InitialValue="--Seleccione Categoria--">Seleccione una categoria</asp:RequiredFieldValidator>
-                    </td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Stock</td>
@@ -169,12 +154,10 @@
                     <td class="auto-style17">Codigo Proveedor</td>
                     <td class="auto-style19">
                         <asp:DropDownList ID="ddlProveedor" runat="server" AppendDataBoundItems="True" Height="30px" Width="220px">
-                            <asp:ListItem>--Seleccione Proveedor--</asp:ListItem>
+                            <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" InitialValue="--Seleccione Proveedor--">Seleccione un proveedor</asp:RequiredFieldValidator>
-                    </td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style13">&nbsp;</td>

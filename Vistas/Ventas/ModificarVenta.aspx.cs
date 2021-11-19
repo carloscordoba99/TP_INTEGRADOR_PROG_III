@@ -16,10 +16,5 @@ namespace Vistas.Ventas
                 LblUsuario.Text = Session["Usuario"].ToString();
             }
         }
-
-        protected void BtnModificar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
