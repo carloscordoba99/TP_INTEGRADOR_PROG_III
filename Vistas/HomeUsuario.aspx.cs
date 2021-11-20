@@ -43,41 +43,7 @@ namespace Vistas
 
         public void AgregarItem(string cod, string des, decimal precio)
         {
-            if(ControlarSiExiste(cod) == false)
-            {
-                decimal total;
-                int cantidad = 1;
-                total = precio * cantidad;
-                Carrito = (DataTable)Session["Pedido"];
-                DataRow fila = Carrito.NewRow();
-                fila[0] = cod;
-                fila[1] = des;
-                fila[2] = precio;
-                fila[3] = (int)cantidad;
-                fila[4] = total;
-                Carrito.Rows.Add(fila);
-                Session["Pedido"] = Carrito;
-                LblProductoAgregado.Text = "Agregado: " + des;
-            }
-            else
-            {
-                LblProductoAgregado.Text = "EL PRODUCTO " + des + " YA FUE AGREGADO";
-            }
-        }
-
-        public bool ControlarSiExiste(string Cod)
-        {
-            bool Control = false;
-            DataTable ContenidoCarrito = (DataTable)Session["Pedido"];
-            foreach (DataRow dr in ContenidoCarrito.Rows)
-            {
-                if(Convert.ToString(dr["ID Artículo"]) == Cod)
-                {
-                    Control = true;
-                }
-            }
-
-            return Control;
+           
         }
 
         protected void BtnCerrarSesion_Click(object sender, EventArgs e)
@@ -97,10 +63,22 @@ namespace Vistas
             if (e.CommandName == "EventoAgregar")
             {
                 NegocioProducto NegProd = new NegocioProducto();
+                NegocioCarrito Carrito = new NegocioCarrito();
+                Session["IdUsuario"] = "1";                                 //// SACAR
+                String IdUsuario = Session["IdUsuario"].ToString();
                 string IdArticulo = e.CommandArgument.ToString();
                 string Descripcion = NegProd.GetDescripcion(IdArticulo);
                 decimal Precio = NegProd.GetPrecio(IdArticulo);
-                AgregarItem(IdArticulo, Descripcion, Precio);
+
+                Boolean Agregado = Carrito.AgregarCarrito(Convert.ToInt32(IdUsuario), Convert.ToInt32(IdArticulo), Descripcion, Precio, 1, Precio, false);
+                if (Agregado == true)
+                {
+                    LblProductoAgregado.Text = "PRODUCTO AGREGADO: " + Descripcion;
+                }
+                else
+                {
+                    LblProductoAgregado.Text = "EL PRODUCTO: '" + Descripcion + "' YA EXISTE";
+                }
             }
         }
     }

@@ -43,5 +43,12 @@ namespace Dao
             SqlParametros.Value = carritos.GetComprado();
 
         }
+        public DataTable GetCarrito(String Cod)
+        {
+            DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM CARRITOS WHERE CodUsuario = '"+ Cod +"'");
+            //DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM Categorias");
+
+            return tabla;
+        }
     }
 }

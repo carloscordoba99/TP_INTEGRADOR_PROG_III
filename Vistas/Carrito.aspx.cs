@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using Negocio;
 
 namespace Vistas
 {
@@ -20,16 +21,14 @@ namespace Vistas
 
         public void CargarGridView()
         {
-            DataTable dt = (DataTable)Session["Pedido"];       
-            GrdCarrito.DataSource = dt;
+            NegocioCarrito Carrito = new NegocioCarrito();
+            Session["IdUsuario"] = "1";                   //// SACAR
+            String CodUsuario = Session["IdUsuario"].ToString();
+            
+            GrdCarrito.DataSource = Carrito.GetCarrito(CodUsuario); ;
             GrdCarrito.DataBind();
 
-            Decimal Total = 0;
-            foreach (DataRow dr in dt.Rows)
-            {
-                Total += Convert.ToDecimal(dr[4]);
-            }
-            LblIdTotal.Text = Convert.ToString(Total);
+
         }
 
         protected void GrdCarrito_RowDeleting(object sender, GridViewDeleteEventArgs e)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Negocio;
 using Entidades;
 using Dao;
+using System.Data;
 
 namespace Negocio
 {
@@ -38,6 +39,11 @@ namespace Negocio
             {
                 return false;
             }
+        }
+        public DataTable GetCarrito(String Cod)
+        {
+            DaoCarritos dao = new DaoCarritos();
+            return dao.GetCarrito(Cod);
         }
     }
 }
