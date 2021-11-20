@@ -28,7 +28,8 @@ namespace Entidades
             this.SubTotal = SubTotal_;
             this.Comprado = Comprado_;
         }
-
+        public void SetCodCarritp(int x) { this.CodCarrito = x; }
+        public int GetCodCarrito() { return CodCarrito; }
         public void SetCodUsuario(int x) { this.CodUsuario = x; }
         public int GetCodUsuario() { return CodUsuario; }
         public void SetCodArticulo(int x) { this.CodArticulo = x; }

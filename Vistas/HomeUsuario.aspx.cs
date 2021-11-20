@@ -17,6 +17,7 @@ namespace Vistas
             //LblMensaje.Text = Session["Usuario"].ToString();
             if(IsPostBack == false)
             {
+               
                 CrearTablaPedido();
             }
         }
