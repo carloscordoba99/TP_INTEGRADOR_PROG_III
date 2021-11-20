@@ -27,7 +27,7 @@
             text-align: center;
         }
         .auto-style11 {
-            width: 423px;
+            width: 325px;
             text-align: center;
         }
         .auto-style14 {
@@ -63,6 +63,10 @@
             text-align: center;
             height: 39px;
         }
+        .auto-style21 {
+            text-align: center;
+            width: 308px;
+        }
         </style>
 </head>
 <body>
@@ -80,10 +84,14 @@
                     <td class="auto-style11">
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Usuario/EliminarUsuario.aspx">Eliminar Usuarios</asp:HyperLink>
                     </td>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style8">
+                    <td class="auto-style21">
                         <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Usuario/BuscarUsuario.aspx">Buscar Usuario</asp:HyperLink>
+                    </td>
+                    <td class="auto-style8">
+                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Usuario/EditarUsuario.aspx">Editar Usuario</asp:HyperLink>
+                    </td>
+                    <td class="auto-style8">
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/PanelAdm.aspx">Inicio</asp:HyperLink>
                     </td>
                 </tr>
                 </table>
