@@ -46,9 +46,20 @@ namespace Dao
         public DataTable GetCarrito(String Cod)
         {
             DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM CARRITOS WHERE CodUsuario = '"+ Cod +"'");
-            //DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM Categorias");
-
             return tabla;
+        }
+
+        public int EliminarCarrito(Carritos Carrito)
+        {
+            SqlCommand comando = new SqlCommand();
+            ArmarParametrosCarritoEliminar(ref comando, Carrito);
+            return dt.EjecutarProcedimientoAlmacenado(comando, "spEliminarCarrito");
+        }
+        private void ArmarParametrosCarritoEliminar(ref SqlCommand Comando, Carritos Carrito)
+        {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = Comando.Parameters.Add("@COD_CARRITO", SqlDbType.Int);
+            SqlParametros.Value = Carrito.GetCodCarrito();
         }
     }
 }

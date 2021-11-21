@@ -18,6 +18,9 @@ namespace Entidades
         private bool Comprado;
 
         public Carritos() { }
+        public Carritos(int CodCarrito_) { /// ESTE ES PARA ELIMINAR UN ARTICULO DEL CARRITO DEL USUAIRO
+            this.CodCarrito = CodCarrito_;
+        }
         public Carritos(int CodUsuario_, int CodArticulo_, string Descripcion_, decimal Precio_, int Cantidad_, decimal SubTotal_, bool Comprado_)
         {
             this.CodUsuario = CodUsuario_;

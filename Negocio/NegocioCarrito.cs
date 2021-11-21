@@ -45,5 +45,16 @@ namespace Negocio
             DaoCarritos dao = new DaoCarritos();
             return dao.GetCarrito(Cod);
         }
+        public bool EliminarCarrito(int cod)
+        {
+            DaoCarritos dao = new DaoCarritos();
+            Carritos Carrito = new Carritos();
+            Carrito.SetCodCarritp(cod);
+            int op = dao.EliminarCarrito(Carrito);
+            if (op == 1)
+                return true;
+            else
+                return false;
+        }
     }
 }
