@@ -27,25 +27,27 @@ namespace Vistas
             
             GrdCarrito.DataSource = Carrito.GetCarrito(CodUsuario); ;
             GrdCarrito.DataBind();
-
-
         }
 
         protected void GrdCarrito_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            String IdArticulo = ((Label)GrdCarrito.Rows[e.RowIndex].FindControl("LblCarrito")).Text;
+            String IdCarrito = ((Label)GrdCarrito.Rows[e.RowIndex].FindControl("LblCarrito")).Text;
 
             NegocioCarrito Carrito = new NegocioCarrito();
-            Boolean estado = Carrito.EliminarCarrito(Convert.ToInt32(IdArticulo));
-            LblIdTotal.Text = Convert.ToString(estado);
+            Carrito.EliminarCarrito(Convert.ToInt32(IdCarrito));
             CargarGridView();
         }
 
-        protected void GrdCarrito_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        protected void BtnActualizar_Click(object sender, EventArgs e)
         {
-            GrdCarrito.EditIndex = -1;
+            foreach (GridViewRow Fila in GrdCarrito.Rows)
+            {
+                String IdArticulo = ((Label)Fila.FindControl("LblCarrito")).Text;
+                String Cantidad = ((TextBox)Fila.FindControl("TxtCantidad")).Text;
+                NegocioCarrito Carrito = new NegocioCarrito();
+                Carrito.ActualizarTablaCantidadPrecio(Convert.ToInt32(IdArticulo), Convert.ToInt32(Cantidad));
+            }
             CargarGridView();
         }
-
     }
 }

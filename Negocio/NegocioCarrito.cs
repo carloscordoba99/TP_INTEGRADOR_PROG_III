@@ -28,6 +28,10 @@ namespace Negocio
             DaoCarritos dao = new DaoCarritos();
             if (dao.ExisteCarrito(Carrito) == false)
             {
+                /*if(dao.ContieneElArticulo(Carrito) == false)
+                {
+                    
+                }*/
                 cantFilas = dao.AgregarCarrito(Carrito);
             }
 
@@ -51,6 +55,18 @@ namespace Negocio
             Carritos Carrito = new Carritos();
             Carrito.SetCodCarritp(cod);
             int op = dao.EliminarCarrito(Carrito);
+            if (op == 1)
+                return true;
+            else
+                return false;
+        }
+        public bool ActualizarTablaCantidadPrecio(int Cod, int Cant)
+        {
+            DaoCarritos dao = new DaoCarritos();
+            Carritos Carrito = new Carritos();
+            Carrito.SetCodCarritp(Cod);
+            Carrito.SetCantidad(Cant);
+            int op = dao.ActualizarTablaCantidadPrecio(Carrito);
             if (op == 1)
                 return true;
             else

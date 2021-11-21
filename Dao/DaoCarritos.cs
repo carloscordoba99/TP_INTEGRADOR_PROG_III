@@ -15,9 +15,13 @@ namespace Dao
         AccesoDatos dt = new AccesoDatos();
         public Boolean ExisteCarrito(Carritos Carrito)
         {
-            String consulta = "Select * from Carritos where CodCarrito='" + Carrito.GetCodCarrito() + "' AND CodUsuario='" + Carrito.GetCodUsuario() +"'";
+            String consulta = "Select * from Carritos where CodCarrito='" + Carrito.GetCodCarrito() + "'";
             return dt.existe(consulta);
         }
+        /*public Boolean ContieneElArticulo(Carritos carritos)
+        {
+
+        }*/
         public int AgregarCarrito(Carritos Carrito)
         {;
             SqlCommand comando = new SqlCommand();
@@ -60,6 +64,20 @@ namespace Dao
             SqlParameter SqlParametros = new SqlParameter();
             SqlParametros = Comando.Parameters.Add("@COD_CARRITO", SqlDbType.Int);
             SqlParametros.Value = Carrito.GetCodCarrito();
+        }
+        public int ActualizarTablaCantidadPrecio(Carritos Carrito)
+        {
+            SqlCommand comando = new SqlCommand();
+            ArmarParametrosCarritoActualizar(ref comando, Carrito);
+            return dt.EjecutarProcedimientoAlmacenado(comando, "spActualizarCarrito");
+        }
+        private void ArmarParametrosCarritoActualizar(ref SqlCommand Comando, Carritos Carrito)
+        {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = Comando.Parameters.Add("@COD_CARRITO", SqlDbType.Int);
+            SqlParametros.Value = Carrito.GetCodCarrito();
+            SqlParametros = Comando.Parameters.Add("@CANTIDAD", SqlDbType.Int);
+            SqlParametros.Value = Carrito.GetCantidad();
         }
     }
 }
