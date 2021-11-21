@@ -80,12 +80,12 @@
                                     <asp:Label ID="lbl_it_Apellido" runat="server" Text='<%# Bind("Apellido") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Email">
+                            <asp:TemplateField HeaderText="Provincia">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txt_eit_Email" runat="server" Text='<%# Bind("Email") %>'></asp:TextBox>
+                                    <asp:TextBox ID="txt_eit_Provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:TextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="lbl_it_Email" runat="server" Text='<%# Bind("Email") %>'></asp:Label>
+                                    <asp:Label ID="lbl_it_Provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Celular">
@@ -112,20 +112,12 @@
                                     <asp:Label ID="lbl_it_Direccion" runat="server" Text='<%# Bind("Direccion") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Contraseña">
+                            <asp:TemplateField HeaderText="Codigo Usuario">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txt_eit_Contrasena" runat="server" Text='<%# Bind("Contrasena") %>'></asp:TextBox>
+                                    <asp:TextBox ID="txt_eit_CodUsuario" runat="server" Text='<%# Bind("CodUsuario") %>'></asp:TextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="lbl_it_Contrasena" runat="server" Text='<%# Bind("Contrasena") %>'></asp:Label>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Tipo de Usuario">
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="txt_eit_tipo_usuario" runat="server" Text='<%# Bind("Tipo_Usuario") %>'></asp:TextBox>
-                                </EditItemTemplate>
-                                <ItemTemplate>
-                                    <asp:Label ID="lbl_it_tipousuario" runat="server" Text='<%# Bind("Tipo_Usuario") %>'></asp:Label>
+                                    <asp:Label ID="lbl_it_tipousuario" runat="server" Text='<%# Bind("CodUsuario") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

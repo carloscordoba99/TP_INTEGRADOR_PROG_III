@@ -59,5 +59,10 @@ namespace Dao
             SqlParametros = comando.Parameters.Add("@CodVenta", SqlDbType.Int);
             SqlParametros.Value = Venta_.GetIdFactura();
         }
+
+        private DataTable GetTablaVentas (String Nombre, String Sql)
+        {
+
+        }
     }
 }

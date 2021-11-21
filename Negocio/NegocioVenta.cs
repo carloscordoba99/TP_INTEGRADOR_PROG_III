@@ -53,5 +53,10 @@ namespace Negocio
             if (op == 1) return true;
             else return false;
         }
+
+        public DataTable ObtenerTodasLasVentas()
+    {
+        return GetVentas("Libros", "Select * from Ventas");
+    }
     }
 }

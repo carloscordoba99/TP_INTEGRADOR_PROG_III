@@ -88,40 +88,35 @@
             </table>
             <p class="auto-style12">
                 Modificar venta</p>
-            <table align="center" class="auto-style14">
-                <tr>
-                    <td class="auto-style17">Código cliente: </td>
-                    <td>
-                        <asp:TextBox ID="TxtCodCliente" runat="server" Width="216px"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style17">Total factura: </td>
-                    <td>
-                        <asp:TextBox ID="TxtTotalFactura" runat="server" Width="216px"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style17">Fecha factura: </td>
-                    <td>
-                        <asp:TextBox ID="TxtFecha" runat="server" Width="216px"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style17">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style13">&nbsp;</td>
-                    <td>
-                        <asp:Button ID="BtnModificar" runat="server" Text="Modificar" Width="129px" />
-                        <asp:Label ID="LblMensaje" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style13">&nbsp;</td>
-                </tr>
-            </table>
+            
+        </div>
+        <div>
+
+            <asp:GridView ID="grdVentas" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center">
+                <Columns>
+                    <asp:TemplateField HeaderText="Codigo Venta">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_CodigoVenta" runat="server" Text='<%# Bind("Cod_Venta_V") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Codigo Cliente">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_CodCliente" runat="server" Text='<%# Bind("Cod_Cliente_V") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Total Factura">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_eit_TotalFact" runat="server" Text='<%# Bind("TotalFactura_V") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Fecha Factura">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_eit_FechaFact" runat="server" Text='<%# Bind("FechaFactura_V") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+
         </div>
     </form>
 </body>

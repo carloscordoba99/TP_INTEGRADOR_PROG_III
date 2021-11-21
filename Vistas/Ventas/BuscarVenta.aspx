@@ -36,9 +36,6 @@
             width: 491px;
             text-align: right;
         }
-        .auto-style15 {
-            width: 247px;
-        }
         .auto-style16 {
             width: 226px;
         }
@@ -51,6 +48,27 @@
             width: 176px;
             text-align: center;
             height: 23px;
+        }
+        .auto-style19 {
+            width: 202px;
+            text-align: right;
+            height: 30px;
+        }
+        .auto-style20 {
+            width: 202px;
+        }
+        .auto-style21 {
+            width: 226px;
+            text-align: center;
+            height: 30px;
+        }
+        .auto-style22 {
+            width: 491px;
+            text-align: right;
+            height: 30px;
+        }
+        .auto-style23 {
+            height: 30px;
         }
         </style>
 </head>
@@ -87,29 +105,33 @@
             <strong>Buscar </strong>venta</p>
         <table class="auto-style1">
             <tr>
-                <td class="auto-style13">Ingrese código de la venta: </td>
-                <td class="auto-style16">
+                <td class="auto-style22">Ingrese código de la venta: </td>
+                <td class="auto-style21">
                     <asp:TextBox ID="TxtIdVenta" runat="server" Width="320px"></asp:TextBox>
                 </td>
-                <td class="auto-style15">
+                <td class="auto-style19">
                         <asp:Button ID="BtnBuscar" runat="server" CssClass="auto-style14" Text="Buscar" Width="113px" OnClick="BtnBuscar_Click" />
                 </td>
-                <td>
+                <td class="auto-style23">
                         <asp:Button ID="BtnMostarTodos" runat="server" OnClick="btnMostarTodos_Click" Text="Mostar Todos" />
                 </td>
             </tr>
+            
+            
             <tr>
-                <td class="auto-style13">&nbsp;</td>
-                <td class="auto-style16">
+                <td class="auto-style22">&nbsp;</td>
+                <td class="auto-style21">
                     &nbsp;</td>
-                <td class="auto-style15">
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
+                <td class="auto-style19">
+                        &nbsp;</td>
+                <td class="auto-style23">
+                        &nbsp;</td>
             </tr>
+            
+            
             <tr>
                 <td class="auto-style5" colspan="4">
-            <asp:GridView ID="GrdVenta" runat="server" Width="1392px">
+            <asp:GridView ID="GrdVenta" runat="server" Width="1392px" HorizontalAlign="Center">
             </asp:GridView>
                 </td>
             </tr>
