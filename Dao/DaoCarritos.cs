@@ -15,7 +15,7 @@ namespace Dao
         AccesoDatos dt = new AccesoDatos();
         public Boolean ExisteCarrito(Carritos Carrito)
         {
-            String consulta = "Select * from Carritos where CodCarrito='" + Carrito.GetCodCarrito() + "'";
+            String consulta = "Select * from Carritos where CodCarrito='" + Carrito.GetCodCarrito() + "' AND CodUsuario='" + Carrito.GetCodUsuario() +"'";
             return dt.existe(consulta);
         }
         public int AgregarCarrito(Carritos Carrito)

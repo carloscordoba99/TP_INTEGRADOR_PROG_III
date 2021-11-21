@@ -22,10 +22,10 @@ namespace Vistas.Ventas
         }
 
 
-        private void CargarGridViewVentas()
+        /*private void CargarGridViewVentas()
         {
             grdVentas.DataSource = UpdateVenta.ObtenerTodasLasVentas();
             grdVentas.DataBind();
-        }
+        }*/
     }
 }

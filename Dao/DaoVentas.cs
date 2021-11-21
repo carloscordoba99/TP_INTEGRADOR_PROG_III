@@ -60,9 +60,9 @@ namespace Dao
             SqlParametros.Value = Venta_.GetIdFactura();
         }
 
-        private DataTable GetTablaVentas (String Nombre, String Sql)
+        /*private DataTable GetTablaVentas (String Nombre, String Sql)
         {
 
-        }
+        }*/
     }
 }
