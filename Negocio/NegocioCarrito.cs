@@ -28,11 +28,10 @@ namespace Negocio
             DaoCarritos dao = new DaoCarritos();
             if (dao.ExisteCarrito(Carrito) == false)
             {
-                /*if(dao.ContieneElArticulo(Carrito) == false)
+                if(dao.ContieneElArticulo(Carrito) == false)
                 {
-                    
-                }*/
-                cantFilas = dao.AgregarCarrito(Carrito);
+                    cantFilas = dao.AgregarCarrito(Carrito);
+                }
             }
 
             if (cantFilas == 1)

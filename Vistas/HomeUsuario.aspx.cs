@@ -15,13 +15,12 @@ namespace Vistas
         {
             
             //LblMensaje.Text = Session["Usuario"].ToString();
-            if(IsPostBack == false)
+            /*if(IsPostBack == false)
             {
-               
                 CrearTablaPedido();
-            }
+            }*/
         }
-        DataTable Dt;
+       /* DataTable Dt;
         DataTable Carrito = new DataTable();
         public DataTable CrearTablaPedido()
         {
@@ -39,13 +38,13 @@ namespace Vistas
             }
 
             return Dt;
-        }
-
+        }*/
+       /*
         public void AgregarItem(string cod, string des, decimal precio)
         {
            
         }
-
+        */
         protected void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
             Session["Usuario"] = null;

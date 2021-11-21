@@ -18,10 +18,11 @@ namespace Dao
             String consulta = "Select * from Carritos where CodCarrito='" + Carrito.GetCodCarrito() + "'";
             return dt.existe(consulta);
         }
-        /*public Boolean ContieneElArticulo(Carritos carritos)
+        public Boolean ContieneElArticulo(Carritos Carrito)
         {
-
-        }*/
+            String consulta = "Select * from Carritos where CodArticulo='" + Carrito.GetCodArticulo() + "' AND CodUsuario='"+Carrito.GetCodUsuario()+"' AND Comprado=0";
+            return dt.existe(consulta);
+        }
         public int AgregarCarrito(Carritos Carrito)
         {;
             SqlCommand comando = new SqlCommand();
