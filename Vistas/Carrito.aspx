@@ -54,7 +54,7 @@
                 </Columns>
             </asp:GridView>
             <br />
-            Total a pagar: $ <asp:Label ID="LblIdTotal" runat="server"></asp:Label>
+            Total a pagar: $ <asp:Label ID="LblTotal" runat="server"></asp:Label>
             <br />
             <br />
             <asp:Button ID="BtnActualizar" runat="server" OnClick="BtnActualizar_Click" Text="Actualizar tabla" />

@@ -27,6 +27,13 @@ namespace Vistas
             
             GrdCarrito.DataSource = Carrito.GetCarrito(CodUsuario); ;
             GrdCarrito.DataBind();
+
+            Decimal Total = 0;
+            foreach(GridViewRow Fila in GrdCarrito.Rows)
+            {
+                Total += Convert.ToDecimal(((Label)Fila.Cells[6].FindControl("LblSubtotal")).Text);
+            }
+            LblTotal.Text = Convert.ToString(Total);
         }
 
         protected void GrdCarrito_RowDeleting(object sender, GridViewDeleteEventArgs e)
