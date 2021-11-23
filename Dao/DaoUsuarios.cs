@@ -109,23 +109,23 @@ namespace Dao
 
         public Boolean VerificarUsuario(Usuario User)
         {
-            String consulta = "Select * from Usuarios where IdCliente='" + User.GetIdCliente() + "' AND Contrasena ='" + User.GetPassword() + "'";
+            String consulta = "Select * from Usuarios where Dni='" + User.GetDni() + "' AND Contrasena ='" + User.GetPassword() + "'";
             return dt.existe(consulta);
         }
         public string GetNombreYApellido(Usuario User)
         {
-            String consulta = "Select * from Usuarios where IdCliente ='" + User.GetIdCliente() + "' AND Contrasena='" + User.GetPassword() + "'";
+            String consulta = "Select * from Usuarios where Dni ='" + User.GetDni() + "' AND Contrasena='" + User.GetPassword() + "'";
             return dt.ObtenerNombreYApellidoUsuario(consulta);
         }
 
         public string GetTraerTipoUsuario(Usuario User)
         {
-            String consulta = "Select * from Usuarios where IdCliente ='" + User.GetIdCliente() + "' AND Contrasena='" + User.GetPassword() + "'";
+            String consulta = "Select * from Usuarios where Dni ='" + User.GetDni() + "' AND Contrasena='" + User.GetPassword() + "'";
             return dt.ObtenerTipoUsuario(consulta);
         }
         public string GetTraerIdUsuario(Usuario User)
         {
-            String consulta = "Select * from Usuarios where IdCliente ='" + User.GetIdCliente() + "' AND Contrasena='" + User.GetPassword() + "'";
+            String consulta = "Select * from Usuarios where Dni ='" + User.GetDni() + "' AND Contrasena='" + User.GetPassword() + "'";
             return dt.ObtenerIdUsuario(consulta);
         }
     }

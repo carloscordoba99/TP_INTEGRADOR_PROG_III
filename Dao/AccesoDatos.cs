@@ -196,7 +196,7 @@ namespace Dao
             SqlDataReader datos = cmd.ExecuteReader();
             if (datos.Read())
             {
-                TipoUsuario = Convert.ToString(datos[8]);
+                TipoUsuario = Convert.ToString(datos[9]);
             }
             return TipoUsuario;
         }

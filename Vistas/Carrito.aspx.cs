@@ -77,7 +77,7 @@ namespace Vistas
             String Compra = "";
             foreach (GridViewRow Fila in GrdCarrito.Rows)
             {
-                Compra += " - " + Convert.ToString(((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text) + " " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + " Por $ " + Convert.ToString(((Label)Fila.Cells[3].FindControl("LblPrecio")).Text) + " <br>";
+                Compra += " - " + Convert.ToString(((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text) + " " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + " Por $ " + Convert.ToString(((Label)Fila.Cells[3].FindControl("LblPrecio")).Text) + " la unidad. <br>";
             }
             Compra += " Por el Total de: " + LblTotal.Text;
             LblCompra.Text = "Usted Realizo la compra de: <br>" + Compra;

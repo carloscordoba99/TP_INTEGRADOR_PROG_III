@@ -87,11 +87,11 @@ namespace Negocio
 
             dao.ModificarDatos(user);
         }
-        public bool ValidarUsuario(String Id, String Contraseña)
+        public bool ValidarUsuario(String Dni, String Contraseña)
         {
             DaoUsuarios dao = new DaoUsuarios();
             Usuario user = new Usuario();
-            user.SetIdCliente(Convert.ToInt32(Id));
+            user.SetDni(Dni);
             user.SetPassword(Contraseña);
             bool aux = dao.VerificarUsuario(user);
             if (aux == true)
@@ -104,29 +104,29 @@ namespace Negocio
             }
         }
 
-        public string GetNombreYApellidoUsuario(String Id, String Contraseña)
+        public string GetNombreYApellidoUsuario(String Dni, String Contraseña)
         {
             DaoUsuarios dao = new DaoUsuarios();
             Usuario user = new Usuario();
-            user.SetIdCliente(Convert.ToInt32(Id));
+            user.SetDni(Dni);
             user.SetPassword(Contraseña);
             String NombreCompleto = dao.GetNombreYApellido(user);
             return NombreCompleto;
         }
-        public string GetTraerTipoUsuario(String Id, String Contraseña)
+        public string GetTraerTipoUsuario(String Dni, String Contraseña)
         {
             DaoUsuarios dao = new DaoUsuarios();
             Usuario user = new Usuario();
-            user.SetIdCliente(Convert.ToInt32(Id));
+            user.SetDni(Dni);
             user.SetPassword(Contraseña);
             String TipoUsuario = dao.GetTraerTipoUsuario(user);
             return TipoUsuario;
         }
-        public string GetTraerIdUsuario(String Id, String Contraseña)
+        public string GetTraerIdUsuario(String Dni, String Contraseña)
         {
             DaoUsuarios dao = new DaoUsuarios();
             Usuario user = new Usuario();
-            user.SetIdCliente(Convert.ToInt32(Id));
+            user.SetDni(Dni);
             user.SetPassword(Contraseña);
             String IdUsuario = dao.GetTraerIdUsuario(user);
             return IdUsuario;

@@ -128,7 +128,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style17"></td>
-                    <td class="auto-style18">ID:</td>
+                    <td class="auto-style18">DNI:</td>
                     <td class="auto-style19">
                         <asp:TextBox ID="TxtUsuario" runat="server" Height="25px" Width="234px"></asp:TextBox>
                     </td>
