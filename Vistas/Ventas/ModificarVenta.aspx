@@ -92,24 +92,36 @@
         </div>
         <div>
 
-            <asp:GridView ID="grdVentas" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center">
+            <asp:GridView ID="grdVentas" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" AutoGenerateEditButton="True" OnRowCancelingEdit="grdVentas_RowCancelingEdit" OnRowEditing="grdVentas_RowEditing" OnRowUpdating="grdVentas_RowUpdating">
                 <Columns>
                     <asp:TemplateField HeaderText="Codigo Venta">
+                        <EditItemTemplate>
+                            <asp:Label ID="lbl_eit_CodVenta" runat="server" Text='<%# Bind("Cod_Venta_V") %>'></asp:Label>
+                        </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_CodigoVenta" runat="server" Text='<%# Bind("Cod_Venta_V") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Codigo Cliente">
+                        <EditItemTemplate>
+                            <asp:Label ID="txt_eit_CodCliente" runat="server" Text='<%# Bind("Cod_Cliente_V") %>'></asp:Label>
+                        </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_CodCliente" runat="server" Text='<%# Bind("Cod_Cliente_V") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Total Factura">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_Totalfact" runat="server" Text='<%# Bind("TotalFactura_V") %>'></asp:TextBox>
+                        </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_eit_TotalFact" runat="server" Text='<%# Bind("TotalFactura_V") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Fecha Factura">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_FechaF" runat="server" Text='<%# Bind("FechaFactura_V") %>'></asp:TextBox>
+                        </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_eit_FechaFact" runat="server" Text='<%# Bind("FechaFactura_V") %>'></asp:Label>
                         </ItemTemplate>

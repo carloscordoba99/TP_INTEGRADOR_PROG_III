@@ -54,9 +54,23 @@ namespace Negocio
             else return false;
         }
 
-        /*public DataTable ObtenerTodasLasVentas()
+        public DataTable ObtenerTodasLasVentas()
         {
-        return GetVentas("Libros", "Select * from Ventas");
-        }*/
+            DaoVentas dao = new DaoVentas();
+            return dao.GetVentas();
+        }
+
+        public void ActualizarVenta(String codv, String codcli, String Total, String fecha)
+        {
+            Venta vta = new Venta();
+            vta.SetIdFactura(Convert.ToInt32(codv));
+            vta.SetIdCliente(Convert.ToInt32(codcli));
+            vta.SetTotalFactura(Convert.ToDecimal(Total));
+            vta.SetFechaVenta(Convert.ToDateTime(fecha));
+
+            DaoVentas dao = new DaoVentas();
+            dao.ModificarVenta(vta);
+        }
+
     }
 }

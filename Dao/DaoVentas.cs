@@ -60,9 +60,27 @@ namespace Dao
             SqlParametros.Value = Venta_.GetIdFactura();
         }
 
-        /*private DataTable GetTablaVentas (String Nombre, String Sql)
+        private void ArmarParametroModificar(ref SqlCommand comando, Venta Venta_)
         {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = comando.Parameters.Add("@CODVENTA", SqlDbType.Int);
+            SqlParametros.Value = Venta_.GetIdFactura();
+            SqlParametros = comando.Parameters.Add("@CODCLIENTE", SqlDbType.Int);
+            SqlParametros.Value = Venta_.GetIdCliente();
+            SqlParametros = comando.Parameters.Add("@TOTALFACT", SqlDbType.Decimal);
+            SqlParametros.Value = Venta_.GetTotalFactura();
+            SqlParametros = comando.Parameters.Add("@FECHAVTA", SqlDbType.Date);
+            SqlParametros.Value = Venta_.GetFechaVenta();
+        }
 
-        }*/
+        public int ModificarVenta(Venta obj)
+        {
+            SqlCommand comando = new SqlCommand();
+            ArmarParametroModificar(ref comando, obj);
+            return dt.EjecutarProcedimientoAlmacenado(comando, "spActualizarVenta");
+            
+        }
+
+        
     }
 }
