@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using Negocio;
+using System.Net.Mail;
+using System.Net;
 
 namespace Vistas
 {
@@ -55,6 +57,30 @@ namespace Vistas
                 Carrito.ActualizarTablaCantidadPrecio(Convert.ToInt32(IdArticulo), Convert.ToInt32(Cantidad));
             }
             CargarGridView();
+        }
+
+        protected void BtnComprar_Click(object sender, EventArgs e)
+        {
+            /* NegocioUsuarios Usuario = new NegocioUsuarios();
+             String Correo = "";
+
+             SmtpClient smtp = new SmtpClient("smpt.alumnos.frgp.utn.edu.ar", 587);
+             smtp.Credentials = new NetworkCredential("francisco.crestanello@alumnos.frgp.utn.edu.ar","1234");
+             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+             smtp.EnableSsl = true;
+             smtp.UseDefaultCredentials = false;
+
+             MailMessage Mail = new MailMessage();
+             Mail.From = new MailAddress(Correo, "FACTURA DE COMPRA");
+             Mail.To.Add(new MailAddress(""))
+             */
+            String Compra = "";
+            foreach (GridViewRow Fila in GrdCarrito.Rows)
+            {
+                Compra += " - " + Convert.ToString(((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text) + " " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + " Por $ " + Convert.ToString(((Label)Fila.Cells[3].FindControl("LblPrecio")).Text) + " <br>";
+            }
+            Compra += " Por el Total de: " + LblTotal.Text;
+            LblCompra.Text = "Usted Realizo la compra de: <br>" + Compra;
         }
     }
 }

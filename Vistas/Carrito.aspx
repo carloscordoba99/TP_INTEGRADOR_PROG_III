@@ -60,7 +60,9 @@
             <asp:Button ID="BtnActualizar" runat="server" OnClick="BtnActualizar_Click" Text="Actualizar tabla" />
             <br />
             <br />
-            <asp:Button ID="BtnComprar" runat="server" Text="Realizar compra" />
+            <asp:Button ID="BtnComprar" runat="server" Text="Realizar compra" OnClick="BtnComprar_Click" />
+            &nbsp;<br />
+            <asp:Label ID="LblCompra" runat="server"></asp:Label>
             <br />
         </div>
     </form>
