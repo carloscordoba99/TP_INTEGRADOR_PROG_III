@@ -84,7 +84,6 @@ namespace Negocio
             user.SetDni(dni);
             user.SetDireccion(direccion);
             user.SetEmail(email);
-
             user.SetPassword(contrasena);
             user.SetTipoUsuario(Convert.ToBoolean(tipo_usuario));
 

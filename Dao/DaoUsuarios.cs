@@ -103,7 +103,7 @@ namespace Dao
             Sqlparametros.Value = user.GetDni();
             Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDireccion();
-            Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.VarChar, 50);
             Sqlparametros.Value = user.GetEmail();
             Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 50);
             Sqlparametros.Value = user.GetPassword();
