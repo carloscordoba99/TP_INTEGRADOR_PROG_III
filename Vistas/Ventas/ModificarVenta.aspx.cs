@@ -48,7 +48,7 @@ namespace Vistas.Ventas
         protected void grdVentas_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             String codventa = ((Label)grdVentas.Rows[e.RowIndex].FindControl("lbl_eit_CodVenta")).Text;
-            String codcliente = ((TextBox)grdVentas.Rows[e.RowIndex].FindControl("txt_eit_CodCliente")).Text;
+            String codcliente = ((Label)grdVentas.Rows[e.RowIndex].FindControl("lbl_eit_CodCliente")).Text;
             String totalventa = ((TextBox)grdVentas.Rows[e.RowIndex].FindControl("txt_eit_Totalfact")).Text;
             String fechafact = ((TextBox)grdVentas.Rows[e.RowIndex].FindControl("txt_eit_FechaF")).Text;
 
@@ -59,5 +59,7 @@ namespace Vistas.Ventas
             CargarGridViewVentas();
 
         }
+
+       
     }
 }

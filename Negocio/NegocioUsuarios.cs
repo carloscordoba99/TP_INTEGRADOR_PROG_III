@@ -23,7 +23,7 @@ namespace Negocio
             return dao.getUsuario(id);
         }
 
-        public bool AgregarUsuario(string nombre, string apellido, string email, string celular,string dni, string direccion, string contrasena,string tipo )
+        public bool AgregarUsuario(string nombre, string apellido, string email, string celular,string dni, string direccion, string provincia, string contrasena,string tipo )
         {
             int cantFilas = 0;
 
@@ -34,8 +34,9 @@ namespace Negocio
             user.SetTelefono(celular);
             user.SetDni(dni);
             user.SetDireccion(direccion);
+            user.SetProvincia(provincia);
             user.SetPassword(contrasena);
-            user.SetTipoUsuario(tipo);
+            user.SetTipoUsuario(Convert.ToBoolean( tipo));
 
             DaoUsuarios dao = new DaoUsuarios();
             if(dao.ExisteUsuario(user) == false)
@@ -71,19 +72,21 @@ namespace Negocio
         }
 
 
-        public void ModificarUsuario(String idcliente,string nombre,string apellido,string email,string celular,string dni,string direccion,string contrasena, string tipo_usuario)
+        public void ModificarUsuario(String idcliente,string nombre,string apellido, string Provincia, string celular,string dni,string direccion, string email, string contrasena, String tipo_usuario)
         {
             DaoUsuarios dao = new DaoUsuarios();
             Usuario user = new Usuario();
             user.SetIdCliente(Convert.ToInt32(idcliente));
             user.SetNombre(nombre);
             user.SetApellido(apellido);
-            user.SetEmail(email);
+            user.SetProvincia(Provincia);
             user.SetTelefono(celular);
             user.SetDni(dni);
             user.SetDireccion(direccion);
+            user.SetEmail(email);
+
             user.SetPassword(contrasena);
-            user.SetTipoUsuario(tipo_usuario);
+            user.SetTipoUsuario(Convert.ToBoolean(tipo_usuario));
 
             dao.ModificarDatos(user);
         }

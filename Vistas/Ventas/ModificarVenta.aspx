@@ -104,7 +104,7 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Codigo Cliente">
                         <EditItemTemplate>
-                            <asp:Label ID="txt_eit_CodCliente" runat="server" Text='<%# Bind("Cod_Cliente_V") %>'></asp:Label>
+                            <asp:Label ID="lbl_eit_CodCliente" runat="server" Text='<%# Bind("Cod_Cliente_V") %>'></asp:Label>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_CodCliente" runat="server" Text='<%# Bind("Cod_Cliente_V") %>'></asp:Label>

@@ -41,14 +41,15 @@ namespace Vistas.Usuario
             String s_IdUsuario = ((Label)grdUsuarios.Rows[e.RowIndex].FindControl("lbl_eit_idUsuario")).Text;
             String s_Nombre = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Nombre")).Text;
             string s_Apellido = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Apellido")).Text;
-            String s_Email = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Email")).Text;
+            String s_Provincia = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Provincia")).Text;
             String s_Celular = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Celular")).Text;
             String s_Dni = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Dni")).Text;
             String s_Direccion = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Direccion")).Text;
-            String s_Contrasena = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Contrasena")).Text;
-            String s_tipousuario = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_tipo_usuario")).Text;
+            String s_Email = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Email")).Text;
+            String s_Contrasena = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_contrasena")).Text;
+            String s_tipousuario = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_TipoUsuario")).Text;
 
-            negUsuarios.ModificarUsuario(s_IdUsuario, s_Nombre, s_Apellido, s_Email, s_Celular, s_Dni, s_Direccion, s_Contrasena, s_tipousuario);
+            negUsuarios.ModificarUsuario(s_IdUsuario, s_Nombre, s_Apellido, s_Provincia, s_Celular, s_Dni, s_Direccion, s_Email, s_Contrasena, s_tipousuario);
             
             grdUsuarios.EditIndex = -1;
             CargarGridViewUsuarios();

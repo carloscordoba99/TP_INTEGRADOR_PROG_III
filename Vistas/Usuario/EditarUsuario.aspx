@@ -112,13 +112,31 @@
                                     <asp:Label ID="lbl_it_Direccion" runat="server" Text='<%# Bind("Direccion") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Codigo Usuario">
+                            <asp:TemplateField HeaderText="Email">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txt_eit_CodUsuario" runat="server" Text='<%# Bind("CodUsuario") %>'></asp:TextBox>
+                                    <asp:TextBox ID="txt_eit_Email" runat="server" Text='<%# Bind("Email") %>'></asp:TextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="lbl_it_tipousuario" runat="server" Text='<%# Bind("CodUsuario") %>'></asp:Label>
+                                    <asp:Label ID="lbl_it_Email" runat="server" Text='<%# Bind("Email") %>'></asp:Label>
                                 </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Contraseña" >
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="txt_eit_contrasena" runat="server" Text='<%# Bind("Contrasena") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="lbl_it_contrasena" runat="server" Text='<%# Bind("Contrasena") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Tipo de Usuario" >
+                               
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="txt_eit_TipoUsuario" runat="server" Text='<%# Bind("TipoUsuario") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="lbl_it_TipoUsuario" runat="server" Text='<%# Bind("TipoUsuario") %>'></asp:Label>
+                                </ItemTemplate>
+                               
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>

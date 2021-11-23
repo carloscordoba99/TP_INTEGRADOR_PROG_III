@@ -30,7 +30,7 @@ namespace Vistas.Usuario
         {
             Boolean agregado = false;
 
-            agregado = negUsuarios.AgregarUsuario(txtNom.Text, txtApellido.Text, txtEmail.Text, txtNumCel.Text, txtDni.Text, TxtDireccion.Text, txtContraseña.Text, ddlTipo.SelectedItem.Text);
+            agregado = negUsuarios.AgregarUsuario(txtNom.Text, txtApellido.Text, txtEmail.Text, txtNumCel.Text, txtDni.Text, TxtDireccion.Text, TxtProvincia.Text ,txtContraseña.Text, ddlTipo.SelectedItem.ToString());
             if (agregado == true)
             {
                 lblMensaje.Text = "El Usuario ha sido agregado";

@@ -11,19 +11,21 @@ namespace Entidades
         private int IdCliente;
         private String Nombre;
         private String Apellido;
+        private String Provincia;
         private string Email;
         private String Telefono;
         private String Dni;
         private String Direccion;
         private String Password;
-        private string TipoUsuario;
-
+        private Boolean TipoUsuario;
+         
         public Usuario() { }
-        public Usuario(int IdCliente_, String Nombre_, String Apellido_, String Email_, String Telefono_, string Dni_, String Direccion_, String Password_, String TipoUsuario_)
+        public Usuario(int IdCliente_, String Nombre_, String Apellido_, String Provincia_, String Email_, String Telefono_, String Dni_, String Direccion_, String Password_, Boolean TipoUsuario_)
         {
             this.IdCliente = IdCliente_;
             this.Nombre = Nombre_;
             this.Apellido = Apellido_;
+            this.Provincia = Provincia_;
             this.Email = Email_;
             this.Telefono = Telefono_;
             this.Dni = Dni_;
@@ -40,8 +42,9 @@ namespace Entidades
         public String GetTelefono() { return Telefono; }
         public String GetDni() { return Dni; }
         public String GetDireccion() { return Direccion; }
+        public String GetProvincia() { return Provincia; }
         public string GetPassword() { return Password; }
-        public String GetTipoUsuario() { return TipoUsuario; }
+        public Boolean GetTipoUsuario() { return TipoUsuario; }
 
         public void SetIdCliente(int IdCliente) { this.IdCliente = IdCliente; }
         public void SetNombre(String nombre_) { this.Nombre = nombre_ ; }
@@ -50,8 +53,9 @@ namespace Entidades
         public void SetTelefono(String telefono_) { this.Telefono = telefono_; }
         public void SetDni(String dni_) {this.Dni = dni_; }
         public void SetDireccion(string direccion_) {this.Direccion = direccion_; }
+        public void SetProvincia(string provincia) { this.Direccion = provincia; }
         public void SetPassword(string password_) {this.Password = password_; }
-        public void SetTipoUsuario(string tipousuario_) {this.TipoUsuario = tipousuario_; }
+        public void SetTipoUsuario(Boolean tipousuario_) {this.TipoUsuario = tipousuario_; }
 
     }
 }

@@ -28,7 +28,7 @@
             font-size: large;
         }
         .auto-style14 {
-            width: 53%;
+            width: 56%;
             margin-left: 34px;
         }
         .auto-style17 {

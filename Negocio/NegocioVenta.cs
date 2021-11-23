@@ -71,6 +71,28 @@ namespace Negocio
             DaoVentas dao = new DaoVentas();
             dao.ModificarVenta(vta);
         }
+        /*
+        public int BuscarCliente(String nCliente)
+        {
+            Usuario nCli = new Usuario();
+            int CantFilas = 0;
+            nCli.SetIdCliente(Convert.ToInt32(nCliente));
+            
+            DaoVentas dao = new DaoVentas();
+            
+            if (dao.ExisteCliente(nCli) == false)
+            {
+                CantFilas = dao.AgregarVenta(nCli);
+            }
+            if (CantFilas == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }*/
 
     }
 }

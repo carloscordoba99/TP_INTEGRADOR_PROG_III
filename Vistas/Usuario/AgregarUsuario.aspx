@@ -156,6 +156,14 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style15">Provincia</td>
+                <td class="auto-style18">
+                    <asp:TextBox ID="TxtProvincia" runat="server" Width="373px"></asp:TextBox>
+                </td>
+                <td class="auto-style18">
+                    &nbsp;</td>
+            </tr>
+            <tr>
                 <td class="auto-style15">Contraseña</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtContraseña" runat="server" Width="373px"></asp:TextBox>
@@ -168,8 +176,8 @@
                 <td class="auto-style18">
                     <asp:DropDownList ID="ddlTipo" runat="server" Height="32px" Width="225px">
                         <asp:ListItem>-- Seleccione Tipo --</asp:ListItem>
-                        <asp:ListItem>Cliente</asp:ListItem>
-                        <asp:ListItem>Administrador</asp:ListItem>
+                        <asp:ListItem Value="0">Cliente</asp:ListItem>
+                        <asp:ListItem Value="1">Administrador</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style18">

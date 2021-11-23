@@ -22,7 +22,13 @@ namespace Vistas.Ventas
 
         protected void BtnAgregar_Click(object sender, EventArgs e)
         {
+
             Boolean Agregado = false;
+
+            /*if(ValidarCliente() == true)
+            {
+
+            }*/
 
             Agregado = ObjVenta.AgregarVenta(TxtCodCliente.Text, TxtTotalFactura.Text, TxtFecha.Text);
             if (Agregado == true)
@@ -41,5 +47,12 @@ namespace Vistas.Ventas
             TxtTotalFactura.Text = "";
             TxtFecha.Text = "";
         }
+
+       /* public bool ValidarCliente( String nCliente)
+        {
+            Boolean Existe = false;
+            Existe = ObjVenta.BuscarCliente(nCliente);
+            return Existe;
+        }*/
     }
 }

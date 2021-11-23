@@ -56,6 +56,8 @@ namespace Dao
             Sqlparametros.Value = user.GetDni();
             Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDireccion();
+            Sqlparametros = comando.Parameters.Add("@PROVINCIA", SqlDbType.VarChar, 25);
+            Sqlparametros.Value = user.GetProvincia();
             Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetPassword();
             Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.VarChar, 25);
@@ -81,7 +83,7 @@ namespace Dao
         {
             SqlCommand comando = new SqlCommand();
             ArmarParametrosUsuarioModificar(ref comando, user);
-            dt.EjecutarProcedimientoAlmacenado(comando, "spModificarUsuario");
+            dt.EjecutarProcedimientoAlmacenado(comando, "spActualizarUsuario");
         }
 
         public void ArmarParametrosUsuarioModificar(ref SqlCommand comando, Usuario user)
@@ -93,17 +95,19 @@ namespace Dao
             Sqlparametros.Value = user.GetNombre();
             Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetApellido();
-            Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.VarChar, 25);
-            Sqlparametros.Value = user.GetEmail();
-            Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@PROVINCIA", SqlDbType.VarChar, 25);
+            Sqlparametros.Value = user.GetProvincia();
+             Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetTelefono();
             Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDni();
-            Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 30);
+            Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDireccion();
-            Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.VarChar, 25);
+            Sqlparametros.Value = user.GetEmail();
+            Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 50);
             Sqlparametros.Value = user.GetPassword();
-            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.Bit);
             Sqlparametros.Value = user.GetTipoUsuario();
         }
 

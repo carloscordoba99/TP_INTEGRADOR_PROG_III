@@ -80,7 +80,12 @@ namespace Dao
             return dt.EjecutarProcedimientoAlmacenado(comando, "spActualizarVenta");
             
         }
+        /*
+        public Boolean ExisteCliente(Usuario cliente)
+        {
+            string Consulta = "Select * from Usuario where IdCliente='" + cliente.GetIdCliente() + "'";
+            return dt.existe(Consulta);
+        }*/
 
-        
     }
 }

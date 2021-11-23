@@ -11,7 +11,7 @@ namespace Dao
 {
     class AccesoDatos
     {
-        string ruta = "Data Source=localhost\\sqlexpress;Initial Catalog=ProyectoProg3;Integrated Security=True";
+        string ruta = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=ProyectoProg3;Integrated Security=True";
         
         public AccesoDatos()
         { }
