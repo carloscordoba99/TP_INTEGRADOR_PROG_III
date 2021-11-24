@@ -92,6 +92,10 @@ namespace Negocio
             DaoProductos dao = new DaoProductos();
             return dao.GetPrecio(Cod);
         }
-
+        public int TraerCantidadDeStock(String Id)
+        {
+            DaoProductos dao = new DaoProductos();
+            return dao.GetCantidad(Id);
+        }
     }
 }

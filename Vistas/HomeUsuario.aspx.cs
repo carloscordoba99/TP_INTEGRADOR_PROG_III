@@ -13,12 +13,12 @@ namespace Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LblMensaje.Text = Session["Usuario"].ToString();
+            LblUsuario.Text = Session["Usuario"].ToString();
         }
         protected void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
             Session["Usuario"] = null;
-            LblMensaje.Text = "";
+            LblUsuario.Text = "";
             Response.Redirect("LoginForm.aspx");
         }
 

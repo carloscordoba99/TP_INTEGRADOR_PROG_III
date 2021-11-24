@@ -15,7 +15,8 @@ namespace Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(IsPostBack == false)
+            LblUsuario.Text = Session["Usuario"].ToString();
+            if (IsPostBack == false)
             {
                 CargarGridView();
             }
@@ -24,7 +25,6 @@ namespace Vistas
         public void CargarGridView()
         {
             NegocioCarrito Carrito = new NegocioCarrito();
-            Session["IdUsuario"] = "1";                   //// SACAR
             String CodUsuario = Session["IdUsuario"].ToString();
             
             GrdCarrito.DataSource = Carrito.GetCarrito(CodUsuario); ;
@@ -61,26 +61,36 @@ namespace Vistas
 
         protected void BtnComprar_Click(object sender, EventArgs e)
         {
-            /* NegocioUsuarios Usuario = new NegocioUsuarios();
-             String Correo = "";
+            NegocioProducto Prod = new NegocioProducto();
 
-             SmtpClient smtp = new SmtpClient("smpt.alumnos.frgp.utn.edu.ar", 587);
-             smtp.Credentials = new NetworkCredential("francisco.crestanello@alumnos.frgp.utn.edu.ar","1234");
-             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-             smtp.EnableSsl = true;
-             smtp.UseDefaultCredentials = false;
-
-             MailMessage Mail = new MailMessage();
-             Mail.From = new MailAddress(Correo, "FACTURA DE COMPRA");
-             Mail.To.Add(new MailAddress(""))
-             */
-            String Compra = "";
+            int Stock = 0, StockRequerido = 0;
+            String Error = "No hay stock suficiente de el/los siguientes productos: <br>";
+            Boolean ControlStock = true;
             foreach (GridViewRow Fila in GrdCarrito.Rows)
             {
-                Compra += " - " + Convert.ToString(((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text) + " " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + " Por $ " + Convert.ToString(((Label)Fila.Cells[3].FindControl("LblPrecio")).Text) + " la unidad. <br>";
+                Stock = Prod.TraerCantidadDeStock(((Label)Fila.FindControl("LblArticulo")).Text);
+                StockRequerido = Convert.ToInt32(((TextBox)Fila.Cells[1].FindControl("TxtCantidad")).Text);
+                if (Stock < StockRequerido)
+                {
+                    Error += " - " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + ".<br>";
+                    ControlStock = false;
+                }
+                
             }
-            Compra += " Por el Total de: " + LblTotal.Text;
-            LblCompra.Text = "Usted Realizo la compra de: <br>" + Compra;
+            if (ControlStock == true)
+            {
+                String Compra = "";
+                foreach (GridViewRow Fila in GrdCarrito.Rows)
+                {
+                    Compra += " - " + Convert.ToString(((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text) + " " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + " Por $ " + Convert.ToString(((Label)Fila.Cells[3].FindControl("LblPrecio")).Text) + " la unidad.<br>";
+                }
+                Compra += " Por el Total de: " + LblTotal.Text;
+                LblCompra.Text = "Usted Realizo la compra de: <br>" + Compra;
+            }
+            else
+            {
+                LblError.Text = Error;
+            }
         }
     }
 }

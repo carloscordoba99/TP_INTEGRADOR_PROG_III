@@ -40,7 +40,7 @@
                     <td class="auto-style4">
                         &nbsp;</td>
                     <td class="auto-style3">
-                        <asp:Label ID="LblMensaje" runat="server"></asp:Label>
+                        <asp:Label ID="LblUsuario" runat="server"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

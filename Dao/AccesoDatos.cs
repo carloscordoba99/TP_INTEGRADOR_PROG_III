@@ -237,5 +237,17 @@ namespace Dao
             }
             return Precio;
         }
+        public int ObtenerStock(String consulta)
+        {
+            int Stock = 0;
+            SqlConnection Conexion = ObtenerConexion();
+            SqlCommand cmd = new SqlCommand(consulta, Conexion);
+            SqlDataReader datos = cmd.ExecuteReader();
+            if (datos.Read())
+            {
+                Stock = Convert.ToInt32(datos[0]);
+            }
+            return Stock;
+        }
     }
 }

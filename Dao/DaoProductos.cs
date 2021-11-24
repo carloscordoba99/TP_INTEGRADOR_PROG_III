@@ -84,6 +84,11 @@ namespace Dao
             decimal Precio = dt.ObtenerPrecioUnitario("Select * from Articulos where CodArticulo = '" + Cod.ToString() + "'");
             return Precio;
         }
+        public int GetCantidad(String Cod)
+        {
+            int Stock = dt.ObtenerStock("SELECT DISTINCT Stock FROM Articulos INNER JOIN Carritos ON Articulos.CodArticulo ='" + Cod.ToString() + "'");
+            return Stock;
+        }
 
         private void ArmarParametrosProductoModificar(ref SqlCommand Comando, Producto prod)
         {
