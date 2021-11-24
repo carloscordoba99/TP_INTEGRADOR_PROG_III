@@ -61,6 +61,9 @@ namespace Vistas
 
         protected void BtnComprar_Click(object sender, EventArgs e)
         {
+            LblCompra.Text = "";
+            LblError.Text = "";
+            
             NegocioProducto Prod = new NegocioProducto();
 
             int Stock = 0, StockRequerido = 0;
