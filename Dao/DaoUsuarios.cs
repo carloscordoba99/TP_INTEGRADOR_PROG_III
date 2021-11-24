@@ -91,15 +91,15 @@ namespace Dao
             SqlParameter Sqlparametros = new SqlParameter();
             Sqlparametros = comando.Parameters.Add("@IDCLIENTE", SqlDbType.Int);
             Sqlparametros.Value = user.GetIdCliente();
-            Sqlparametros = comando.Parameters.Add("@NOMBRE", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@NOMBRE", SqlDbType.VarChar,25);
             Sqlparametros.Value = user.GetNombre();
-            Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar,25);
             Sqlparametros.Value = user.GetApellido();
-            Sqlparametros = comando.Parameters.Add("@PROVINCIA", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@PROVINCIA", SqlDbType.VarChar,25);
             Sqlparametros.Value = user.GetProvincia();
-             Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar,25);
             Sqlparametros.Value = user.GetTelefono();
-            Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.VarChar,25);
             Sqlparametros.Value = user.GetDni();
             Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDireccion();
@@ -107,8 +107,9 @@ namespace Dao
             Sqlparametros.Value = user.GetEmail();
             Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 50);
             Sqlparametros.Value = user.GetPassword();
-            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.Bit);
+            Sqlparametros = comando.Parameters.Add("@TIPOU", SqlDbType.Bit);
             Sqlparametros.Value = user.GetTipoUsuario();
+
         }
 
         public Boolean VerificarUsuario(Usuario User)

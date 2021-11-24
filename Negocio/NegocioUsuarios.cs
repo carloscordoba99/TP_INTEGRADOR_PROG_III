@@ -72,21 +72,23 @@ namespace Negocio
         }
 
 
-        public void ModificarUsuario(String idcliente,string nombre,string apellido, string Provincia, string celular,string dni,string direccion, string email, string contrasena, String tipo_usuario)
+        public void ModificarUsuario(string idcliente, string nombre, string apellido, string provincia, string celular, string dni, string direccion, string email, string contrasena, string tipousuario)
         {
             DaoUsuarios dao = new DaoUsuarios();
+            
             Usuario user = new Usuario();
+
             user.SetIdCliente(Convert.ToInt32(idcliente));
             user.SetNombre(nombre);
             user.SetApellido(apellido);
-            user.SetProvincia(Provincia);
+            user.SetProvincia(provincia);
             user.SetTelefono(celular);
             user.SetDni(dni);
             user.SetDireccion(direccion);
             user.SetEmail(email);
             user.SetPassword(contrasena);
-            user.SetTipoUsuario(Convert.ToBoolean(tipo_usuario));
-
+            user.SetTipoUsuario(Convert.ToBoolean(tipousuario));
+           
             dao.ModificarDatos(user);
         }
         public bool ValidarUsuario(String Dni, String Contraseña)
