@@ -96,7 +96,7 @@ namespace Dao
             Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar,25);
             Sqlparametros.Value = user.GetApellido();
             Sqlparametros = comando.Parameters.Add("@PROVINCIA", SqlDbType.VarChar,25);
-            Sqlparametros.Value = user.GetProvincia();
+            Sqlparametros.Value = user.GetDireccion();
             Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar,25);
             Sqlparametros.Value = user.GetTelefono();
             Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.VarChar,25);

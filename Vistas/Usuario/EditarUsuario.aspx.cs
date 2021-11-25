@@ -38,7 +38,7 @@ namespace Vistas.Usuario
 
         protected void grdUsuarios_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            String idUsuario = ((Label)grdUsuarios.Rows[e.RowIndex].FindControl("lbl_eit_IdCliente")).Text;
+            String idCliente = ((Label)grdUsuarios.Rows[e.RowIndex].FindControl("lbl_eit_IdCliente")).Text;
             String nombre = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Nombre")).Text;
             String apellido = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Apellido")).Text;
             String provincia = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Provincia")).Text;
@@ -51,7 +51,7 @@ namespace Vistas.Usuario
 
             //lblmensaje.Text = provincia.ToString(); 
 
-            negUsuarios.ModificarUsuario(idUsuario, nombre, apellido, provincia, celular, dni, direccion, email, contrasena, tUsuario);
+            negUsuarios.ModificarUsuario(idCliente, nombre, apellido, provincia, celular, dni, direccion, email, contrasena, tUsuario);
 
             grdUsuarios.EditIndex = -1;
             CargarGridViewUsuarios();

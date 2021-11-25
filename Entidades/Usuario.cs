@@ -53,7 +53,7 @@ namespace Entidades
         public void SetTelefono(String telefono_) { this.Telefono = telefono_; }
         public void SetDni(String dni_) {this.Dni = dni_; }
         public void SetDireccion(string direccion_) {this.Direccion = direccion_; }
-        public void SetProvincia(string provincia) { this.Direccion = provincia; }
+        public void SetProvincia(string provincia) { this.Provincia = provincia; }
         public void SetPassword(string password_) {this.Password = password_; }
         public void SetTipoUsuario(Boolean tipousuario_) {this.TipoUsuario = tipousuario_; }
 
