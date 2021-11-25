@@ -89,11 +89,42 @@ namespace Vistas
                 }
                 Compra += " Por el Total de: " + LblTotal.Text;
                 LblCompra.Text = "Usted Realizo la compra de: <br>" + Compra;
+
+                /// AHORA GENERO LA FACTURA Y EL DETALLE DE LA FACTURA
+                String IdCliente = Session["IdUsuario"].ToString();
+                String TotalAPagar = LblTotal.Text;
+                String FechaActual = DateTime.Now.ToString();
+                GenerarVenta(IdCliente, TotalAPagar, FechaActual);
             }
             else
             {
                 LblError.Text = Error;
             }
         }
+        public void GenerarVenta(String CodCliente, String MontoTotal, String Fecha)
+        {
+            NegocioVenta Venta = new NegocioVenta();
+            NegocioDetalleDeVentas DetVenta = new NegocioDetalleDeVentas();
+
+            bool Vendido = Venta.AgregarVenta(CodCliente, MontoTotal, Fecha);
+            if (Vendido == true)
+            {
+                
+                String CodVenta = Venta.GetVentaSegunClienteMontoFecha(CodCliente, MontoTotal, Fecha);/// PIDO EL CÓDIGO DE LA VENTA
+                //String CodVenta = Vt.Rows[0]["Cod_Venta_V"].ToString(); 
+                foreach (GridViewRow Fila in GrdCarrito.Rows)
+                {
+                    String CodArt = ((Label)Fila.FindControl("LblArticulo")).Text;
+                    String Cantidad = ((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text;
+                    String PrecioUnitario = ((Label)Fila.Cells[3].FindControl("LblPrecio")).Text;
+                    DetVenta.AgregarDetalleDeVenta(CodVenta, CodArt,Cantidad, PrecioUnitario);
+                }
+            }
+            else
+            {
+                LblError.Text = "Lo siento, no se pudo realizar la compra. Intente de nuevo";
+            }
+        }
+
     }
 }

@@ -86,6 +86,10 @@ namespace Dao
             string Consulta = "Select * from Usuario where IdCliente='" + cliente.GetIdCliente() + "'";
             return dt.existe(Consulta);
         }*/
-
+        public string GetVentaSegunClienteMontoFecha(string CodCliente, string MontoTotal, string Fecha)
+        {
+            string consulta = "Select * from ventas where Cod_Cliente_V = '" + CodCliente.ToString() + "' AND TotalFactura_V ='"+MontoTotal.ToString()+ "' AND FechaFactura_V ='"+Fecha.ToString()+"'";
+            return dt.GetVentaSegunClienteMontoFecha(consulta);
+        }
     }
 }

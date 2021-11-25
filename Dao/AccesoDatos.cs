@@ -249,5 +249,26 @@ namespace Dao
             }
             return Stock;
         }
+        public DataTable ObtenerVenta(String NombreTabla, String Sql)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection Conexion = ObtenerConexion();
+            SqlDataAdapter adp = ObtenerAdaptador(Sql, Conexion);
+            adp.Fill(ds, NombreTabla);
+            Conexion.Close();
+            return ds.Tables[NombreTabla];
+        }
+        public string GetVentaSegunClienteMontoFecha(string consulta)
+        {
+            String CodVenta = "";
+            SqlConnection Conexion = ObtenerConexion();
+            SqlCommand cmd = new SqlCommand(consulta, Conexion);
+            SqlDataReader datos = cmd.ExecuteReader();
+            if (datos.Read())
+            {
+                CodVenta = Convert.ToString(datos[0]);
+            }
+            return CodVenta;
+        }
     }
 }
