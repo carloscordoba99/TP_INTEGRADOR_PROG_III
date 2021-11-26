@@ -106,6 +106,7 @@ namespace Vistas
             NegocioVenta Venta = new NegocioVenta();
             NegocioDetalleDeVentas DetVenta = new NegocioDetalleDeVentas();
 
+
             bool Vendido = Venta.AgregarVenta(CodCliente, MontoTotal, Fecha);
             if (Vendido == true)
             {
@@ -114,10 +115,14 @@ namespace Vistas
                 //String CodVenta = Vt.Rows[0]["Cod_Venta_V"].ToString(); 
                 foreach (GridViewRow Fila in GrdCarrito.Rows)
                 {
+                    /// GENERO EL DETALLE DE VENTA
                     String CodArt = ((Label)Fila.FindControl("LblArticulo")).Text;
                     String Cantidad = ((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text;
                     String PrecioUnitario = ((Label)Fila.Cells[3].FindControl("LblPrecio")).Text;
                     DetVenta.AgregarDetalleDeVenta(CodVenta, CodArt,Cantidad, PrecioUnitario);
+
+                    /// DOY DE BAJA EL PRODUCTO DEL CARRITO
+                    DarDeBajaDelCarrito(CodCliente, CodArt);
                 }
             }
             else
@@ -125,6 +130,10 @@ namespace Vistas
                 LblError.Text = "Lo siento, no se pudo realizar la compra. Intente de nuevo";
             }
         }
-
+        public void DarDeBajaDelCarrito(String CodCliente, String CodArt)
+        {
+            NegocioCarrito Carrito = new NegocioCarrito();
+            Carrito.DarDeBajaDelCarrito(CodCliente, CodArt);
+        }
     }
 }

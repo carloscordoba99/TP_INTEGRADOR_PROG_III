@@ -71,5 +71,18 @@ namespace Negocio
             else
                 return false;
         }
+        public void DarDeBajaDelCarrito(String CodCliente, String CodArt)
+        {
+            DaoCarritos dao = new DaoCarritos();
+            Carritos Carrito = new Carritos();
+            Carrito.SetCodArticulo(Convert.ToInt32(CodArt));
+            Carrito.SetCodUsuario(Convert.ToInt32(CodCliente));
+            dao.DarDeBajaDelCarrito(Carrito);
+            /*int op = 
+            if (op == 1)
+                return true;
+            else
+                return false;*/
+        }
     }
 }

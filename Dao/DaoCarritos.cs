@@ -50,7 +50,7 @@ namespace Dao
         }
         public DataTable GetCarrito(String Cod)
         {
-            DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM CARRITOS WHERE CodUsuario = '"+ Cod +"'");
+            DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM CARRITOS WHERE CodUsuario = '"+ Cod +"' AND Comprado=0");
             return tabla;
         }
 
@@ -79,6 +79,22 @@ namespace Dao
             SqlParametros.Value = Carrito.GetCodCarrito();
             SqlParametros = Comando.Parameters.Add("@CANTIDAD", SqlDbType.Int);
             SqlParametros.Value = Carrito.GetCantidad();
+        }
+        
+        /// DAR DE BAJA AL CARRITO PORQUE FUE COMPRADO
+        public void DarDeBajaDelCarrito(Carritos Carrito)
+        {
+            SqlCommand comando = new SqlCommand();
+            ArmarParametrosBajaCarrito(ref comando, Carrito);
+            dt.EjecutarProcedimientoAlmacenado(comando, "spDarDeBajaCarrito");
+        }
+        private void ArmarParametrosBajaCarrito(ref SqlCommand Comando, Carritos Carrito)
+        {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = Comando.Parameters.Add("@CodUsuario", SqlDbType.Int);
+            SqlParametros.Value = Carrito.GetCodUsuario();
+            SqlParametros = Comando.Parameters.Add("@CodArt", SqlDbType.Int);
+            SqlParametros.Value = Carrito.GetCodArticulo();
         }
     }
 }
