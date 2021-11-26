@@ -86,9 +86,9 @@ namespace Dao
             string Consulta = "Select * from Usuario where IdCliente='" + cliente.GetIdCliente() + "'";
             return dt.existe(Consulta);
         }*/
-        public string GetVentaSegunClienteMontoFecha(string CodCliente, string MontoTotal, string Fecha)
+        public string GetVentaSegunClienteMontoFecha()
         {
-            string consulta = "Select * from ventas where Cod_Cliente_V = '" + CodCliente.ToString() + "' AND TotalFactura_V ='"+MontoTotal.ToString()+ "' AND FechaFactura_V ='"+Fecha.ToString()+"'";
+            string consulta = "Select MAX(Cod_Venta_V) AS 'Venta' from ventas";
             return dt.GetVentaSegunClienteMontoFecha(consulta);
         }
     }

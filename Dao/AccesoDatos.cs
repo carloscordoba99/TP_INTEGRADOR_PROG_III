@@ -264,6 +264,7 @@ namespace Dao
             SqlConnection Conexion = ObtenerConexion();
             SqlCommand cmd = new SqlCommand(consulta, Conexion);
             SqlDataReader datos = cmd.ExecuteReader();
+            //CodVenta = datos["Venta"].ToString();
             if (datos.Read())
             {
                 CodVenta = Convert.ToString(datos[0]);

@@ -93,10 +93,10 @@ namespace Negocio
                 return false;
             }
         }*/
-        public string GetVentaSegunClienteMontoFecha(String CodCliente, String MontoTotal, String Fecha)
+        public string GetVentaSegunClienteMontoFecha()
         {
             DaoVentas dao = new DaoVentas();
-            return dao.GetVentaSegunClienteMontoFecha(CodCliente, MontoTotal, Fecha);
+            return dao.GetVentaSegunClienteMontoFecha();
         }
     }
 }

@@ -110,7 +110,7 @@ namespace Vistas
             if (Vendido == true)
             {
                 
-                String CodVenta = Venta.GetVentaSegunClienteMontoFecha(CodCliente, MontoTotal, Fecha);/// PIDO EL CÓDIGO DE LA VENTA
+                String CodVenta = Venta.GetVentaSegunClienteMontoFecha();/// PIDO EL CÓDIGO DE LA VENTA
                 //String CodVenta = Vt.Rows[0]["Cod_Venta_V"].ToString(); 
                 foreach (GridViewRow Fila in GrdCarrito.Rows)
                 {
