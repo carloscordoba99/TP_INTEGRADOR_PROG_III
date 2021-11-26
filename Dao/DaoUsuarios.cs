@@ -42,8 +42,8 @@ namespace Dao
         private void ArmarParametrosUsuarioAgregar(ref SqlCommand comando, Usuario user)
         {
             SqlParameter Sqlparametros = new SqlParameter();
-            Sqlparametros = comando.Parameters.Add("@IDCLIENTE", SqlDbType.Int);
-            Sqlparametros.Value = user.GetIdCliente();
+            /*Sqlparametros = comando.Parameters.Add("@IDCLIENTE", SqlDbType.Int);
+            Sqlparametros.Value = user.GetIdCliente();*/
             Sqlparametros = comando.Parameters.Add("@NOMBRE", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetNombre();
             Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar, 25);
@@ -60,7 +60,7 @@ namespace Dao
             Sqlparametros.Value = user.GetProvincia();
             Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetPassword();
-            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.VarChar, 25);
+            Sqlparametros = comando.Parameters.Add("@TIPOUSUARIO", SqlDbType.Bit);
             Sqlparametros.Value = user.GetTipoUsuario();
 
         }
@@ -79,11 +79,18 @@ namespace Dao
             SqlParametros.Value = user.GetIdCliente();
         }
 
-        public void ModificarDatos(Usuario user)
+        
+
+        public bool ModificarUsuario(Usuario user)
         {
-            SqlCommand comando = new SqlCommand();
-            ArmarParametrosUsuarioModificar(ref comando, user);
-            dt.EjecutarProcedimientoAlmacenado(comando, "spActualizarUsuario");
+            SqlCommand Comando = new SqlCommand();
+            ArmarParametrosUsuarioModificar(ref Comando, user);
+            AccesoDatos ad = new AccesoDatos();
+            int FilasInsertadas = ad.EjecutarProcedimientoAlmacenado(Comando, "spActualizarUsuario");
+            if (FilasInsertadas == 1)
+                return true;
+            else
+                return false;
         }
 
         public void ArmarParametrosUsuarioModificar(ref SqlCommand comando, Usuario user)

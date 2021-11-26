@@ -12,7 +12,7 @@ namespace Entidades
         private String Nombre;
         private String Apellido;
         private String Provincia;
-        private string Email;
+        private String Email;
         private String Telefono;
         private String Dni;
         private String Direccion;

@@ -23,7 +23,7 @@ namespace Negocio
             return dao.getUsuario(id);
         }
 
-        public bool AgregarUsuario(string nombre, string apellido, string email, string celular,string dni, string direccion, string provincia, string contrasena,string tipo )
+        public bool AgregarUsuario(string nombre, string apellido, string email, string celular,string dni, string direccion, string provincia, string contrasena,int tipo )
         {
             int cantFilas = 0;
 
@@ -36,7 +36,7 @@ namespace Negocio
             user.SetDireccion(direccion);
             user.SetProvincia(provincia);
             user.SetPassword(contrasena);
-            user.SetTipoUsuario(Convert.ToBoolean( tipo));
+            user.SetTipoUsuario(Convert.ToBoolean(tipo));
 
             DaoUsuarios dao = new DaoUsuarios();
             if(dao.ExisteUsuario(user) == false)
@@ -89,7 +89,7 @@ namespace Negocio
             user.SetPassword(contrasena);
             user.SetTipoUsuario(Convert.ToBoolean(tipousuario));
            
-            dao.ModificarDatos(user);
+            dao.ModificarUsuario(user);
         }
         public bool ValidarUsuario(String Dni, String Contraseña)
         {

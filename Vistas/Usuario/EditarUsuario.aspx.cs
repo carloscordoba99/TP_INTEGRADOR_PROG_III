@@ -49,7 +49,7 @@ namespace Vistas.Usuario
             String contrasena = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Contrasena")).Text;
             String tUsuario = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_TipoUsuario")).Text;
 
-            //lblmensaje.Text = provincia.ToString(); 
+            
 
             negUsuarios.ModificarUsuario(idCliente, nombre, apellido, provincia, celular, dni, direccion, email, contrasena, tUsuario);
 

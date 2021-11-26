@@ -150,6 +150,7 @@ namespace Dao
             return ds.Tables[NombreTabla];
         }
 
+        
         public int EjecutarProcedimientoAlmacenado(SqlCommand Comando, String NombreSP)
         {
             int FilasCambiadas;

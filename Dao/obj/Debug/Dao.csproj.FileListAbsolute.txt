@@ -151,3 +151,12 @@ C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V24\Dao\obj\Debug\Dao.csproj
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V24\Dao\obj\Debug\Dao.csproj.CopyComplete
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V24\Dao\obj\Debug\Dao.dll
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V24\Dao\obj\Debug\Dao.pdb
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\bin\Debug\Dao.dll
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\bin\Debug\Dao.pdb
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\bin\Debug\Entidades.dll
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\bin\Debug\Entidades.pdb
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\obj\Debug\Dao.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\obj\Debug\Dao.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\obj\Debug\Dao.csproj.CopyComplete
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\obj\Debug\Dao.dll
+C:\Users\Usuario\source\repos\Nueva carpeta\Dao\obj\Debug\Dao.pdb
