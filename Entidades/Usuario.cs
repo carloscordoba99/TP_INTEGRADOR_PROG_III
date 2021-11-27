@@ -36,7 +36,7 @@ namespace Entidades
 
        
         public int GetIdCliente() { return IdCliente; }
-        public string GetNombre() { return Nombre; }
+        public String GetNombre() { return Nombre; }
         public String GetApellido() { return Apellido; }
         public string GetEmail() { return Email; }
         public String GetTelefono() { return Telefono; }

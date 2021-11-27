@@ -81,10 +81,10 @@ namespace Dao
 
         
 
-        public bool ModificarUsuario(Usuario user)
+        public bool ModificarUsuario(Usuario cliente)
         {
             SqlCommand Comando = new SqlCommand();
-            ArmarParametrosUsuarioModificar(ref Comando, user);
+            ArmarParametrosUsuarioModificar(ref Comando, cliente);
             AccesoDatos ad = new AccesoDatos();
             int FilasInsertadas = ad.EjecutarProcedimientoAlmacenado(Comando, "spActualizarUsuario");
             if (FilasInsertadas == 1)
@@ -93,29 +93,29 @@ namespace Dao
                 return false;
         }
 
-        public void ArmarParametrosUsuarioModificar(ref SqlCommand comando, Usuario user)
+        public void ArmarParametrosUsuarioModificar(ref SqlCommand comando, Usuario cliente)
         {
             SqlParameter Sqlparametros = new SqlParameter();
             Sqlparametros = comando.Parameters.Add("@IDCLIENTE", SqlDbType.Int);
-            Sqlparametros.Value = user.GetIdCliente();
+            Sqlparametros.Value = cliente.GetIdCliente();
             Sqlparametros = comando.Parameters.Add("@NOMBRE", SqlDbType.VarChar,25);
-            Sqlparametros.Value = user.GetNombre();
+            Sqlparametros.Value = cliente.GetNombre();
             Sqlparametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar,25);
-            Sqlparametros.Value = user.GetApellido();
+            Sqlparametros.Value = cliente.GetApellido();
             Sqlparametros = comando.Parameters.Add("@PROVINCIA", SqlDbType.VarChar,25);
-            Sqlparametros.Value = user.GetDireccion();
+            Sqlparametros.Value = cliente.GetProvincia();
             Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar,25);
-            Sqlparametros.Value = user.GetTelefono();
+            Sqlparametros.Value = cliente.GetTelefono();
             Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.VarChar,25);
-            Sqlparametros.Value = user.GetDni();
+            Sqlparametros.Value = cliente.GetDni();
             Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 25);
-            Sqlparametros.Value = user.GetDireccion();
+            Sqlparametros.Value = cliente.GetDireccion();
             Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.VarChar, 50);
-            Sqlparametros.Value = user.GetEmail();
+            Sqlparametros.Value = cliente.GetEmail();
             Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 50);
-            Sqlparametros.Value = user.GetPassword();
+            Sqlparametros.Value = cliente.GetEmail();
             Sqlparametros = comando.Parameters.Add("@TIPOU", SqlDbType.Bit);
-            Sqlparametros.Value = user.GetTipoUsuario();
+            Sqlparametros.Value = cliente.GetTipoUsuario();
 
         }
 
