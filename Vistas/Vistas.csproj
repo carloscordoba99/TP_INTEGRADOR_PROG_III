@@ -93,6 +93,7 @@
     <Content Include="Web.config" />
     <Content Include="HomeUsuario.aspx" />
     <Content Include="Carrito.aspx" />
+    <Content Include="RegistroUsuario.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DetalleVentas\AgregarDetalleDeVentas.aspx.cs">
@@ -263,6 +264,13 @@
     </Compile>
     <Compile Include="Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUsuario.aspx.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroUsuario.aspx.designer.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

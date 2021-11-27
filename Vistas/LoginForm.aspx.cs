@@ -86,7 +86,7 @@ namespace Vistas
 
         protected void Registrarse_Click(object sender, EventArgs e)
         {
-            // Response.Redirect("Usuario/RegistroUsuario.aspx");
+            Response.Redirect("RegistroUsuario.aspx");
         }
        
     }
