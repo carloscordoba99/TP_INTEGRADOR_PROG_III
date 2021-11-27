@@ -106,7 +106,9 @@
             <tr>
                 <td class="auto-style15">Provincia</td>
                 <td class="auto-style18">
-                    <asp:TextBox ID="TxtProvincia" runat="server" Width="373px"></asp:TextBox>
+                    <asp:DropDownList ID="DdlProvincias" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreProvincia" DataValueField="IdProvincia">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString2 %>" SelectCommand="SELECT * FROM [Provincias]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style18">
                     &nbsp;</td>

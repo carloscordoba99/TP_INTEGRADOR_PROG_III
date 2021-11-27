@@ -30,9 +30,9 @@ namespace Vistas.Usuario
         {
             Boolean agregado = false;
 
-            lblMensaje.Text = ddlTipo.SelectedValue.ToString();
+            lblMensaje.Text = DdlProvincias.SelectedValue.ToString();
 
-            agregado = negUsuarios.AgregarUsuario(txtNom.Text, txtApellido.Text, txtEmail.Text, txtNumCel.Text, txtDni.Text, TxtDireccion.Text, TxtProvincia.Text ,txtContraseña.Text, Convert.ToInt32 ( ddlTipo.SelectedValue.ToString()));
+            agregado = negUsuarios.AgregarUsuario(txtNom.Text, txtApellido.Text, txtEmail.Text, txtNumCel.Text, txtDni.Text, TxtDireccion.Text, DdlProvincias.SelectedValue.ToString() ,txtContraseña.Text, Convert.ToInt32 ( ddlTipo.SelectedValue.ToString()));
             if (agregado == true)
             {
                 lblMensaje.Text = "El Usuario ha sido agregado";
