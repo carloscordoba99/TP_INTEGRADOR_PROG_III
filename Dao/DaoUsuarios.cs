@@ -12,10 +12,12 @@ namespace Dao
     public class DaoUsuarios
     {
         AccesoDatos dt = new AccesoDatos();
+        //string tablaUsers = "select usuarios.IdCliente, Usuarios.Nombre,Usuarios.Apellido, Usuarios.Provincia,Usuarios.Celular,Usuarios.Dni,Usuarios.Direccion,Usuarios.Email,Usuarios.Contrasena,Tipo from Usuarios inner join TipoUsuarios on Usuarios.TipoUsuario = TipoUsuarios.Cod";
 
         public DataTable getUsuarios()
         {
-            DataTable tabla = dt.ObtenerTablaUsuarios("Usuarios", "select * from Usuarios");
+             DataTable tabla = dt.ObtenerTablaUsuarios("Usuarios", "select * from Usuarios");
+            //DataTable tabla = dt.ObtenerTablaUsuarios("Usuarios", tablaUsers);
             return tabla;
         }
 

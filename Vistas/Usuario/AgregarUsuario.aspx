@@ -67,6 +67,12 @@
             text-align: center;
             width: 308px;
         }
+        .auto-style22 {
+            height: 23px;
+            text-align: left;
+            width: 381px;
+            margin-left: 40px;
+        }
         </style>
 </head>
 <body>
@@ -106,8 +112,8 @@
                 <td class="auto-style14">
                     <asp:TextBox ID="txtNom" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style14">
-                    <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNom">Ingrese Nombre</asp:RequiredFieldValidator>
+                <td class="auto-style22">
+                    <asp:CompareValidator ID="cv_Nombre" runat="server" ControlToValidate="txtNom" Operator="NotEqual">Ingrese Nombre</asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -116,7 +122,7 @@
                     <asp:TextBox ID="txtApellido" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style14">
-                    <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido">Ingrese Apellido</asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="cv_Apellido" runat="server" ControlToValidate="txtApellido" Operator="NotEqual">Ingrese Apellido</asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -134,7 +140,7 @@
                     <asp:TextBox ID="txtNumCel" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style18">
-                    <asp:RequiredFieldValidator ID="rfvNum" runat="server" ControlToValidate="txtNumCel">Ingrese Numero Celular</asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="cv_Tel" runat="server" ControlToValidate="txtNumCel" ErrorMessage="CompareValidator" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese un numero de Telefono</asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -158,12 +164,16 @@
             <tr>
                 <td class="auto-style15">Provincia</td>
                 <td class="auto-style18">
-                    <asp:DropDownList ID="DdlProvincias" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreProvincia" DataValueField="IdProvincia">
+                    <asp:DropDownList ID="DdlProvincias" runat="server">
+                        <asp:ListItem>-- Seleccione Provincia --</asp:ListItem>
+                        <asp:ListItem>Cordoba</asp:ListItem>
+                        <asp:ListItem>Santa Fe</asp:ListItem>
+                        <asp:ListItem>Buenos Aires</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString2 %>" SelectCommand="SELECT * FROM [Provincias]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style18">
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="frProvincia" runat="server" ControlToValidate="DdlProvincias" InitialValue="-- Seleccione Provincia --">Elija una Provincia</asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style15">Contraseña</td>

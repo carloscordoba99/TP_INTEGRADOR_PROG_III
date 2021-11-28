@@ -52,7 +52,7 @@ namespace Vistas.Usuario
             String contrasena = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_contrasena")).Text;
             String tUsuario = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_tipousuario")).Text;
 
-            // lblmensaje.Text = idCliente.ToString() + nombre.ToString()+ provincia.ToString() + celular.ToString() + direccion.ToString() + contrasena.ToString();
+            //lblmensaje.Text = tUsuario.ToString();
 
 
             NegocioUsuarios modificar = new NegocioUsuarios();
@@ -61,6 +61,8 @@ namespace Vistas.Usuario
             grdUsuarios.EditIndex = -1;
             CargarGridViewUsuarios();
         }
+
+        
 
 
         /*

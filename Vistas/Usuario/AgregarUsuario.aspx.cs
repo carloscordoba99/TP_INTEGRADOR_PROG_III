@@ -22,7 +22,8 @@ namespace Vistas.Usuario
             {
                 LblUsuario.Text = Session["Usuario"].ToString();
             }
-      
+
+           
            
         }
 
@@ -32,7 +33,7 @@ namespace Vistas.Usuario
 
             lblMensaje.Text = DdlProvincias.SelectedValue.ToString();
 
-            agregado = negUsuarios.AgregarUsuario(txtNom.Text, txtApellido.Text, txtEmail.Text, txtNumCel.Text, txtDni.Text, TxtDireccion.Text, DdlProvincias.SelectedValue.ToString() ,txtContraseña.Text, Convert.ToInt32 ( ddlTipo.SelectedValue.ToString()));
+            agregado = negUsuarios.AgregarUsuario(txtNom.Text, txtApellido.Text, txtEmail.Text, txtNumCel.Text, txtDni.Text, TxtDireccion.Text, DdlProvincias.SelectedValue.ToString() ,txtContraseña.Text, Convert.ToInt32 (ddlTipo.SelectedValue.ToString()));
             if (agregado == true)
             {
                 lblMensaje.Text = "El Usuario ha sido agregado";

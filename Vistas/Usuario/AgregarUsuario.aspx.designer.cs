@@ -87,13 +87,13 @@ namespace Vistas.Usuario
         protected global::System.Web.UI.WebControls.TextBox txtNom;
 
         /// <summary>
-        /// Control rfvNombre.
+        /// Control cv_Nombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombre;
+        protected global::System.Web.UI.WebControls.CompareValidator cv_Nombre;
 
         /// <summary>
         /// Control txtApellido.
@@ -105,13 +105,13 @@ namespace Vistas.Usuario
         protected global::System.Web.UI.WebControls.TextBox txtApellido;
 
         /// <summary>
-        /// Control rfvApellido.
+        /// Control cv_Apellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvApellido;
+        protected global::System.Web.UI.WebControls.CompareValidator cv_Apellido;
 
         /// <summary>
         /// Control txtEmail.
@@ -141,13 +141,13 @@ namespace Vistas.Usuario
         protected global::System.Web.UI.WebControls.TextBox txtNumCel;
 
         /// <summary>
-        /// Control rfvNum.
+        /// Control cv_Tel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNum;
+        protected global::System.Web.UI.WebControls.CompareValidator cv_Tel;
 
         /// <summary>
         /// Control txtDni.
@@ -195,13 +195,13 @@ namespace Vistas.Usuario
         protected global::System.Web.UI.WebControls.DropDownList DdlProvincias;
 
         /// <summary>
-        /// Control SqlDataSource1.
+        /// Control frProvincia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator frProvincia;
 
         /// <summary>
         /// Control txtContraseña.
