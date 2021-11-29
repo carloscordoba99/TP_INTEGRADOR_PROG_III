@@ -33,24 +33,6 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.Button BtnCerrarSesion;
 
         /// <summary>
-        /// Control LblUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblUsuario;
-
-        /// <summary>
-        /// Control btnfiltro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnfiltro;
-
-        /// <summary>
         /// Control txtbuscar.
         /// </summary>
         /// <remarks>
@@ -60,13 +42,13 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtbuscar;
 
         /// <summary>
-        /// Control btnbuscar.
+        /// Control BtnBuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnbuscar;
+        protected global::System.Web.UI.WebControls.Button BtnBuscar;
 
         /// <summary>
         /// Control BtnCarrito.
@@ -76,6 +58,15 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnCarrito;
+
+        /// <summary>
+        /// Control LblUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblUsuario;
 
         /// <summary>
         /// Control LblProductoAgregado.

@@ -10,50 +10,39 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style3 {
-            width: 1072px;
-        }
-        .auto-style4 {
-            width: 1108px;
-        }
-        .auto-style5 {
-            width: 1127px;
-        }
         .auto-style6 {
             width: 1203px;
         }
-        .auto-style7 {
-            margin-left: 137px;
+        .auto-style8 {
+            width: 1230px;
         }
         </style>
 </head>
-<body>
+<body style="margin: 30px 100px">
     <form id="form1" runat="server">
         <div>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style6">
-                        <asp:Button ID="BtnCerrarSesion" runat="server" OnClick="BtnCerrarSesion_Click" Text="Cerrar sesión" />
-                    </td>
-                    <td class="auto-style5">
-                        &nbsp;</td>
-                    <td class="auto-style4">
-                        &nbsp;</td>
-                    <td class="auto-style3">
-                        <asp:Label ID="LblUsuario" runat="server"></asp:Label>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
-            <br />
             <nav> 
-                <asp:Button ID="btnfiltro" runat="server" CssClass="auto-style7" Text="buscar con filtro" Width="117px" />
-                <asp:TextBox ID="txtbuscar" runat="server" Width="367px"></asp:TextBox>
-                <asp:Button ID="btnbuscar" runat="server" Text="Buscar" Width="200px" />
-                <asp:Button ID="BtnCarrito" runat="server" Text="Ir al carrito" Width="200px" OnClick="BtnCarrito_Click" />
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style6">
+                            <asp:Button ID="BtnCerrarSesion" runat="server" OnClick="BtnCerrarSesion_Click" Text="Cerrar sesión" Width="118px" />
+                        </td>
+                        <td class="auto-style8">
+                            <asp:TextBox ID="txtbuscar" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style2">
+                            <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" Width="100px" />
+                        </td>
+                        <td class="auto-style2">
+                            <asp:Button ID="BtnCarrito" runat="server" Text="Ir al carrito" Width="100px" OnClick="BtnCarrito_Click" />
+                        </td>
+                        <td class="auto-style2">
+                            <asp:Label ID="LblUsuario" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
             </nav>
             <asp:Label ID="LblProductoAgregado" runat="server"></asp:Label>
-            <br />
             <asp:ListView ID="LVproductos" runat="server" DataSourceID="SqlDataSource1" GroupItemCount="3">
                 <AlternatingItemTemplate>
                     <td runat="server" style="background-color: #FAFAD2; color: #284775;">
