@@ -38,7 +38,7 @@ namespace Vistas.Categoria
 
         private void AgregarGrid()
         {
-            grdCategorias.DataSource = negCat.getTablaCategorias();
+            grdCategorias.DataSource = negCat.TablaCategorias();
             grdCategorias.DataBind();
         }
 

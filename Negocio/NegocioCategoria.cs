@@ -55,6 +55,13 @@ namespace Negocio
             return dao.getCategorias();
         }
 
+        public DataTable TablaCategorias()
+        {
+            DaoCategoria dao = new DaoCategoria();
+            return dao.ObtenerTablaCategoria();
+        }
+
+
         public DataTable getTablaProveedores()
         {
             DaoCategoria dao2 = new DaoCategoria();

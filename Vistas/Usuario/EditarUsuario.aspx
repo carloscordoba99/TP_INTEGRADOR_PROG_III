@@ -20,6 +20,16 @@
         div{
             text-align:center;
         }
+        .auto-style3 {
+            height: 23px;
+        }
+        .auto-style4 {
+            height: 23px;
+            width: 249px;
+        }
+        .auto-style5 {
+            width: 249px;
+        }
     </style>
 </head>
 <body>
@@ -29,21 +39,24 @@
             <table class="auto-style1">
                 <tr>
                     <td rowspan="2" class="auto-style2" >Editar Usuario</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style4"></td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style3"></td>
                 </tr>
                 <tr>
                     <td>
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Usuario/AgregarUsuario.aspx">Agregar Usuario</asp:HyperLink>
                     </td>
-                    <td>
+                    <td class="auto-style5">
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Usuario/EliminarUsuario.aspx">Eliminar Usuario</asp:HyperLink>
                     </td>
+
                     <td>
                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Usuario/BuscarUsuario.aspx">Buscar Usuario</asp:HyperLink>
                     </td>
+
                     <td>
                         <asp:HyperLink ID="HyperLink4" runat="server">Inicio</asp:HyperLink>
                     </td>

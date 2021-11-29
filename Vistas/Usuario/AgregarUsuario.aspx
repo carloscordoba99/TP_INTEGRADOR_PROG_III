@@ -20,14 +20,12 @@
             text-align: right;
         }
         .auto-style8 {
-            text-align: center;
-        }
-        .auto-style10 {
             width: 250px;
             text-align: center;
         }
+        
         .auto-style11 {
-            width: 325px;
+            width: 250px;
             text-align: center;
         }
         .auto-style14 {
@@ -45,9 +43,10 @@
             text-align: center;
         }
         .auto-style17 {
-            width: 55%;
+            width: 70%;
             height: 208px;
             margin-left: 0px;
+            text-align: center;
         }
         .auto-style18 {
             text-align: left;
@@ -64,14 +63,42 @@
             height: 39px;
         }
         .auto-style21 {
+            width: 250px;
             text-align: center;
-            width: 308px;
         }
         .auto-style22 {
             height: 23px;
             text-align: left;
-            width: 381px;
+            width: 459px;
             margin-left: 40px;
+        }
+        .auto-style23 {
+            width: 227px;
+            height: 23px;
+            text-align: center;
+        }
+        .auto-style25 {
+            width: 227px;
+            text-align: center;
+            height: 39px;
+        }
+        .auto-style26 {
+            width: 227px;
+            text-align: center;
+        }
+        .auto-style27 {
+            height: 23px;
+            text-align: left;
+            width: 459px;
+        }
+        .auto-style28 {
+            text-align: left;
+            width: 459px;
+        }
+        .auto-style29 {
+            text-align: center;
+            width: 459px;
+            height: 39px;
         }
         </style>
 </head>
@@ -79,14 +106,12 @@
     <form id="form1" runat="server">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style3">Usuarios</td>
+            <td class="auto-style3">Crear Usuario</td>
             <td class="auto-style5">
                         <asp:Label ID="LblUsuario" runat="server"></asp:Label>
                     <table class="auto-style1">
                 <tr>
-                    <td class="auto-style10">
-                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AgregarUsuario.aspx">Crear Usuario</asp:HyperLink>
-                    </td>
+                   
                     <td class="auto-style11">
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Usuario/EliminarUsuario.aspx">Eliminar Usuarios</asp:HyperLink>
                     </td>
@@ -104,64 +129,81 @@
             </td>
         </tr>
     </table>
-        <p class="auto-style8">
-            Crear Usuario</p>
+        <br />
         <table align="center" class="auto-style17">
             <tr>
+                <td class="auto-style23">
+                    <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNom">Ingrese Nombre</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style16">Nombre</td>
                 <td class="auto-style14">
                     <asp:TextBox ID="txtNom" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style22">
-                    <asp:CompareValidator ID="cv_Nombre" runat="server" ControlToValidate="txtNom" Operator="NotEqual">Ingrese Nombre</asp:CompareValidator>
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style23">
+                    <asp:RequiredFieldValidator ID="rfv_Apellido" runat="server" ControlToValidate="txtApellido">Ingrese Apellido</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style16">Apellido</td>
                 <td class="auto-style14">
                     <asp:TextBox ID="txtApellido" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style14">
-                    <asp:CompareValidator ID="cv_Apellido" runat="server" ControlToValidate="txtApellido" Operator="NotEqual">Ingrese Apellido</asp:CompareValidator>
-                </td>
+                <td class="auto-style27">
+                    &nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="rfv_Email" runat="server" ControlToValidate="txtEmail">Ingrese Email</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style15">Email</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtEmail" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style18">
+                <td class="auto-style28">
                     <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Ingrese Email</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
+                <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="rfv_Num" runat="server" ControlToValidate="txtNumCel">Ingrese Celular</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style15">Numero Celular</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtNumCel" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style18">
+                <td class="auto-style28">
                     <asp:CompareValidator ID="cv_Tel" runat="server" ControlToValidate="txtNumCel" ErrorMessage="CompareValidator" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese un numero de Telefono</asp:CompareValidator>
                 </td>
             </tr>
             <tr>
+                <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="rfv_Dni" runat="server" ControlToValidate="txtDni">Ingrese Dni</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style15">Dni</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtDni" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style18">
+                <td class="auto-style28">
                     <asp:CompareValidator ID="cv" runat="server" ControlToValidate="txtDni" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Dni</asp:CompareValidator>
                 </td>
             </tr>
             <tr>
+                <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="frv_Direccion" runat="server" ControlToValidate="TxtDireccion">Ingrese Direccion</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style15">Direccion</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="TxtDireccion" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style18">
-                    <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="TxtDireccion">Ingrese Direccion</asp:RequiredFieldValidator>
-                </td>
+                <td class="auto-style28">
+                    &nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="frProvincia" runat="server" ControlToValidate="DdlProvincias" InitialValue="-- Seleccione Provincia --">Elija una Provincia</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style15">Provincia</td>
                 <td class="auto-style18">
                     <asp:DropDownList ID="DdlProvincias" runat="server">
@@ -171,19 +213,24 @@
                         <asp:ListItem>Buenos Aires</asp:ListItem>
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style18">
-                    <asp:RequiredFieldValidator ID="frProvincia" runat="server" ControlToValidate="DdlProvincias" InitialValue="-- Seleccione Provincia --">Elija una Provincia</asp:RequiredFieldValidator>
-                </td>
+                <td class="auto-style28">
+                    &nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="rfv_Contrasena" runat="server" ControlToValidate="txtContraseña">Ingrese Contraseña</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style15">Contraseña</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtContraseña" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style18">
+                <td class="auto-style28">
                     &nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="rfv0" runat="server" ControlToValidate="ddlTipo" InitialValue="-- Seleccione Tipo --">Seleccione Tipo</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style15">Tipo de Usuario</td>
                 <td class="auto-style18">
                     <asp:DropDownList ID="ddlTipo" runat="server" Height="32px" Width="225px">
@@ -192,16 +239,16 @@
                         <asp:ListItem Value="1">Administrador</asp:ListItem>
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style18">
-                    <asp:RequiredFieldValidator ID="rfv" runat="server" ControlToValidate="ddlTipo" InitialValue="-- Seleccione Tipo --">Seleccione Tipo</asp:RequiredFieldValidator>
-                </td>
+                <td class="auto-style28">
+                    &nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style25">&nbsp;</td>
                 <td class="auto-style20"></td>
                 <td class="auto-style19">
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" Width="103px" OnClick="btnGuardar_Click" Height="27px" />
                 </td>
-                <td class="auto-style19">
+                <td class="auto-style29">
                     <asp:Label ID="lblMensaje" runat="server"></asp:Label>
                 </td>
             </tr>

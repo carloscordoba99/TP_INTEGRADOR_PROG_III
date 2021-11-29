@@ -31,8 +31,14 @@ namespace Dao
         public DataTable getCategorias()
         {
             DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT CodCategoria AS 'CODIGO CATEGORIA', NombreCategoria AS 'NOMBRE CATEGORIA', Descripcion AS 'DESCRIPCION'  FROM Categorias");
-            //DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM Categorias");
+             //DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT * FROM Categorias");
 
+            return tabla;
+        }
+
+        public DataTable ObtenerTablaCategoria()
+        {
+            DataTable tabla = dt.ObtenerTablaCategoria("Categorias", "SELECT CodCategoria , NombreCategoria , Descripcion  FROM Categorias");
             return tabla;
         }
 

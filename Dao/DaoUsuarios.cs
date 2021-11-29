@@ -29,7 +29,7 @@ namespace Dao
 
         public Boolean ExisteUsuario(Usuario user)
         {
-            String consulta = "Select * from Usuarios where Email='" + user.GetDni() + "'";
+            String consulta = "Select * from Usuarios where Dni='" + user.GetDni() + "'";
             return dt.existe(consulta);
         }
 

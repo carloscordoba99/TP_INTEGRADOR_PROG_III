@@ -10,6 +10,7 @@
 
         .auto-style1 {
             width: 100%;
+            
         }
         .auto-style3 {
             width: 184px;
@@ -23,15 +24,16 @@
             text-align: center;
         }
         .auto-style11 {
-            width: 294px;
+             width: 250px;
             text-align: center;
         }
         .auto-style9 {
             text-align: center;
-            width: 338px;
+             width: 250px;
         }
         .auto-style8 {
             text-align: center;
+             width: 250px;
         }
         .auto-style12 {
             width: 397px;
@@ -58,7 +60,7 @@
             <td class="auto-style3">Usuarios</td>
             <td class="auto-style5">
                         <asp:Label ID="LblUsuario" runat="server"></asp:Label>
-                    <table class="auto-style1">
+                    <table class="auto-style1" >
                 <tr>
                     <td class="auto-style10">
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Usuario/AgregarUsuario.aspx">Crear Usuario</asp:HyperLink>

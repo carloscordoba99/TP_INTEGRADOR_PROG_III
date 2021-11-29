@@ -40,7 +40,7 @@ namespace Vistas.Usuario
             }
             else
             {
-                lblMensaje.Text = "El Usuario no ha sido Agregado";
+                lblMensaje.Text = "El Usuario no ha sido Agregado, porque ya existe usuario con ese DNi";
             }
 
             LimpiarTexbox();

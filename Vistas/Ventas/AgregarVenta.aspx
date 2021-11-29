@@ -32,11 +32,11 @@
             margin-left: 34px;
         }
         .auto-style17 {
-            width: 258px;
+            width: 262px;
             text-align: right;
         }
         .auto-style13 {
-            width: 258px;
+            width: 262px;
         }
         .auto-style19 {
             width: 260px;
@@ -59,7 +59,7 @@
             height: 23px;
         }
         .auto-style23 {
-            width: 258px;
+            width: 262px;
             text-align: right;
             height: 26px;
         }

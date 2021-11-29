@@ -147,6 +147,7 @@
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
+                    <HeaderStyle HorizontalAlign="Center" />
                 </asp:GridView>
                 
             </div>
