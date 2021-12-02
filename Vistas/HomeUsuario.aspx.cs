@@ -15,6 +15,7 @@ namespace Vistas
         protected void Page_Load(object sender, EventArgs e)
         {
             LblUsuario.Text = Session["Usuario"].ToString();
+
             /*itemsTodosBD.Items.Clear();
             foreach (ListViewDataItem item in LVproductos.Items)
             {
@@ -61,22 +62,13 @@ namespace Vistas
 
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
-            LVproductos.Items.Clear();  //Borra el ListView
-            List<ListViewItem> itemsAUX = new List<ListViewItem>();  //Lista Auxiliar para el filtrado
-            //Recorre todos los items
-            foreach (ListViewItem lvi in itemsTodos)
-            {
-                //Filtra los items que comienzan con el valor de textBox1.Text
-                //if (lvi.ToString().StartsWith(txtbuscar.Text)) itemsAUX.Add(lvi); //Agregar el Item encontrado.
-                if(txtbuscar.Text.ToLower() == lvi.FindControl("DescripcionLabel").ToString().ToLower()) itemsAUX.Add(lvi);
-            }
-            //LVproductos.Items.Add(itemsAUX.ToArray()); //Recargar el ListView
-            //LVproductos.Items.Add
-            foreach (ListViewDataItem lvi in itemsAUX)
-            {
-                LVproductos.Items.Add(lvi);
-            }
-
+            String Busqueda = txtbuscar.Text.ToUpper();
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND [Descripcion] LIKE '%' + '"+ Busqueda +"' + '%'";
         }
+        protected void BtnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1'";
+        }
+
     }
 }

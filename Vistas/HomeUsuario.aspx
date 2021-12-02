@@ -34,7 +34,7 @@
                             <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" Width="100px" OnClick="BtnBuscar_Click" />
                         </td>
                         <td class="auto-style2">
-                            <asp:Button ID="BtnMostrarTodos" runat="server" Text="Mostrar todos" Width="100px" />
+                            <asp:Button ID="BtnMostrarTodos" runat="server" Text="Mostrar todos" Width="100px" OnClick="BtnMostrarTodos_Click" />
                         </td>
                         <td class="auto-style2">
                             <asp:Button ID="BtnCarrito" runat="server" Text="Ir al carrito" Width="100px" OnClick="BtnCarrito_Click" />

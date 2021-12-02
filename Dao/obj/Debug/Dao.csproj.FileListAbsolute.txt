@@ -196,3 +196,12 @@ C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V29\Dao\obj\Debug\Dao.csproj
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V29\Dao\obj\Debug\Dao.csproj.CopyComplete
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V29\Dao\obj\Debug\Dao.dll
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V29\Dao\obj\Debug\Dao.pdb
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\bin\Debug\Dao.dll
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\bin\Debug\Dao.pdb
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\bin\Debug\Entidades.dll
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\bin\Debug\Entidades.pdb
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\obj\Debug\Dao.csproj.AssemblyReference.cache
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\obj\Debug\Dao.csproj.CoreCompileInputs.cache
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\obj\Debug\Dao.csproj.CopyComplete
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\obj\Debug\Dao.dll
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Dao\obj\Debug\Dao.pdb
