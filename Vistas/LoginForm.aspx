@@ -138,7 +138,7 @@
                     <td class="auto-style13"></td>
                     <td class="auto-style7">Contraseña:</td>
                     <td class="auto-style21">
-                        <asp:TextBox ID="TxtContraseña" runat="server" Height="28px" Width="234px"></asp:TextBox>
+                        <asp:TextBox ID="TxtContraseña" runat="server" Height="28px" Width="234px" TextMode="Password"></asp:TextBox>
                     </td>
                     <td class="auto-style22"></td>
                 </tr>

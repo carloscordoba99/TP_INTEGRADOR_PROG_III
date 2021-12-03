@@ -25,16 +25,32 @@ namespace Vistas
         {
             Boolean agregado = false;
 
-            agregado = negUsuarios.AgregarUsuario(txtNom.Text, txtApellido.Text, txtEmail.Text, txtNumCel.Text, txtDni.Text, TxtDireccion.Text, DdlProvincias.SelectedValue.ToString(), txtContraseña.Text, 0);
+            lblMensaje.Text = DdlProvincias.SelectedValue.ToString();
+
+            agregado = negUsuarios.AgregarUsuario(txtNom.Text, txtApellido.Text, txtEmail.Text, txtNumCel.Text, txtDni.Text, TxtDireccion.Text, DdlProvincias.SelectedValue.ToString(), txtContrasenia.Text, 0);
             if (agregado == true)
             {
                 lblMensaje.Text = "El Usuario ha sido agregado";
-
             }
             else
             {
-                lblMensaje.Text = "El Usuario no ha sido Agregado";
+                lblMensaje.Text = "El Usuario no ha sido Agregado, porque ya existe usuario con ese DNi";
             }
+
+            LimpiarTexbox();
         }
+        public void LimpiarTexbox()
+        {
+            txtNom.Text = "";
+            txtApellido.Text = "";
+            txtEmail.Text = "";
+            txtNumCel.Text = "";
+            TxtDireccion.Text = "";
+            txtDni.Text = "";
+            txtContrasenia.Text = "";
+            txtContraseniaRevision.Text = "";
+            DdlProvincias.SelectedIndex = 0;
+        }
+
     }
 }

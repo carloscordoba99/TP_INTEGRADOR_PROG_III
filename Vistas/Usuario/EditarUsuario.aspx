@@ -58,7 +58,7 @@
                     </td>
 
                     <td>
-                        <asp:HyperLink ID="HyperLink4" runat="server">Inicio</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/PanelAdm.aspx">Inicio</asp:HyperLink>
                     </td>
                 </tr>
             </table>
