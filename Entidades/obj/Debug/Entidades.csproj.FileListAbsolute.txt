@@ -142,3 +142,9 @@ C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Entidades\obj\Debug\Enti
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Entidades\obj\Debug\Entidades.dll
 C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V30\Entidades\obj\Debug\Entidades.pdb
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V31\Entidades\bin\Debug\Entidades.dll
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V31\Entidades\bin\Debug\Entidades.pdb
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V31\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V31\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V31\Entidades\obj\Debug\Entidades.dll
+C:\Users\crest\Desktop\TP INTEGRADOR FINAL PROG III\V31\Entidades\obj\Debug\Entidades.pdb

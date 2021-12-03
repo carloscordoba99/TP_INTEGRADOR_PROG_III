@@ -45,7 +45,37 @@
                     </tr>
                 </table>
             </nav>
+            <br />
+            <table class="auto-style1">
+                <tr>
+                    <td>Categorías</td>
+                    <td>
             <asp:Label ID="LblProductoAgregado" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <asp:Button ID="BtnMemoriasRAM" runat="server" Text="Memorias RAM" Width="100px" OnClick="BtnMemoriasRAM_Click" />
+                        <br />
+                        <br />
+                            <asp:Button ID="BtnMonitores" runat="server" Text="Monitores" Width="100px" OnClick="BtnMonitores_Click" />
+                        <br />
+                        <br />
+                            <asp:Button ID="BtnAuriculares" runat="server" Text="Auriculares" Width="100px" OnClick="BtnAuriculares_Click" />
+                        <br />
+                        <br />
+                            <asp:Button ID="BtnMouse" runat="server" Text="Mouse" Width="100px" OnClick="BtnMouse_Click" />
+                        <br />
+                        <br />
+                            <asp:Button ID="BtnMotherBoard" runat="server" Text="MotherBoard" Width="100px" OnClick="BtnMotherBoard_Click" />
+                        <br />
+                        <br />
+                            <asp:Button ID="BtnMicrofono" runat="server" Text="Microfonos" Width="100px" OnClick="BtnMicrofono_Click" />
+                        <br />
+                        <br />
+                            <asp:Button ID="BtnTeclados" runat="server" Text="Teclados" Width="100px" OnClick="BtnTeclados_Click" />
+                        </td>
+                    <td>
             <asp:ListView ID="LVproductos" runat="server" DataSourceID="SqlDataSource1" GroupItemCount="3">
                 <AlternatingItemTemplate>
                     <td runat="server" style="background-color: #FAFAD2; color: #284775;">
@@ -144,6 +174,9 @@
                         <br /></td>
                 </SelectedItemTemplate>
             </asp:ListView>
+                    </td>
+                </tr>
+            </table>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString %>" SelectCommand="SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos]"></asp:SqlDataSource>
         </div>
     </form>

@@ -70,5 +70,38 @@ namespace Vistas
             SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1'";
         }
 
+        protected void BtnMemoriasRAM_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND CodCategoria = '1'";
+        }
+
+        protected void BtnMonitores_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND CodCategoria = '2'";
+        }
+
+        protected void BtnAuriculares_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND CodCategoria = '3'";
+        }
+        protected void BtnMouse_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND CodCategoria = '4'";
+        }
+
+        protected void BtnMotherBoard_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND CodCategoria = '5'";
+        }
+
+        protected void BtnMicrofono_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND CodCategoria = '6'";
+        }
+
+        protected void BtnTeclados_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND CodCategoria = '7'";
+        }
     }
 }
