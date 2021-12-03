@@ -71,6 +71,7 @@
                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Producto/BuscarProducto.aspx">Buscar Producto</asp:HyperLink>
                     </td>
                     <td class="auto-style8">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/PanelAdm.aspx">Home</asp:HyperLink>
                     </td>
                 </tr>
                 </table>

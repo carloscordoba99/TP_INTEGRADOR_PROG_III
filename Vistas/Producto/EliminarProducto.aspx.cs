@@ -26,11 +26,11 @@ namespace Vistas.Producto
             bool eliminado = deleteProducto.EliminarProducto(Codigo);
             if(eliminado == true)
             {
-                lblMensaje.Text = "No se ha podido eliminar el Producto";
+                lblMensaje.Text = "Se ha podido eliminar el Producto";
             }
             else
             {
-                lblMensaje.Text =  "Se ha eliminado el Producto";
+                lblMensaje.Text =  "No se ha eliminado el Producto";
             }
         }
 

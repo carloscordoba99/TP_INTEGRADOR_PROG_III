@@ -25,13 +25,13 @@ namespace Vistas.Producto
             {
                 //dropdowlist Categoria
 
-                ddlCategoria.DataSource = negCat.getTablaCategorias();
+                /*ddlCategoria.DataSource = negCat.getTablaCategorias();
                 ddlCategoria.DataTextField = "NombreCategoria";
                 ddlCategoria.DataBind();
 
                 ddlProveedor.DataSource = negCat2.getTablaProveedores();
                 ddlProveedor.DataTextField = "Cod_Proveedor_Pr";
-                ddlProveedor.DataBind();
+                ddlProveedor.DataBind();*/
             }
         }
 
@@ -42,7 +42,9 @@ namespace Vistas.Producto
         {
             Boolean agregado = false;
 
-            agregado = objProd.AgregarProducto(txtNombre.Text,txtDescripcion.Text, txtPrecioU.Text, ddlCategoria.SelectedIndex.ToString(), txtStock.Text,ddlProveedor.SelectedValue);
+
+
+            agregado = objProd.AgregarProducto(txtNombre.Text,txtDescripcion.Text, txtPrecioU.Text, ddlCategoria.SelectedValue, txtStock.Text,ddlProveedor.SelectedValue);
             if (agregado == true)
             {
                 lblMensaje.Text = "Producto Agregado";

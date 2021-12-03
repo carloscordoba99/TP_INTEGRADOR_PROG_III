@@ -135,8 +135,9 @@
                 <tr>
                     <td class="auto-style17">Categoria</td>
                     <td class="auto-style19">
-                        <asp:DropDownList ID="ddlCategoria" runat="server" Height="30px" Width="220px">
+                        <asp:DropDownList ID="ddlCategoria" runat="server" Height="30px" Width="220px" DataSourceID="SqlDataSource1" DataTextField="NombreCategoria" DataValueField="CodCategoria">
                         </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString3 %>" SelectCommand="SELECT [CodCategoria], [NombreCategoria] FROM [Categorias]"></asp:SqlDataSource>
                     </td>
                     <td>
                         &nbsp;</td>
@@ -153,9 +154,10 @@
                 <tr>
                     <td class="auto-style17">Codigo Proveedor</td>
                     <td class="auto-style19">
-                        <asp:DropDownList ID="ddlProveedor" runat="server" AppendDataBoundItems="True" Height="30px" Width="220px">
+                        <asp:DropDownList ID="ddlProveedor" runat="server" AppendDataBoundItems="True" Height="30px" Width="220px" DataSourceID="SqlDataSource2" DataTextField="RazonSocial_Pr" DataValueField="Cod_Proveedor_Pr">
                             <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString4 %>" SelectCommand="SELECT [Cod_Proveedor_Pr], [RazonSocial_Pr] FROM [Proveedores]"></asp:SqlDataSource>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
