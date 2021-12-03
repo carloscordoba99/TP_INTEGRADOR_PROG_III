@@ -77,7 +77,9 @@
                             <td class="auto-style9">
                                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DetalleVentas/BuscarDetalleDeVentas.aspx">Buscar detalle de ventas</asp:HyperLink>
                             </td>
-                            <td class="auto-style8"></td>
+                            <td class="auto-style8">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/PanelAdm.aspx">Home</asp:HyperLink>
+                            </td>
                         </tr>
                         </table>
                     </td>
@@ -92,8 +94,10 @@
                         <asp:TextBox ID="TxtCodVenta" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style18">
-                        <asp:RequiredFieldValidator ID="rfvCodVenta" runat="server" ControlToValidate="TxtCodVenta">Ingrese Codigo Venta</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvCodVenta" runat="server" ControlToValidate="TxtCodVenta" ValidationGroup="Group1">Ingrese Codigo Venta</asp:RequiredFieldValidator>
                     </td>
+                    <td class="auto-style18">
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Codigo de artículo: </td>
@@ -101,8 +105,10 @@
                         <asp:TextBox ID="TXtCodArt" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style18">
-                        <asp:RequiredFieldValidator ID="rfvCodArt" runat="server" ControlToValidate="TXtCodArt">Ingrese Codigo</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvCodArt" runat="server" ControlToValidate="TXtCodArt" ValidationGroup="Group1">Ingrese Codigo</asp:RequiredFieldValidator>
                     </td>
+                    <td class="auto-style18">
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Cantidad: </td>
@@ -110,7 +116,10 @@
                         <asp:TextBox ID="TxtCantidad" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style18">
-                        <asp:CompareValidator ID="cvCantidad" runat="server" ControlToValidate="TxtCantidad" ErrorMessage="CompareValidator" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Cantidad</asp:CompareValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TxtCantidad" ErrorMessage="RequiredFieldValidator" ValidationGroup="Group1">Ingrese cantidad</asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style18">
+                        <asp:CompareValidator ID="cvCantidad" runat="server" ControlToValidate="TxtCantidad" ErrorMessage="CompareValidator" Operator="GreaterThan" Type="Integer" ValueToCompare="0" ValidationGroup="Group1">Ingrese una cantidad mayor a 0</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
@@ -119,20 +128,26 @@
                         <asp:TextBox ID="TxtPrecioUnitario" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style18">
-                        <asp:CompareValidator ID="cv" runat="server" ControlToValidate="TxtPrecioUnitario" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Precio Unitario</asp:CompareValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TxtPrecioUnitario" ErrorMessage="RequiredFieldValidator" ValidationGroup="Group1">Ingrese precio unitario</asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style18">
+                        <asp:CompareValidator ID="cv" runat="server" ControlToValidate="TxtPrecioUnitario" Operator="GreaterThan" Type="Integer" ValueToCompare="0" ValidationGroup="Group1">Ingrese Precio Unitario mayor a 0</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">&nbsp;</td>
                     <td class="auto-style18">&nbsp;</td>
                     <td class="auto-style18">&nbsp;</td>
+                    <td class="auto-style18">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style13">&nbsp;</td>
                     <td class="auto-style18">
-                        <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" Width="129px" OnClick="BtnAgregar_Click" />
+                        <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" Width="129px" OnClick="BtnAgregar_Click" ValidationGroup="Group1" />
                         <asp:Label ID="LblMensaje" runat="server"></asp:Label>
                     </td>
+                    <td class="auto-style18">
+                        &nbsp;</td>
                     <td class="auto-style18">
                         &nbsp;</td>
                 </tr>

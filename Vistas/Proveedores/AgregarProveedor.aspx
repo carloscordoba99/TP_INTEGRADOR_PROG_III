@@ -116,7 +116,7 @@
                         <asp:TextBox ID="TxtRazonSocial" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvRazonSocial" runat="server" ControlToValidate="TxtRazonSocial">Ingrese Razon Social</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvRazonSocial" runat="server" ControlToValidate="TxtRazonSocial" ValidationGroup="Group1">Ingrese Razon Social</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -125,7 +125,37 @@
                         <asp:TextBox ID="TxtMarca" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvMarca" runat="server" ControlToValidate="TxtMarca">Ingrese Marca</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvMarca" runat="server" ControlToValidate="TxtMarca" ValidationGroup="Group1">Ingrese Marca</asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">Provincia: </td>
+                    <td class="auto-style19">
+                    <asp:DropDownList ID="DdlProvincias" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreProvincia" DataValueField="IdProvincia">
+                        <asp:ListItem>-- Seleccione Provincia --</asp:ListItem>
+                        <asp:ListItem>Cordoba</asp:ListItem>
+                        <asp:ListItem>Santa Fe</asp:ListItem>
+                        <asp:ListItem>Buenos Aires</asp:ListItem>
+                    </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString5 %>" SelectCommand="SELECT [IdProvincia], [NombreProvincia] FROM [Provincias]"></asp:SqlDataSource>
+                    </td>
+                    <td class="auto-style20">
+                        <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ControlToValidate="DdlProvincias" ValidationGroup="Group1">Ingrese Provincia</asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">Localidad: </td>
+                    <td class="auto-style19">
+                    <asp:DropDownList ID="DdlLocalidad" runat="server" DataSourceID="SqlDataSource2" DataTextField="NombreLocalidad" DataValueField="IdLocalidad">
+                        <asp:ListItem>-- Seleccione Provincia --</asp:ListItem>
+                        <asp:ListItem>Cordoba</asp:ListItem>
+                        <asp:ListItem>Santa Fe</asp:ListItem>
+                        <asp:ListItem>Buenos Aires</asp:ListItem>
+                    </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString6 %>" SelectCommand="SELECT * FROM [Localidades]"></asp:SqlDataSource>
+                    </td>
+                    <td class="auto-style20">
+                        <asp:RequiredFieldValidator ID="rfvCiudad" runat="server" ControlToValidate="DdlLocalidad" ValidationGroup="Group1">Ingrese localidad</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -134,70 +164,52 @@
                         <asp:TextBox ID="TxtDireccion" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="TxtDireccion">Ingrese Direccion</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="TxtDireccion" ValidationGroup="Group1">Ingrese Direccion</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">Ciudad: </td>
-                    <td class="auto-style19">
-                        <asp:TextBox ID="TxtCiudad" runat="server" Width="216px"></asp:TextBox>
-                    </td>
-                    <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvCiudad" runat="server" ControlToValidate="TxtCiudad">Ingrese Ciudad</asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style17">Provincia</td>
-                    <td class="auto-style19">
-                        <asp:TextBox ID="TxtProvincia" runat="server" Width="216px"></asp:TextBox>
-                    </td>
-                    <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ControlToValidate="TxtProvincia">Ingrese Provincia</asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style17">Cuit</td>
+                    <td class="auto-style17">Cuit: </td>
                     <td class="auto-style19">
                         <asp:TextBox ID="TxtCuit" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ControlToValidate="TxtCuit">Ingrese numero de Cuit</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ControlToValidate="TxtCuit" ValidationGroup="Group1">Ingrese numero de Cuit</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">Telefono</td>
+                    <td class="auto-style17">Telefono: </td>
                     <td class="auto-style19">
                         <asp:TextBox ID="TxtTelefono" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="TxtTelefono">Ingrese Numero de Telefono</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="TxtTelefono" ValidationGroup="Group1">Ingrese Numero de Telefono</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">Contacto</td>
+                    <td class="auto-style17">Contacto: </td>
                     <td class="auto-style19">
                         <asp:TextBox ID="TxtContacto" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvContacto" runat="server" ControlToValidate="TxtContacto">Ingrese Contacto</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvContacto" runat="server" ControlToValidate="TxtContacto" ValidationGroup="Group1">Ingrese Contacto</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">Web</td>
+                    <td class="auto-style17">Web: </td>
                     <td class="auto-style19">
                         <asp:TextBox ID="TxtWeb" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RegularExpressionValidator ID="revWeb" runat="server" ControlToValidate="TxtWeb" ValidationExpression="([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?">Ingrese una Pagina web Valida</asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="revWeb" runat="server" ControlToValidate="TxtWeb" ValidationExpression="([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" ValidationGroup="Group1">Ingrese una Pagina web Valida</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">Email</td>
+                    <td class="auto-style17">Email: </td>
                     <td class="auto-style19">
                         <asp:TextBox ID="TxtEmail" runat="server" Width="216px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="TxtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Ingrese una Direccion de Email Valida</asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="TxtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="Group1">Ingrese una Direccion de Email Valida</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -206,7 +218,7 @@
                         <asp:TextBox ID="TxtCBU" runat="server" Width="214px"></asp:TextBox>
                     </td>
                     <td class="auto-style20">
-                        <asp:RequiredFieldValidator ID="rfvCbu" runat="server" ControlToValidate="TxtCBU">Ingrese numero de Cbu</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvCbu" runat="server" ControlToValidate="TxtCBU" ValidationGroup="Group1">Ingrese numero de Cbu</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -217,7 +229,7 @@
                 <tr>
                     <td class="auto-style13"></td>
                     <td class="auto-style21">
-                        <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" Width="129px" OnClick="BtnAgregar_Click" />
+                        <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" Width="129px" OnClick="BtnAgregar_Click" ValidationGroup="Group1" />
                     </td>
                     <td class="auto-style22">
                         <asp:Label ID="LblMensaje" runat="server"></asp:Label>

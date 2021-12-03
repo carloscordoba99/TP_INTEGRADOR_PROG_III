@@ -34,7 +34,7 @@ namespace Vistas
 
         protected void btnProveedores_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Proveedores/AgregarProveedeor.aspx");
+            Response.Redirect("Proveedores/AgregarProveedor.aspx");
         }
 
         protected void btnUsuarios_Click(object sender, EventArgs e)

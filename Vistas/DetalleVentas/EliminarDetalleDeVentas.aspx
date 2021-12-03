@@ -73,15 +73,17 @@
                     <table class="auto-style1">
                     <tr>
                         <td class="auto-style10">
-                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DetalleDeVentas/AgregarDetalleDeVentas.aspx">Agregar detalle de ventas</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DetalleVentas/AgregarDetalleDeVentas.aspx">Agregar detalle de ventas</asp:HyperLink>
                         </td>
                         <td class="auto-style11">
-                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/DetalleDeVentas/EliminarDetalleDeVentas.aspx">Eliminar detalle de ventas</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/DetalleVentas/EliminarDetalleDeVentas.aspx">Eliminar detalle de ventas</asp:HyperLink>
                         </td>
                         <td class="auto-style9">
-                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DetalleDeVentas/BuscarDetalleDeVentas.aspx">Buscar detalle de ventas</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DetalleVentas/BuscarDetalleDeVentas.aspx">Buscar detalle de ventas</asp:HyperLink>
                         </td>
-                        <td class="auto-style8"></td>
+                        <td class="auto-style8">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/PanelAdm.aspx">Home</asp:HyperLink>
+                        </td>
                     </tr>
                     </table>
                 </td>

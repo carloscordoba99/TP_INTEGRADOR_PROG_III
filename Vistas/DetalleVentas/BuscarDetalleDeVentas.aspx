@@ -72,7 +72,9 @@
                         <td class="auto-style9">
                                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DetalleVentas/BuscarDetalleDeVentas.aspx">Buscar detalle de ventas</asp:HyperLink>
                         </td>
-                        <td class="auto-style8"></td>
+                        <td class="auto-style8">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/PanelAdm.aspx">Home</asp:HyperLink>
+                        </td>
                     </tr>
                     </table>
                 </td>

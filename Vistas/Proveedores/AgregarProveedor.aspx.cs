@@ -28,7 +28,7 @@ namespace Vistas.Proveedores
         {
             Boolean Agregado = false;
 
-            Agregado = ObjProv.AgregarProveedor(TxtRazonSocial.Text,TxtMarca.Text,TxtDireccion.Text,TxtCiudad.Text,TxtProvincia.Text,TxtCuit.Text,TxtTelefono.Text,TxtContacto.Text,TxtEmail.Text,TxtWeb.Text,TxtCBU.Text);
+            Agregado = ObjProv.AgregarProveedor(TxtRazonSocial.Text,TxtMarca.Text,TxtDireccion.Text,DdlLocalidad.SelectedValue,DdlProvincias.SelectedValue,TxtCuit.Text,TxtTelefono.Text,TxtContacto.Text,TxtEmail.Text,TxtWeb.Text,TxtCBU.Text);
             if (Agregado == true)
             {
                 LblMensaje.Text = "Proveedor Agregado.";
@@ -48,14 +48,14 @@ namespace Vistas.Proveedores
             TxtRazonSocial.Text = "";
             TxtMarca.Text = "";
             TxtDireccion.Text = "";
-            TxtCiudad.Text = "";
-            TxtProvincia.Text = "";
             TxtCuit.Text = "";
             TxtTelefono.Text = "";
             TxtContacto.Text = "";
             TxtEmail.Text = "";
             TxtWeb.Text = "";
             TxtCBU.Text = "";
+            DdlProvincias.SelectedValue = "0";
+            DdlLocalidad.SelectedValue = "0";
         }
 
         public void AgregarListaProveedores()
