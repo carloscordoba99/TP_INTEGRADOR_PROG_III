@@ -82,7 +82,7 @@
                 <tr style="text-align:left">
                     <td colspan="3">
             <asp:Button ID="BtnActualizar" runat="server" OnClick="BtnActualizar_Click" Text="Actualizar tabla" />
-                    &nbsp;<asp:Button ID="BtnComprar" runat="server" Text="Realizar compra" OnClick="BtnComprar_Click" />
+                    &nbsp;<asp:Button ID="BtnComprar" runat="server" Text="Realizar compra" OnClick="BtnComprar_Click" OnClientClick="return confirm('¿Desea realizar esta compra?');" />
                     &nbsp;Total a pagar: $ <asp:Label ID="LblTotal" runat="server"></asp:Label>
                     </td>
                 </tr>

@@ -15,15 +15,6 @@ namespace Vistas
         protected void Page_Load(object sender, EventArgs e)
         {
             LblUsuario.Text = Session["Usuario"].ToString();
-
-            /*itemsTodosBD.Items.Clear();
-            foreach (ListViewDataItem item in LVproductos.Items)
-            {
-                itemsTodosBD.Items.Add(item);
-            }*/
-
-            itemsTodos = new ListViewDataItem[LVproductos.Items.Count];
-            this.LVproductos.Items.CopyTo(itemsTodos, 0);
         }
         protected void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
@@ -64,6 +55,7 @@ namespace Vistas
         {
             String Busqueda = txtbuscar.Text.ToUpper();
             SqlDataSource1.SelectCommand = "SELECT [ImagenUrl], [Descripcion], [PrecioUnitario], [CodArticulo] FROM [Articulos] WHERE [Estado] = '1' AND [Descripcion] LIKE '%' + '"+ Busqueda +"' + '%'";
+            txtbuscar.Text = "";
         }
         protected void BtnMostrarTodos_Click(object sender, EventArgs e)
         {
