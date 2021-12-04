@@ -1,5 +1,8 @@
 ﻿using Negocio;
 using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Web.UI.WebControls;
 
 namespace Vistas.Proveedores
 {
@@ -16,6 +19,7 @@ namespace Vistas.Proveedores
             if(IsPostBack == false)
             {
                 AgregarListaProveedores();
+                LlenarDropDownList();
             }
         }
         protected void BtnAgregar_Click(object sender, EventArgs e)
@@ -61,5 +65,36 @@ namespace Vistas.Proveedores
             grdListaProveedores.DataBind();
         }
 
+        public void LlenarDropDownList()
+        {
+            DdlProvincias.DataSource = ConsultarDdl("SELECT * FROM PROVINCIAS");
+            DdlProvincias.DataTextField = "NombreProvincia";
+            DdlProvincias.DataValueField = "IdProvincia";
+            DdlProvincias.DataBind();
+            DdlProvincias.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Seleccionar provincia --"));
+            DdlLocalidad.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Seleccionar localidad --"));
+        }
+        public DataSet ConsultarDdl(String consulta)
+        {
+            string conexion = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=ProyectoProg3;Integrated Security=True";
+            SqlConnection cn = new SqlConnection(conexion);
+            cn.Open();
+            SqlCommand cmd = new SqlCommand(consulta,cn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cn.Close();
+            return ds;
+        }
+
+        protected void DdlProvincias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int ProvinciaId = Convert.ToInt32(DdlProvincias.SelectedValue);
+            DdlLocalidad.DataSource = ConsultarDdl("SELECT * FROM LOCALIDADES WHERE IdProvincia='"+Convert.ToString(ProvinciaId)+"'");
+            DdlLocalidad.DataTextField = "NombreLocalidad";
+            DdlLocalidad.DataValueField = "IdLocalidad";
+            DdlLocalidad.DataBind();
+            DdlLocalidad.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Seleccionar localidad --"));
+        }
     }
 }
