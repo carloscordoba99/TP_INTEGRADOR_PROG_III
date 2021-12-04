@@ -71,6 +71,9 @@
                     <td class="auto-style9">
                         <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Usuario/BuscarUsuario.aspx">Buscar Usuario</asp:HyperLink>
                     </td>
+                    <td class="auto-style9">
+                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Usuario/EditarUsuario.aspx">Editar Usuario</asp:HyperLink>
+                    </td>
                     <td class="auto-style8">
                         <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/PanelAdm.aspx">Inicio</asp:HyperLink>
                     </td>

@@ -46,5 +46,10 @@ namespace Vistas
         {
             Response.Redirect("Ventas/AgregarVenta.aspx");
         }
+
+        protected void BtnReportes_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("reportes/ReporteVentas.aspx");
+        }
     }
 }

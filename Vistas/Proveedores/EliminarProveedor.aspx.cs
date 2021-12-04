@@ -31,6 +31,7 @@ namespace Vistas.Proveedores
             {
                 LblMensaje.Text = "No se ha podido eliminar el proveedor.";
             }
+            TxtIDProveedor.Text = "";
         }
     }
 }

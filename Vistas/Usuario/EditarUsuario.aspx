@@ -43,6 +43,7 @@
                     <td class="auto-style4"></td>
                     <td class="auto-style3"></td>
                     <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style3"></td>
                 </tr>
                 <tr>
@@ -55,6 +56,10 @@
 
                     <td>
                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Usuario/BuscarUsuario.aspx">Buscar Usuario</asp:HyperLink>
+                    </td>
+
+                    <td>
+                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Usuario/EditarUsuario.aspx">Editar Usuario</asp:HyperLink>
                     </td>
 
                     <td>

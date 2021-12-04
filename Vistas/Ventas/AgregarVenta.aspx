@@ -105,33 +105,53 @@
                     <td class="auto-style17">Código cliente: </td>
                     <td>
                         <asp:TextBox ID="TxtCodCliente" runat="server" Width="216px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvCodCliente" runat="server" ControlToValidate="TxtCodCliente">Ingrese Codigo de Cliente</asp:RequiredFieldValidator>
                     </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="rfvCodCliente" runat="server" ControlToValidate="TxtCodCliente" ValidationGroup="Group1">Ingrese Codigo de Cliente</asp:RequiredFieldValidator>
+                    </td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style23">Total factura: </td>
                     <td class="auto-style24">
                         <asp:TextBox ID="TxtTotalFactura" runat="server" Width="216px"></asp:TextBox>
-                        <asp:CompareValidator ID="cvTotalFactura" runat="server" ControlToValidate="TxtTotalFactura" Operator="GreaterThan" Type="Integer" ValueToCompare="0">Ingrese Total de Factura</asp:CompareValidator>
+                    </td>
+                    <td class="auto-style24">
+                        <asp:RequiredFieldValidator ID="rfvCodCliente0" runat="server" ControlToValidate="TxtTotalFactura" ValidationGroup="Group1">Ingrese un total de factura</asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style24">
+                        <asp:CompareValidator ID="cvTotalFactura" runat="server" ControlToValidate="TxtTotalFactura" Operator="GreaterThan" Type="Integer" ValueToCompare="0" ValidationGroup="Group1">El total de la factura debe ser mayor a 0</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">Fecha factura: </td>
                     <td>
                         <asp:TextBox ID="TxtFecha" runat="server" Width="216px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvFecha" runat="server" ControlToValidate="TxtFecha">Ingrese Fecha</asp:RequiredFieldValidator>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="rfvFecha" runat="server" ControlToValidate="TxtFecha" ValidationGroup="Group1">Ingrese Fecha</asp:RequiredFieldValidator>
+                    </td>
+                    <td>
+                        <asp:RegularExpressionValidator ID="RevFechaInicio" runat="server" ControlToValidate="TxtFecha" ErrorMessage="dd/mm/yyyy" SetFocusOnError="True" ValidationExpression="^([0]?[1-9]|[1-2][0-9]|[3][0-1])/([0]?[1-9]|[1][0-2])/([1-3][0-9][0-9][0-9])$" ValidationGroup="Group1">Por favor, ingresar la fecha de la siguiente manera: día/mes/año</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style17">&nbsp;</td>
                     <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style13">&nbsp;</td>
                     <td>
-                        <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" Width="129px" OnClick="BtnAgregar_Click" />
+                        <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" Width="129px" OnClick="BtnAgregar_Click" ValidationGroup="Group1" />
                         <asp:Label ID="LblMensaje" runat="server"></asp:Label>
                     </td>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
             </table>
         </div>

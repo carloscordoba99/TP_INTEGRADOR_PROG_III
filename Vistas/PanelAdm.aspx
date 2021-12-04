@@ -19,9 +19,11 @@
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" Height="586px" Width="259px">
-                <asp:Panel ID="Panel2" runat="server" CssClass="auto-style1" Height="75px" Width="801px">
+                <asp:Panel ID="Panel2" runat="server" CssClass="auto-style1" Height="35px" Width="801px" style="text-align:right">
                     <asp:Label ID="LblUsuario" runat="server"></asp:Label>
                 </asp:Panel>
+                <asp:Panel ID="Panel3" runat="server" CssClass="auto-style1" Height="40px" Width="801px" style="text-align:center">
+                    PANEL ADMINISTRADOR</asp:Panel>s
                 <div class="auto-style2">
                     <br />
                     <asp:Button ID="btnProductos" runat="server" Font-Bold="True" Height="30px" Text="Productos" Width="180px" OnClick="btnProductos_Click" />
@@ -40,6 +42,9 @@
                     <br />
                     <br />
                     <asp:Button ID="btnVentas" runat="server" Font-Bold="True" Height="30px" Text="Ventas" Width="180px" OnClick="btnVentas_Click" />
+                    <br />
+                    <br />
+                    <asp:Button ID="BtnReportes" runat="server" Font-Bold="True" Height="30px" Text="Reporte ventas" Width="180px" OnClick="BtnReportes_Click" />
                     <br />
                 </div>
             </asp:Panel>

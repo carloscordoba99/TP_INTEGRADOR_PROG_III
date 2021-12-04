@@ -154,7 +154,7 @@
                             <asp:TextBox ID="txt_eit_Ciudad" runat="server" Text='<%# Bind("Ciudad_Pr") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_Ciudad" runat="server" Text='<%# Bind("Ciudad_Pr") %>'></asp:Label>
+                            <asp:Label ID="lbl_Ciudad" runat="server" Text='<%# Bind("Localidad_Pr") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Provincia">

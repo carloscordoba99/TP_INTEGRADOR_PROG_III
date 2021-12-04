@@ -82,16 +82,17 @@
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Usuario/AgregarUsuario.aspx">Crear Usuario</asp:HyperLink>
                     </td>
                     <td class="auto-style11">
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Usuario/BuscarUsuario.aspx">Buscar Usuario</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Usuario/EliminarUsuario.aspx">Eliminar Usuarios</asp:HyperLink>
                     </td>
                     <td class="auto-style9">
-                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Usuario/EditarUsuario.aspx">Editar Usuario</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Usuario/BuscarUsuario.aspx">Buscar Usuario</asp:HyperLink>
                     </td>
                     <td class="auto-style18">
-                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/PanelAdm.aspx">Inicio</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Usuario/EditarUsuario.aspx">Editar Usuario</asp:HyperLink>
                     </td>
                     <td class="auto-style8">
-                        &nbsp;</td>
+                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/PanelAdm.aspx">Inicio</asp:HyperLink>
+                    </td>
                 </tr>
                 </table>
             </td>

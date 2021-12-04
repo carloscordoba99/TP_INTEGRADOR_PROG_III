@@ -51,6 +51,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.Label LblUsuario;
 
         /// <summary>
+        /// Control Panel3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel3;
+
+        /// <summary>
         /// Control btnProductos.
         /// </summary>
         /// <remarks>
@@ -103,5 +112,14 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnVentas;
+
+        /// <summary>
+        /// Control BtnReportes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnReportes;
     }
 }

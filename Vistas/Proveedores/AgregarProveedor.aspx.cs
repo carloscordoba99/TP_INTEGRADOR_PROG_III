@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Entidades;
-using Negocio;
+﻿using Negocio;
+using System;
 
 namespace Vistas.Proveedores
 {
@@ -28,7 +22,10 @@ namespace Vistas.Proveedores
         {
             Boolean Agregado = false;
 
-            Agregado = ObjProv.AgregarProveedor(TxtRazonSocial.Text,TxtMarca.Text,TxtDireccion.Text,DdlLocalidad.SelectedValue,DdlProvincias.SelectedValue,TxtCuit.Text,TxtTelefono.Text,TxtContacto.Text,TxtEmail.Text,TxtWeb.Text,TxtCBU.Text);
+            String localidad = DdlLocalidad.SelectedValue.ToString();
+            String Provincia = DdlProvincias.SelectedIndex.ToString();
+
+            Agregado = ObjProv.AgregarProveedor(TxtRazonSocial.Text,TxtMarca.Text,TxtDireccion.Text,localidad,Provincia,TxtCuit.Text,TxtTelefono.Text,TxtContacto.Text,TxtEmail.Text,TxtWeb.Text,TxtCBU.Text);
             if (Agregado == true)
             {
                 LblMensaje.Text = "Proveedor Agregado.";
@@ -54,8 +51,8 @@ namespace Vistas.Proveedores
             TxtEmail.Text = "";
             TxtWeb.Text = "";
             TxtCBU.Text = "";
-            DdlProvincias.SelectedValue = "0";
-            DdlLocalidad.SelectedValue = "0";
+            DdlProvincias.SelectedIndex = 0;
+            DdlLocalidad.SelectedIndex = 0;
         }
 
         public void AgregarListaProveedores()
@@ -63,5 +60,6 @@ namespace Vistas.Proveedores
             grdListaProveedores.DataSource = ObjProv.GetTablaProveedores();
             grdListaProveedores.DataBind();
         }
+
     }
 }
