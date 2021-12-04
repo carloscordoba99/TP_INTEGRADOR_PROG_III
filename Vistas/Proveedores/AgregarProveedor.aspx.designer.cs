@@ -114,22 +114,13 @@ namespace Vistas.Proveedores
         protected global::System.Web.UI.WebControls.DropDownList DdlProvincias;
 
         /// <summary>
-        /// Control SqlDataSource1.
+        /// Control frProvincia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-
-        /// <summary>
-        /// Control rfvProvincia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProvincia;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator frProvincia;
 
         /// <summary>
         /// Control DdlLocalidad.
@@ -141,22 +132,13 @@ namespace Vistas.Proveedores
         protected global::System.Web.UI.WebControls.DropDownList DdlLocalidad;
 
         /// <summary>
-        /// Control SqlDataSource2.
+        /// Control frProvincia0.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
-
-        /// <summary>
-        /// Control rfvCiudad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCiudad;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator frProvincia0;
 
         /// <summary>
         /// Control TxtDireccion.
@@ -240,6 +222,15 @@ namespace Vistas.Proveedores
         protected global::System.Web.UI.WebControls.TextBox TxtWeb;
 
         /// <summary>
+        /// Control RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
         /// Control revWeb.
         /// </summary>
         /// <remarks>
@@ -256,6 +247,15 @@ namespace Vistas.Proveedores
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtEmail;
+
+        /// <summary>
+        /// Control RequiredFieldValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
         /// Control revEmail.

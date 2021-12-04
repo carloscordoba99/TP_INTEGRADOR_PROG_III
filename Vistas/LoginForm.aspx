@@ -149,7 +149,7 @@
                         <asp:Button ID="BtnIniciarSesion" runat="server" OnClick="BtnIniciarSesion_Click" Text="Iniciar sesión" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="BtnCerrarSesion" runat="server" OnClick="BtnCerrarSesion_Click" Text="Cerrar Sesión" Width="116px" />
-                        <asp:Button ID="Registrarse" runat="server" OnClick="Registrarse_Click" Text="Crear usuario" />
+                        <asp:Button ID="Registrarse" runat="server" OnClick="Registrarse_Click" Text="Registrarse" />
                     </td>
                     <td class="auto-style15">
                         <asp:Label ID="LblMensaje" runat="server"></asp:Label>

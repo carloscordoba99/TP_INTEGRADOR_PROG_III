@@ -23,7 +23,7 @@ namespace Vistas.Proveedores
             Boolean Agregado = false;
 
             String localidad = DdlLocalidad.SelectedValue.ToString();
-            String Provincia = DdlProvincias.SelectedIndex.ToString();
+            String Provincia = DdlProvincias.SelectedValue.ToString();
 
             Agregado = ObjProv.AgregarProveedor(TxtRazonSocial.Text,TxtMarca.Text,TxtDireccion.Text,localidad,Provincia,TxtCuit.Text,TxtTelefono.Text,TxtContacto.Text,TxtEmail.Text,TxtWeb.Text,TxtCBU.Text);
             if (Agregado == true)

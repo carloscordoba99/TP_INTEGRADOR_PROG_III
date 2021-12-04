@@ -51,5 +51,13 @@ namespace Vistas
         {
             Response.Redirect("reportes/ReporteVentas.aspx");
         }
+
+        protected void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session["Usuario"] = null;
+            Session["IdUsuario"] = null;
+            LblUsuario.Text = "";
+            Response.Redirect("LoginForm.aspx");
+        }
     }
 }

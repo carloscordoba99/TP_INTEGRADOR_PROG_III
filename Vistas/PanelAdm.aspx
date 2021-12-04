@@ -20,6 +20,7 @@
         <div>
             <asp:Panel ID="Panel1" runat="server" Height="586px" Width="259px">
                 <asp:Panel ID="Panel2" runat="server" CssClass="auto-style1" Height="35px" Width="801px" style="text-align:right">
+                    <asp:Button ID="BtnCerrarSesion" runat="server" OnClick="BtnCerrarSesion_Click" Text="Cerrar Sesión" Width="116px" />
                     <asp:Label ID="LblUsuario" runat="server"></asp:Label>
                 </asp:Panel>
                 <asp:Panel ID="Panel3" runat="server" CssClass="auto-style1" Height="40px" Width="801px" style="text-align:center">
