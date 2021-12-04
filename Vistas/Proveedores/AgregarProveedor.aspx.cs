@@ -29,6 +29,19 @@ namespace Vistas.Proveedores
             String localidad = DdlLocalidad.SelectedValue.ToString();
             String Provincia = DdlProvincias.SelectedValue.ToString();
 
+            DataSet Resultado1 = ConsultarDdl("SELECT NombreProvincia FROM Provincias WHERE IdProvincia='" + Provincia + "'");
+            DataSet Resultado2 = ConsultarDdl("SELECT NombreLocalidad FROM Localidades WHERE IdLocalidad='" + localidad + "'");
+
+            DataTable dt = Resultado1.Tables[0];
+            foreach (DataRow row in dt.Rows)
+            {
+                Provincia = Convert.ToString(row["NombreProvincia"]);
+            }
+            dt = Resultado2.Tables[0];
+            foreach (DataRow row in dt.Rows)
+            {
+                localidad = Convert.ToString(row["NombreLocalidad"]);
+            }
             Agregado = ObjProv.AgregarProveedor(TxtRazonSocial.Text,TxtMarca.Text,TxtDireccion.Text,localidad,Provincia,TxtCuit.Text,TxtTelefono.Text,TxtContacto.Text,TxtEmail.Text,TxtWeb.Text,TxtCBU.Text);
             if (Agregado == true)
             {
