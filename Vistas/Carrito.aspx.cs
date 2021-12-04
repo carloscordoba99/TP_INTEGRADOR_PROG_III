@@ -65,40 +65,46 @@ namespace Vistas
             LblError.Text = "";
             
             NegocioProducto Prod = new NegocioProducto();
-
             int Stock = 0, StockRequerido = 0;
             String Error = "No hay stock suficiente de el/los siguientes productos: <br>";
             Boolean ControlStock = true;
-            foreach (GridViewRow Fila in GrdCarrito.Rows)
+            if (GrdCarrito.Rows.Count > 0)
             {
-                Stock = Prod.TraerCantidadDeStock(((Label)Fila.FindControl("LblArticulo")).Text);
-                StockRequerido = Convert.ToInt32(((TextBox)Fila.Cells[1].FindControl("TxtCantidad")).Text);
-                if (Stock < StockRequerido)
-                {
-                    Error += " - " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + ".<br>";
-                    ControlStock = false;
-                }
-                
-            }
-            if (ControlStock == true)
-            {
-                String Compra = "";
                 foreach (GridViewRow Fila in GrdCarrito.Rows)
                 {
-                    Compra += " - " + Convert.ToString(((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text) + " " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + " Por $ " + Convert.ToString(((Label)Fila.Cells[3].FindControl("LblPrecio")).Text) + " la unidad.<br>";
-                }
-                Compra += " Por el Total de: " + LblTotal.Text;
-                LblCompra.Text = "Usted Realizo la compra de: <br>" + Compra;
+                    Stock = Prod.TraerCantidadDeStock(((Label)Fila.FindControl("LblArticulo")).Text);
+                    StockRequerido = Convert.ToInt32(((TextBox)Fila.Cells[1].FindControl("TxtCantidad")).Text);
+                    if (Stock < StockRequerido)
+                    {
+                        Error += " - " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + ".<br>";
+                        ControlStock = false;
+                    }
 
-                /// AHORA GENERO LA FACTURA Y EL DETALLE DE LA FACTURA
-                String IdCliente = Session["IdUsuario"].ToString();
-                String TotalAPagar = LblTotal.Text;
-                String FechaActual = DateTime.Now.ToString();
-                GenerarVenta(IdCliente, TotalAPagar, FechaActual);
+                }
+                if (ControlStock == true)
+                {
+                    String Compra = "";
+                    foreach (GridViewRow Fila in GrdCarrito.Rows)
+                    {
+                        Compra += " - " + Convert.ToString(((TextBox)Fila.Cells[4].FindControl("TxtCantidad")).Text) + " " + Convert.ToString(((Label)Fila.Cells[2].FindControl("LblDescripcion")).Text) + " Por $ " + Convert.ToString(((Label)Fila.Cells[3].FindControl("LblPrecio")).Text) + " la unidad.<br>";
+                    }
+                    Compra += " Por el Total de: " + LblTotal.Text;
+                    LblCompra.Text = "Usted Realizo la compra de: <br>" + Compra;
+
+                    /// AHORA GENERO LA FACTURA Y EL DETALLE DE LA FACTURA
+                    String IdCliente = Session["IdUsuario"].ToString();
+                    String TotalAPagar = LblTotal.Text;
+                    String FechaActual = DateTime.Now.ToString();
+                    GenerarVenta(IdCliente, TotalAPagar, FechaActual);
+                }
+                else
+                {
+                    LblError.Text = Error;
+                }
             }
             else
             {
-                LblError.Text = Error;
+                LblError.Text = "Usted no selecciono ningún producto para comprar. Seleccione uno para poder realizar la compra. ";
             }
         }
         public void GenerarVenta(String CodCliente, String MontoTotal, String Fecha)
