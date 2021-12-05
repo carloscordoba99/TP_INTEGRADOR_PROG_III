@@ -128,25 +128,25 @@
             <br />
         <table align="center" class="auto-style17">
             <tr>
-                <td class="auto-style16">Nombre</td>
-                <td class="auto-style14">
+                <td class="auto-style15">Nombre</td>
+                <td class="auto-style18">
                     <asp:TextBox ID="txtNom" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style23">
+                <td class="auto-style26">
                     <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNom" ValidationGroup="Group1">Ingrese Nombre</asp:RequiredFieldValidator>
                 </td>
-                <td class="auto-style22">
+                <td class="auto-style28">
                     &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style16">Apellido</td>
-                <td class="auto-style14">
+                <td class="auto-style15">Apellido</td>
+                <td class="auto-style18">
                     <asp:TextBox ID="txtApellido" runat="server" Width="373px"></asp:TextBox>
                 </td>
-                <td class="auto-style23">
+                <td class="auto-style26">
                     <asp:RequiredFieldValidator ID="rfv_Apellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Group1">Ingrese Apellido</asp:RequiredFieldValidator>
                 </td>
-                <td class="auto-style27">
+                <td class="auto-style28">
                     &nbsp;</td>
             </tr>
             <tr>
@@ -186,27 +186,27 @@
                 </td>
             </tr>
             <tr>
-                    <td class="auto-style33">Provincia: </td>
-                    <td class="auto-style30">
+                    <td class="auto-style15">Provincia: </td>
+                    <td class="auto-style18">
                     <asp:DropDownList ID="DdlProvincias" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlProvincias_SelectedIndexChanged">
                     </asp:DropDownList>
                     </td>
-                    <td class="auto-style31">
+                    <td class="auto-style26">
                     <asp:RequiredFieldValidator ID="frProvincia" runat="server" ControlToValidate="DdlProvincias" InitialValue="-- Seleccionar provincia --" ValidationGroup="Group1">Elija una Provincia</asp:RequiredFieldValidator>
                     </td>
-                    <td class="auto-style32">
+                    <td class="auto-style28">
                         </td>
                 </tr>
             <tr>
-                    <td class="auto-style37">Localidad: </td>
-                    <td class="auto-style34">
+                    <td class="auto-style15">Localidad: </td>
+                    <td class="auto-style18">
                     <asp:DropDownList ID="DdlLocalidad" runat="server" AutoPostBack="True" Width="214px">
                     </asp:DropDownList>
                     </td>
-                    <td class="auto-style35">
+                    <td class="auto-style26">
                     <asp:RequiredFieldValidator ID="frProvincia0" runat="server" ControlToValidate="DdlLocalidad" InitialValue="-- Seleccionar localidad --" ValidationGroup="Group1">Elija una Localidad</asp:RequiredFieldValidator>
                     </td>
-                    <td class="auto-style36">
+                    <td class="auto-style28">
                         </td>
                 </tr>
             <tr>
