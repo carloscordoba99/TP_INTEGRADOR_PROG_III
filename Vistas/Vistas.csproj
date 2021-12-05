@@ -82,6 +82,9 @@
     <Content Include="Producto\AgregarProducto.aspx" />
     <Content Include="Producto\BuscarProducto.aspx" />
     <Content Include="Producto\EliminarProducto.aspx" />
+    <Content Include="Provincias\AgregarProvincia.aspx" />
+    <Content Include="Provincias\BuscarProvincia.aspx" />
+    <Content Include="Provincias\EliminarProvincia.aspx" />
     <Content Include="reportes\ReporteVentas.aspx" />
     <Content Include="Usuario\AgregarUsuario.aspx" />
     <Content Include="Usuario\BuscarUsuario.aspx" />
@@ -196,6 +199,27 @@
       <DependentUpon>EliminarProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provincias\AgregarProvincia.aspx.cs">
+      <DependentUpon>AgregarProvincia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Provincias\AgregarProvincia.aspx.designer.cs">
+      <DependentUpon>AgregarProvincia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Provincias\BuscarProvincia.aspx.cs">
+      <DependentUpon>BuscarProvincia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Provincias\BuscarProvincia.aspx.designer.cs">
+      <DependentUpon>BuscarProvincia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Provincias\EliminarProvincia.aspx.cs">
+      <DependentUpon>EliminarProvincia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Provincias\EliminarProvincia.aspx.designer.cs">
+      <DependentUpon>EliminarProvincia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="reportes\ReporteVentas.aspx.cs">
       <DependentUpon>ReporteVentas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -24,7 +24,7 @@ namespace Dao
             return dt.existe(consulta);
         }
         public int AgregarCarrito(Carritos Carrito)
-        {;
+        {
             SqlCommand comando = new SqlCommand();
             ArmarParametrosCategorialAgregar(ref comando, Carrito);
             return dt.EjecutarProcedimientoAlmacenado(comando, "spAgregarCarrito");

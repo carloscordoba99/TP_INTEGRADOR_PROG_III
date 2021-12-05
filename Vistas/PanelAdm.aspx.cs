@@ -59,5 +59,10 @@ namespace Vistas
             LblUsuario.Text = "";
             Response.Redirect("LoginForm.aspx");
         }
+
+        protected void BtnProvincias_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Provincias/AgregarProvincia.aspx");
+        }
     }
 }
