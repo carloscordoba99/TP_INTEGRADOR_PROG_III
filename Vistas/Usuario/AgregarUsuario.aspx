@@ -100,6 +100,48 @@
             width: 459px;
             height: 39px;
         }
+        .auto-style30 {
+            width: 70%;
+            height: 35px;
+            margin-left: 0px;
+            text-align: center;
+        }
+        .auto-style31 {
+            text-align: center;
+            width: 381px;
+            height: 35px;
+        }
+        .auto-style32 {
+            text-align: center;
+            width: 459px;
+            height: 35px;
+        }
+        .auto-style33 {
+            width: 173px;
+            text-align: center;
+            height: 35px;
+        }
+        .auto-style34 {
+            width: 70%;
+            height: 49px;
+            margin-left: 0px;
+            text-align: center;
+        }
+        .auto-style35 {
+            text-align: center;
+            width: 381px;
+            height: 49px;
+        }
+        .auto-style36 {
+            text-align: center;
+            width: 459px;
+            height: 49px;
+        }
+        .auto-style37 {
+            width: 173px;
+            text-align: center;
+            height: 49px;
+        }
         </style>
 </head>
 <body>
@@ -113,13 +155,13 @@
                 <tr>
                    
                     <td class="auto-style11">
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Usuario/EliminarUsuario.aspx">Eliminar Usuarios</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Usuario/AgregarUsuario.aspx">Crear Usuario</asp:HyperLink>
                     </td>
                     <td class="auto-style21">
-                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Usuario/BuscarUsuario.aspx">Buscar Usuario</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Usuario/EliminarUsuario.aspx">Eliminar Usuarios</asp:HyperLink>
                     </td>
                     <td class="auto-style8">
-                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Usuario/EditarUsuario.aspx">Editar Usuario</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Usuario/BuscarUsuario.aspx">Buscar Usuario</asp:HyperLink>
                     </td>
                     <td class="auto-style8">
                         <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Usuario/EditarUsuario.aspx">Editar Usuario</asp:HyperLink>
@@ -135,7 +177,7 @@
         <br />
         <table align="center" class="auto-style17">
             <tr>
-                <td class="auto-style16">Nombre</td>
+                <td class="auto-style16">Nombre:</td>
                 <td class="auto-style14">
                     <asp:TextBox ID="txtNom" runat="server" Width="373px"></asp:TextBox>
                 </td>
@@ -146,7 +188,7 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style16">Apellido</td>
+                <td class="auto-style16">Apellido:</td>
                 <td class="auto-style14">
                     <asp:TextBox ID="txtApellido" runat="server" Width="373px"></asp:TextBox>
                 </td>
@@ -157,7 +199,7 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style15">Email</td>
+                <td class="auto-style15">Email:</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtEmail" runat="server" Width="373px"></asp:TextBox>
                 </td>
@@ -169,7 +211,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style15">Numero Celular</td>
+                <td class="auto-style15">Numero Celular:</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtNumCel" runat="server" Width="373px"></asp:TextBox>
                 </td>
@@ -181,7 +223,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style15">Dni</td>
+                <td class="auto-style15">Dni:</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtDni" runat="server" Width="373px"></asp:TextBox>
                 </td>
@@ -193,7 +235,31 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style15">Direccion</td>
+                    <td class="auto-style15">Provincia: </td>
+                    <td class="auto-style18">
+                    <asp:DropDownList ID="DdlProvincias" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlProvincias_SelectedIndexChanged">
+                    </asp:DropDownList>
+                    </td>
+                    <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="frProvincia" runat="server" ControlToValidate="DdlProvincias" InitialValue="-- Seleccionar provincia --" ValidationGroup="Group1">Elija una Provincia</asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style28">
+                        </td>
+                </tr>
+            <tr>
+                    <td class="auto-style15">Localidad: </td>
+                    <td class="auto-style18">
+                    <asp:DropDownList ID="DdlLocalidad" runat="server" AutoPostBack="True" Width="214px">
+                    </asp:DropDownList>
+                    </td>
+                    <td class="auto-style26">
+                    <asp:RequiredFieldValidator ID="frProvincia0" runat="server" ControlToValidate="DdlLocalidad" InitialValue="-- Seleccionar localidad --" ValidationGroup="Group1">Elija una Localidad</asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style28">
+                        </td>
+                </tr>
+            <tr>
+                <td class="auto-style15">Direccion:</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="TxtDireccion" runat="server" Width="373px"></asp:TextBox>
                 </td>
@@ -204,23 +270,7 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style15">Provincia</td>
-                <td class="auto-style18">
-                    <asp:DropDownList ID="DdlProvincias" runat="server">
-                        <asp:ListItem>-- Seleccione Provincia --</asp:ListItem>
-                        <asp:ListItem>Cordoba</asp:ListItem>
-                        <asp:ListItem>Santa Fe</asp:ListItem>
-                        <asp:ListItem>Buenos Aires</asp:ListItem>
-                    </asp:DropDownList>
-                </td>
-                <td class="auto-style26">
-                    <asp:RequiredFieldValidator ID="frProvincia" runat="server" ControlToValidate="DdlProvincias" InitialValue="-- Seleccione Provincia --" ValidationGroup="Group1">Elija una Provincia</asp:RequiredFieldValidator>
-                </td>
-                <td class="auto-style28">
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style15">Contraseña</td>
+                <td class="auto-style15">Contraseña:</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtContrasenia" runat="server" Width="373px" TextMode="Password"></asp:TextBox>
                 </td>
@@ -231,7 +281,7 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style15">Contraseña</td>
+                <td class="auto-style15">Contraseña:</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="txtContraseniaRevision" runat="server" Width="373px" TextMode="Password"></asp:TextBox>
                 </td>
@@ -243,7 +293,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style15">Tipo de Usuario</td>
+                <td class="auto-style15">Tipo de Usuario:</td>
                 <td class="auto-style18">
                     <asp:DropDownList ID="ddlTipo" runat="server" Height="32px" Width="225px">
                         <asp:ListItem>-- Seleccione Tipo --</asp:ListItem>

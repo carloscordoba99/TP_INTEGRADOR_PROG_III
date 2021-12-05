@@ -303,12 +303,12 @@ namespace Vistas.Proveedores
         protected global::System.Web.UI.WebControls.Label LblMensaje;
 
         /// <summary>
-        /// Control grdListaProveedores.
+        /// Control GrdProveedores.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdListaProveedores;
+        protected global::System.Web.UI.WebControls.GridView GrdProveedores;
     }
 }

@@ -74,8 +74,8 @@ namespace Vistas.Proveedores
 
         public void AgregarListaProveedores()
         {
-            grdListaProveedores.DataSource = ObjProv.GetTablaProveedores();
-            grdListaProveedores.DataBind();
+            GrdProveedores.DataSource = ObjProv.GetTablaProveedores();
+            GrdProveedores.DataBind();
         }
 
         public void LlenarDropDownList()
@@ -102,12 +102,19 @@ namespace Vistas.Proveedores
 
         protected void DdlProvincias_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int ProvinciaId = Convert.ToInt32(DdlProvincias.SelectedValue);
-            DdlLocalidad.DataSource = ConsultarDdl("SELECT * FROM LOCALIDADES WHERE IdProvincia='"+Convert.ToString(ProvinciaId)+"'");
-            DdlLocalidad.DataTextField = "NombreLocalidad";
-            DdlLocalidad.DataValueField = "IdLocalidad";
-            DdlLocalidad.DataBind();
-            DdlLocalidad.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Seleccionar localidad --"));
+            if (DdlProvincias.SelectedIndex == 0)
+            {
+                DdlLocalidad.SelectedIndex = 0;
+            }
+            else
+            {
+                int ProvinciaId = Convert.ToInt32(DdlProvincias.SelectedValue);
+                DdlLocalidad.DataSource = ConsultarDdl("SELECT * FROM LOCALIDADES WHERE IdProvincia='" + Convert.ToString(ProvinciaId) + "'");
+                DdlLocalidad.DataTextField = "NombreLocalidad";
+                DdlLocalidad.DataValueField = "IdLocalidad";
+                DdlLocalidad.DataBind();
+                DdlLocalidad.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Seleccionar localidad --"));
+            }
         }
     }
 }

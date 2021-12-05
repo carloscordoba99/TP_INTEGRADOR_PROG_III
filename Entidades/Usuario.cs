@@ -12,6 +12,7 @@ namespace Entidades
         private String Nombre;
         private String Apellido;
         private String Provincia;
+        private String Localidad;
         private String Email;
         private String Telefono;
         private String Dni;
@@ -20,12 +21,13 @@ namespace Entidades
         private Boolean TipoUsuario;
          
         public Usuario() { }
-        public Usuario(int IdCliente_, String Nombre_, String Apellido_, String Provincia_, String Email_, String Telefono_, String Dni_, String Direccion_, String Password_, Boolean TipoUsuario_)
+        public Usuario(int IdCliente_, String Nombre_, String Apellido_, String Provincia_, String Localidad_, String Email_, String Telefono_, String Dni_, String Direccion_, String Password_, Boolean TipoUsuario_)
         {
             this.IdCliente = IdCliente_;
             this.Nombre = Nombre_;
             this.Apellido = Apellido_;
             this.Provincia = Provincia_;
+            this.Localidad = Localidad_;
             this.Email = Email_;
             this.Telefono = Telefono_;
             this.Dni = Dni_;
@@ -43,6 +45,7 @@ namespace Entidades
         public String GetDni() { return Dni; }
         public String GetDireccion() { return Direccion; }
         public String GetProvincia() { return Provincia; }
+        public String GetLocalidad() { return Localidad; }
         public string GetPassword() { return Password; }
         public Boolean GetTipoUsuario() { return TipoUsuario; }
 
@@ -54,6 +57,7 @@ namespace Entidades
         public void SetDni(String dni_) {this.Dni = dni_; }
         public void SetDireccion(string direccion_) {this.Direccion = direccion_; }
         public void SetProvincia(string provincia) { this.Provincia = provincia; }
+        public void SetLocalidad(string loc) { this.Localidad = loc; }
         public void SetPassword(string password_) {this.Password = password_; }
         public void SetTipoUsuario(Boolean tipousuario_) {this.TipoUsuario = tipousuario_; }
 

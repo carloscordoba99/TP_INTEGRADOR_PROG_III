@@ -35,7 +35,7 @@ namespace Dao
 
         public int AgregarUsuario(Usuario user)
         {
-            user.SetIdCliente(dt.ObtenerMaximo("select max(IdCliente) from Usuarios") + 1);
+            //user.SetIdCliente(dt.ObtenerMaximo("select max(IdCliente) from Usuarios") + 1);
             SqlCommand comando = new SqlCommand();
             ArmarParametrosUsuarioAgregar(ref comando,user);
             return dt.EjecutarProcedimientoAlmacenado(comando, "spAgregarUsuario");
@@ -58,6 +58,8 @@ namespace Dao
             Sqlparametros.Value = user.GetDni();
             Sqlparametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetDireccion();
+            Sqlparametros = comando.Parameters.Add("@LOCALIDAD", SqlDbType.VarChar, 25);
+            Sqlparametros.Value = user.GetLocalidad();
             Sqlparametros = comando.Parameters.Add("@PROVINCIA", SqlDbType.VarChar, 25);
             Sqlparametros.Value = user.GetProvincia();
             Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 25);
@@ -106,6 +108,8 @@ namespace Dao
             Sqlparametros.Value = cliente.GetApellido();
             Sqlparametros = comando.Parameters.Add("@PROVINCIA", SqlDbType.VarChar,25);
             Sqlparametros.Value = cliente.GetProvincia();
+            Sqlparametros = comando.Parameters.Add("@LOCALIDAD", SqlDbType.VarChar, 25);
+            Sqlparametros.Value = cliente.GetLocalidad();
             Sqlparametros = comando.Parameters.Add("@CELULAR", SqlDbType.VarChar,25);
             Sqlparametros.Value = cliente.GetTelefono();
             Sqlparametros = comando.Parameters.Add("@DNI", SqlDbType.VarChar,25);
@@ -115,7 +119,7 @@ namespace Dao
             Sqlparametros = comando.Parameters.Add("@EMAIL", SqlDbType.VarChar, 50);
             Sqlparametros.Value = cliente.GetEmail();
             Sqlparametros = comando.Parameters.Add("@CONTRASENA", SqlDbType.VarChar, 50);
-            Sqlparametros.Value = cliente.GetEmail();
+            Sqlparametros.Value = cliente.GetPassword();
             Sqlparametros = comando.Parameters.Add("@TIPOU", SqlDbType.Bit);
             Sqlparametros.Value = cliente.GetTipoUsuario();
 

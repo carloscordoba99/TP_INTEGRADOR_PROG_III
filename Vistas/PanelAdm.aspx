@@ -24,8 +24,7 @@
                     <asp:Label ID="LblUsuario" runat="server"></asp:Label>
                 </asp:Panel>
                 <asp:Panel ID="Panel3" runat="server" CssClass="auto-style1" Height="40px" Width="801px" style="text-align:center">
-                    PANEL ADMINISTRADOR</asp:Panel>s
-                <div class="auto-style2">
+                    PANEL ADMINISTRADOR</asp:Panel>&nbsp;<div class="auto-style2">
                     <br />
                     <asp:Button ID="btnProductos" runat="server" Font-Bold="True" Height="30px" Text="Productos" Width="180px" OnClick="btnProductos_Click" />
                     <br />

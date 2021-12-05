@@ -32,13 +32,13 @@
         .auto-style22 {
             height: 23px;
             text-align: left;
-            width: 459px;
+            width: 457px;
             margin-left: 40px;
         }
         .auto-style27 {
             height: 23px;
             text-align: left;
-            width: 459px;
+            width: 457px;
         }
         .auto-style15 {
             width: 173px;
@@ -54,7 +54,7 @@
         }
         .auto-style28 {
             text-align: left;
-            width: 459px;
+            width: 457px;
         }
         .auto-style20 {
             width: 173px;
@@ -73,8 +73,50 @@
         }
         .auto-style29 {
             text-align: center;
-            width: 459px;
+            width: 457px;
             height: 39px;
+        }
+        .auto-style30 {
+            text-align: center;
+            width: 381px;
+            height: 45px;
+        }
+        .auto-style31 {
+            text-align: center;
+            width: 457px;
+            height: 45px;
+        }
+        .auto-style32 {
+            width: 173px;
+            text-align: center;
+            height: 45px;
+        }
+        .auto-style33 {
+            width: 70%;
+            height: 45px;
+            margin-left: 0px;
+            text-align: center;
+        }
+        .auto-style34 {
+            text-align: center;
+            width: 381px;
+            height: 49px;
+        }
+        .auto-style35 {
+            text-align: center;
+            width: 457px;
+            height: 49px;
+        }
+        .auto-style36 {
+            width: 173px;
+            text-align: center;
+            height: 49px;
+        }
+        .auto-style37 {
+            width: 70%;
+            height: 49px;
+            margin-left: 0px;
+            text-align: center;
         }
         </style>
 </head>
@@ -144,28 +186,36 @@
                 </td>
             </tr>
             <tr>
+                    <td class="auto-style33">Provincia: </td>
+                    <td class="auto-style30">
+                    <asp:DropDownList ID="DdlProvincias" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlProvincias_SelectedIndexChanged">
+                    </asp:DropDownList>
+                    </td>
+                    <td class="auto-style31">
+                    <asp:RequiredFieldValidator ID="frProvincia" runat="server" ControlToValidate="DdlProvincias" InitialValue="-- Seleccionar provincia --" ValidationGroup="Group1">Elija una Provincia</asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style32">
+                        </td>
+                </tr>
+            <tr>
+                    <td class="auto-style37">Localidad: </td>
+                    <td class="auto-style34">
+                    <asp:DropDownList ID="DdlLocalidad" runat="server" AutoPostBack="True" Width="214px">
+                    </asp:DropDownList>
+                    </td>
+                    <td class="auto-style35">
+                    <asp:RequiredFieldValidator ID="frProvincia0" runat="server" ControlToValidate="DdlLocalidad" InitialValue="-- Seleccionar localidad --" ValidationGroup="Group1">Elija una Localidad</asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style36">
+                        </td>
+                </tr>
+            <tr>
                 <td class="auto-style15">Direccion</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="TxtDireccion" runat="server" Width="373px"></asp:TextBox>
                 </td>
                 <td class="auto-style26">
                     <asp:RequiredFieldValidator ID="frv_Direccion" runat="server" ControlToValidate="TxtDireccion" ValidationGroup="Group1">Ingrese Direccion</asp:RequiredFieldValidator>
-                </td>
-                <td class="auto-style28">
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style15">Provincia</td>
-                <td class="auto-style18">
-                    <asp:DropDownList ID="DdlProvincias" runat="server">
-                        <asp:ListItem>-- Seleccione Provincia --</asp:ListItem>
-                        <asp:ListItem>Cordoba</asp:ListItem>
-                        <asp:ListItem>Santa Fe</asp:ListItem>
-                        <asp:ListItem>Buenos Aires</asp:ListItem>
-                    </asp:DropDownList>
-                </td>
-                <td class="auto-style26">
-                    <asp:RequiredFieldValidator ID="frProvincia" runat="server" ControlToValidate="DdlProvincias" InitialValue="-- Seleccione Provincia --" ValidationGroup="Group1">Elija una Provincia</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style28">
                     &nbsp;</td>

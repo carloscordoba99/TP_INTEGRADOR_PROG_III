@@ -45,6 +45,7 @@ namespace Vistas.Usuario
             String nombre = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_nombre")).Text;
             String apellido = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_apellido")).Text;
             String provincia = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_provincia")).Text;
+            String localidad = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_localidad")).Text;
             String celular = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_celular")).Text;
             String dni = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_dni")).Text;
             String direccion = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_direccion")).Text;
@@ -56,8 +57,7 @@ namespace Vistas.Usuario
 
 
             NegocioUsuarios modificar = new NegocioUsuarios();
-            modificar.ModificarUsuario(idCliente, nombre, apellido, provincia, celular, dni, direccion, email, contrasena, tUsuario);
-
+            modificar.ModificarUsuario(idCliente, nombre, apellido, provincia, localidad, celular, dni, direccion, email, contrasena, tUsuario);
             grdUsuarios.EditIndex = -1;
             CargarGridViewUsuarios();
         }
