@@ -71,6 +71,9 @@
     <Content Include="DetalleVentas\AgregarDetalleDeVentas.aspx" />
     <Content Include="DetalleVentas\BuscarDetalleDeVentas.aspx" />
     <Content Include="DetalleVentas\EliminarDetalleDeVentas.aspx" />
+    <Content Include="Localidades\AgregarLocalidad.aspx" />
+    <Content Include="Localidades\BuscarLocalidad.aspx" />
+    <Content Include="Localidades\EliminarLocalidad.aspx" />
     <Content Include="Proveedores\AgregarProveedor.aspx" />
     <Content Include="Proveedores\BuscarProveedor.aspx" />
     <Content Include="Categoria\AgregarCategoria.aspx" />
@@ -120,6 +123,27 @@
     </Compile>
     <Compile Include="DetalleVentas\EliminarDetalleDeVentas.aspx.designer.cs">
       <DependentUpon>EliminarDetalleDeVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Localidades\AgregarLocalidad.aspx.cs">
+      <DependentUpon>AgregarLocalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Localidades\AgregarLocalidad.aspx.designer.cs">
+      <DependentUpon>AgregarLocalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Localidades\BuscarLocalidad.aspx.cs">
+      <DependentUpon>BuscarLocalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Localidades\BuscarLocalidad.aspx.designer.cs">
+      <DependentUpon>BuscarLocalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Localidades\EliminarLocalidad.aspx.cs">
+      <DependentUpon>EliminarLocalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Localidades\EliminarLocalidad.aspx.designer.cs">
+      <DependentUpon>EliminarLocalidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Proveedores\AgregarProveedor.aspx.cs">
       <DependentUpon>AgregarProveedor.aspx</DependentUpon>

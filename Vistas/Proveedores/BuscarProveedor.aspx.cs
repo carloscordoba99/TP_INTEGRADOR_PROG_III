@@ -62,8 +62,8 @@ namespace Vistas.Proveedores
             String razonSocial = ((TextBox)GrdProveedores.Rows[e.RowIndex].FindControl("txt_eit_RazonSocial")).Text;
             String marca = ((TextBox)GrdProveedores.Rows[e.RowIndex].FindControl("txt_eit_Marca")).Text;
             String direccion = ((TextBox)GrdProveedores.Rows[e.RowIndex].FindControl("txt_eit_Direccion")).Text;
-            String ciudad = ((TextBox)GrdProveedores.Rows[e.RowIndex].FindControl("txt_eit_Ciudad")).Text;
-            String provincia = ((TextBox)GrdProveedores.Rows[e.RowIndex].FindControl("txt_eit_Provincia")).Text;
+            String ciudad = ((DropDownList)GrdProveedores.Rows[e.RowIndex].FindControl("DdlLocalidades")).SelectedIndex.ToString();
+            String provincia = ((DropDownList)GrdProveedores.Rows[e.RowIndex].FindControl("DdlProvincias")).SelectedValue.ToString();
             String cuit = ((TextBox)GrdProveedores.Rows[e.RowIndex].FindControl("txt_eit_Cuit")).Text;
             String telefono = ((TextBox)GrdProveedores.Rows[e.RowIndex].FindControl("txt_eit_Telefono")).Text;
             String contacto = ((TextBox)GrdProveedores.Rows[e.RowIndex].FindControl("txt_eit_Contacto")).Text;

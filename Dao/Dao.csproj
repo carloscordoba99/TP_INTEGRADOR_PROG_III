@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="DaoLocalidades.cs" />
     <Compile Include="DaoProvincia.cs" />
     <Compile Include="DaoCarritos.cs" />
     <Compile Include="DaoCategoria.cs" />

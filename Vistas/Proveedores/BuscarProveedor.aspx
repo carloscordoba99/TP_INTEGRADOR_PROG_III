@@ -141,28 +141,32 @@
                             <asp:Label ID="lbl_Marca" runat="server" Text='<%# Bind("Marca_Pr") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Provincia">
+                        <EditItemTemplate>
+                            <asp:DropDownList ID="DdlProvincias" runat="server" DataSourceID="SqlDataSourceProveedoresUpdate" DataTextField="NombreProvincia" DataValueField="IdProvincia">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSourceProveedoresUpdate" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString8 %>" SelectCommand="SELECT * FROM [Provincias]"></asp:SqlDataSource>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_Provincia_Pr" runat="server" Text='<%# Bind("Provincia_Pr") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Localidad">
+                        <EditItemTemplate>
+                            <asp:DropDownList ID="DdlLocalidades" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreLocalidad" DataValueField="IdLocalidad">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString9 %>" SelectCommand="SELECT [IdLocalidad], [NombreLocalidad] FROM [Localidades]"></asp:SqlDataSource>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_Ciudad" runat="server" Text='<%# Bind("Localidad_Pr") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="Direccion">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_Direccion" runat="server" Text='<%# Bind("Direccion_Pr") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_Direccion" runat="server" Text='<%# Bind("Direccion_Pr") %>'></asp:Label>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Ciudad">
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_Ciudad" runat="server" Text='<%# Bind("Localidad_Pr") %>'></asp:TextBox>
-                        </EditItemTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="lbl_Ciudad" runat="server" Text='<%# Bind("Localidad_Pr") %>'></asp:Label>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Provincia">
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_Provincia" runat="server" Text='<%# Bind("Provincia_Pr") %>'></asp:TextBox>
-                        </EditItemTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="lbl_Provincia_Pr" runat="server" Text='<%# Bind("Provincia_Pr") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Cuit">
