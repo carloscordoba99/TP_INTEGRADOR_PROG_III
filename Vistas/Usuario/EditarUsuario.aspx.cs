@@ -44,8 +44,8 @@ namespace Vistas.Usuario
             String idCliente = ((Label)grdUsuarios.Rows[e.RowIndex].FindControl("lbl_eit_idcliente")).Text;
             String nombre = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_nombre")).Text;
             String apellido = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_apellido")).Text;
-            String provincia = ((DropDownList)grdUsuarios.Rows[e.RowIndex].FindControl("DdlProvincias")).Text;
-            String localidad = ((DropDownList)grdUsuarios.Rows[e.RowIndex].FindControl("DdlLocalidades")).Text;
+            String provincia = ((DropDownList)grdUsuarios.Rows[e.RowIndex].FindControl("DdlProvincias")).SelectedValue;
+            String localidad = ((DropDownList)grdUsuarios.Rows[e.RowIndex].FindControl("DdlLocalidades")).SelectedValue;
             String celular = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_celular")).Text;
             String dni = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_dni")).Text;
             String direccion = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_direccion")).Text;
@@ -53,43 +53,12 @@ namespace Vistas.Usuario
             String contrasena = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_contrasena")).Text;
             String tUsuario = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_tipousuario")).Text;
 
-            //lblmensaje.Text = tUsuario.ToString();
-
-
             NegocioUsuarios modificar = new NegocioUsuarios();
             modificar.ModificarUsuario(idCliente, nombre, apellido, provincia, localidad, celular, dni, direccion, email, contrasena, tUsuario);
             grdUsuarios.EditIndex = -1;
             CargarGridViewUsuarios();
         }
 
-        
-
-
-        /*
-        
-        protected void grdUsuarios_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            String idCliente = ((Label)grdUsuarios.Rows[e.RowIndex].FindControl("lbl_eit_IdCliente")).Text;
-            String nombre = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Nombre")).Text;
-            String apellido = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Apellido")).Text;
-            String provincia = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Provincia")).Text;
-            String celular = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Celular")).Text;
-            String dni = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Dni")).Text;
-            String direccion = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Direccion")).Text;
-            String email = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Email")).Text;
-            String contrasena = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_Contrasena")).Text;
-            String tUsuario = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_TipoUsuario")).Text;
-
-            // lblmensaje.Text = idCliente.ToString() + nombre.ToString()+ provincia.ToString() + celular.ToString() + direccion.ToString() + contrasena.ToString();
-
-            
-            NegocioUsuarios modificar = new NegocioUsuarios();
-            modificar.ModificarUsuario(idCliente, nombre, apellido, provincia, celular, dni, direccion, email, contrasena, tUsuario);
-
-            grdUsuarios.EditIndex = -1;
-            CargarGridViewUsuarios();
-        }
-        */
     }
 
 }

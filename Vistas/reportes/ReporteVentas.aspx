@@ -26,7 +26,15 @@
     <form id="form1" runat="server">
         <div>
             <br />
-            REPORTE DE VENTAS SEGUN UN RANGO DE FECHAS<br />
+            <table class="auto-style1">
+                <tr>
+                    <td>REPORTE DE VENTAS SEGUN UN RANGO DE FECHAS</td>
+                    <td>
+                        <asp:Label ID="LblUsuario" runat="server"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+            <br />
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style3">DE:</td>
@@ -65,6 +73,7 @@
                 </tr>
             </table>
             <br />
+            &nbsp;<asp:Label ID="LblRecaudaciónTotal" runat="server"></asp:Label>
             <br />
             <br />
         </div>

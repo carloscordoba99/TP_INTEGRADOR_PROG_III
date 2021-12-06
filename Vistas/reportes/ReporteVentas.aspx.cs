@@ -13,7 +13,10 @@ namespace Vistas.reportes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Usuario"] != null)
+            {
+                LblUsuario.Text = Session["Usuario"].ToString();
+            }
         }
 
         protected void BtnMostrarReporte_Click(object sender, EventArgs e)
@@ -28,6 +31,12 @@ namespace Vistas.reportes
             da.Fill(dt);
             GrdReporte.DataSource = dt;
             GrdReporte.DataBind();
+            /*decimal Total = 0;
+            foreach (GridViewRow Fila in GrdReporte.Rows)
+            {
+                Total += Fila.Cells[3];
+            }
+            LblRecaudaciónTotal.Text = "RECAUDACION TOTAL: $ " + Convert.ToString(Total);*/
         }
 
         protected void GrdReporte_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)

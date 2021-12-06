@@ -112,7 +112,7 @@
                                 <EditItemTemplate>
                                     <asp:DropDownList ID="DdlLocalidades" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreLocalidad" DataValueField="IdLocalidad">
                                     </asp:DropDownList>
-                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString9 %>" SelectCommand="SELECT [IdLocalidad], [NombreLocalidad] FROM [Localidades]"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString10 %>" SelectCommand="SELECT [IdLocalidad], [NombreLocalidad] FROM [Localidades]"></asp:SqlDataSource>
                                 </EditItemTemplate>
                                 <ItemTemplate>
                                     <asp:Label ID="lbl_it_localidad" runat="server" Text='<%# Bind("Localidad") %>'></asp:Label>
