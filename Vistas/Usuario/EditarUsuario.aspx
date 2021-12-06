@@ -100,7 +100,9 @@
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="PROVINCIA">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txt_eit_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:TextBox>
+                                    <asp:DropDownList ID="DdlProvincias" runat="server" DataSourceID="SqlDataSourceProveedoresUpdate" DataTextField="NombreProvincia" DataValueField="IdProvincia">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSourceProveedoresUpdate" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString8 %>" SelectCommand="SELECT * FROM [Provincias]"></asp:SqlDataSource>
                                 </EditItemTemplate>
                                 <ItemTemplate>
                                     <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:Label>
@@ -108,7 +110,9 @@
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="LOCALIDAD">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txt_eit_localidad" runat="server" Text='<%# Bind("Provincia") %>'></asp:TextBox>
+                                    <asp:DropDownList ID="DdlLocalidades" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreLocalidad" DataValueField="IdLocalidad">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoProg3ConnectionString9 %>" SelectCommand="SELECT [IdLocalidad], [NombreLocalidad] FROM [Localidades]"></asp:SqlDataSource>
                                 </EditItemTemplate>
                                 <ItemTemplate>
                                     <asp:Label ID="lbl_it_localidad" runat="server" Text='<%# Bind("Localidad") %>'></asp:Label>

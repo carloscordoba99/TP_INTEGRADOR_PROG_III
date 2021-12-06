@@ -52,6 +52,19 @@
             text-align: center;
             font-size: large;
         }
+        .auto-style17 {
+            width: 258px;
+            text-align: right;
+        }
+        .auto-style19 {
+            width: 238px;
+        }
+        .auto-style29 {
+            width: 303px;
+        }
+        .auto-style20 {
+            width: 269px;
+        }
         </style>
 </head>
 <body>
@@ -83,7 +96,29 @@
         <div>
             <p class="auto-style12">
                 Buscar Localidad&nbsp;&nbsp;&nbsp; </p>
-            <asp:GridView ID="grdProvincias" runat="server" AutoGenerateColumns="False" AutoGenerateEditButton="True" OnRowCancelingEdit="grdProvincias_RowCancelingEdit" OnRowEditing="grdProvincias_RowEditing" OnRowUpdating="grdProvincias_RowUpdating">
+            <table class="auto-style14" align="center">
+                <tr>
+                    <td class="auto-style17">Id Provincia: </td>
+                    <td class="auto-style19">
+                        <asp:TextBox ID="txtIdLocalidad" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style29">
+                        <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" Width="129px" OnClick="BtnBuscar_Click" ValidationGroup="Group1" />
+                    </td>
+                    <td class="auto-style20">
+                        <asp:Button ID="BtnMostrarTodos" runat="server" Text="Mostrar todos" Width="129px" OnClick="BtnMostrarTodos_Click" ValidationGroup="Group1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">&nbsp;</td>
+                    <td class="auto-style19">
+                        <asp:Label ID="LblMensaje" runat="server"></asp:Label>
+                    </td>
+                    <td class="auto-style29">&nbsp;</td>
+                    <td class="auto-style20">&nbsp;</td>
+                </tr>
+                </table>
+            <asp:GridView ID="grdLocalidades" runat="server" AutoGenerateColumns="False" AutoGenerateEditButton="True" OnRowEditing="grdLocalidades_RowEditing" OnRowUpdating="grdLocalidades_RowUpdating" >
                 <Columns>
                     <asp:TemplateField HeaderText="Id Localidad">
                         <EditItemTemplate>
@@ -95,7 +130,7 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Nombre Localidad">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_NombreProvincia" runat="server" Text='<%# Bind("NombreProvincia") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_NombreLocalidad" runat="server" Text='<%# Bind("NombreLocalidad") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_NombreLocalidad" runat="server" Text='<%# Bind("NombreLocalidad") %>'></asp:Label>
@@ -103,7 +138,7 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Id Provincia">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_IdProvincia" runat="server" Text='<%# Bind("IdProvincia") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_IdLocalidad" runat="server" Text='<%# Bind("IdProvincia") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_IdProvincia" runat="server" Text='<%# Bind("IdProvincia") %>'></asp:Label>

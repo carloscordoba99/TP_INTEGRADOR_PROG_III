@@ -106,6 +106,7 @@ namespace Vistas
             {
                 LblError.Text = "Usted no selecciono ningún producto para comprar. Seleccione uno para poder realizar la compra. ";
             }
+            CargarGridView();
         }
         public void GenerarVenta(String CodCliente, String MontoTotal, String Fecha)
         {

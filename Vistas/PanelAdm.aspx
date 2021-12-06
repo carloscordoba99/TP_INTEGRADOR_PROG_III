@@ -47,7 +47,7 @@
                     <asp:Button ID="BtnProvincias" runat="server" Font-Bold="True" Height="30px" Text="Provincias" Width="180px" OnClick="BtnProvincias_Click" />
                     <br />
                     <br />
-                    <asp:Button ID="BtnLocalidades" runat="server" Font-Bold="True" Height="30px" Text="Localidades" Width="180px" />
+                    <asp:Button ID="BtnLocalidades" runat="server" Font-Bold="True" Height="30px" Text="Localidades" Width="180px" OnClick="BtnLocalidades_Click" />
                     <br />
                     <br />
                     <asp:Button ID="BtnReportes" runat="server" Font-Bold="True" Height="30px" Text="Reporte ventas" Width="180px" OnClick="BtnReportes_Click" />

@@ -52,6 +52,40 @@
             text-align: center;
             font-size: large;
         }
+        .auto-style17 {
+            width: 258px;
+            text-align: right;
+        }
+        .auto-style19 {
+            width: 238px;
+        }
+        .auto-style29 {
+            width: 303px;
+        }
+        .auto-style33 {
+            margin-top: 0px;
+        }
+        .auto-style20 {
+            width: 269px;
+        }
+        .auto-style13 {
+            width: 258px;
+            height: 30px;
+        }
+        .auto-style21 {
+            width: 238px;
+            height: 30px;
+            text-align: center;
+        }
+        .auto-style32 {
+            width: 303px;
+            height: 30px;
+        }
+
+        .auto-style22 {
+            width: 269px;
+            height: 30px;
+        }
         </style>
 </head>
 <body>
@@ -83,6 +117,36 @@
         <div>
             <p class="auto-style12">
                 Eliminar Localidad&nbsp;&nbsp;&nbsp; </p>
+            <table class="auto-style14" align="center">
+                <tr>
+                    <td class="auto-style17">Ingrese Id: </td>
+                    <td class="auto-style19">
+                        <asp:TextBox ID="txtIdLocalidad" runat="server" Width="216px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style29">
+                        <asp:Button ID="BtnEliminar" runat="server" Text="Eliminar" Width="129px" OnClick="BtnAgregar_Click" ValidationGroup="Group1" CssClass="auto-style33" />
+                    </td>
+                    <td class="auto-style20">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">&nbsp;</td>
+                    <td class="auto-style19">
+                        <asp:Label ID="LblMensaje" runat="server"></asp:Label>
+                    </td>
+                    <td class="auto-style29">&nbsp;</td>
+                    <td class="auto-style20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style13"></td>
+                    <td class="auto-style21">
+                        &nbsp;</td>
+                    <td class="auto-style32">
+                        &nbsp;</td>
+                    <td class="auto-style22">
+                        &nbsp;</td>
+                </tr>
+            </table>
             <br />
             <br />
         </div>

@@ -64,5 +64,10 @@ namespace Vistas
         {
             Response.Redirect("Provincias/AgregarProvincia.aspx");
         }
+
+        protected void BtnLocalidades_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Localidades/AgregarLocalidad.aspx");
+        }
     }
 }

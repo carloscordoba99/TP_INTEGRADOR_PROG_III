@@ -75,7 +75,7 @@ namespace Dao
             SqlParameter Sqlparametros = new SqlParameter();
             Sqlparametros = comando.Parameters.Add("@IdLocalidad", SqlDbType.Int);
             Sqlparametros.Value = Localidad.GetIdLocalidad();
-            Sqlparametros = comando.Parameters.Add("@NOMBRE_PROVINCIA", SqlDbType.VarChar, 30);
+            Sqlparametros = comando.Parameters.Add("@NOMBRE_LOCALIDAD", SqlDbType.VarChar, 30);
             Sqlparametros.Value = Localidad.GetNombreLocalidad();
             Sqlparametros = comando.Parameters.Add("@IdProvincia", SqlDbType.Int);
             Sqlparametros.Value = Localidad.GetIdProvincia();

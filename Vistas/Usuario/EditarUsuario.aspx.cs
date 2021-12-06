@@ -44,8 +44,8 @@ namespace Vistas.Usuario
             String idCliente = ((Label)grdUsuarios.Rows[e.RowIndex].FindControl("lbl_eit_idcliente")).Text;
             String nombre = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_nombre")).Text;
             String apellido = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_apellido")).Text;
-            String provincia = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_provincia")).Text;
-            String localidad = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_localidad")).Text;
+            String provincia = ((DropDownList)grdUsuarios.Rows[e.RowIndex].FindControl("DdlProvincias")).Text;
+            String localidad = ((DropDownList)grdUsuarios.Rows[e.RowIndex].FindControl("DdlLocalidades")).Text;
             String celular = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_celular")).Text;
             String dni = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_dni")).Text;
             String direccion = ((TextBox)grdUsuarios.Rows[e.RowIndex].FindControl("txt_eit_direccion")).Text;

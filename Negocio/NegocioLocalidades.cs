@@ -47,7 +47,7 @@ namespace Negocio
             return dao.GetLocalidad(id);
         }
 
-        public bool EliminarProvincia(int id)
+        public bool EliminarLocalidad(int id)
         {
             DaoLocalidades dao = new DaoLocalidades();
             Localidades Prov = new Localidades();
